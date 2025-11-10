@@ -117,9 +117,9 @@
         <div class="row g-2 align-items-center">
             <div class="col">
                 {{-- Pretitle --}}
-                @if (isset($pretitle) || $pretitle)
+                @if ($pretitle)
                     <div class="page-pretitle">
-                        {{ $pretitle ?? $pretitle }}
+                        {{ $pretitle }}
                     </div>
                 @endif
 
@@ -133,9 +133,9 @@
                 </h2>
 
                 {{-- Subtitle/Description --}}
-                @if (isset($subtitle) || $subtitle)
+                @if ($subtitle)
                     <div class="page-subtitle">
-                        {{ $subtitle ?? $subtitle }}
+                        {{ $subtitle }}
                     </div>
                 @endif
             </div>

@@ -127,7 +127,7 @@
             <x-dynamic-component :component="$iconComponent" class="icon alert-icon" />
         </div>
         <div>
-            @if (isset($title) || $title)
+            @if ($title)
                 <h4 class="alert-heading">{{ $title }}</h4>
                 @if ($slot->isNotEmpty())
                     <div class="alert-description">{{ $slot }}</div>
@@ -140,7 +140,7 @@
                 <div class="btn-list mt-2">{{ $actions }}</div>
             @endisset
         </div>
-    @elseif(isset($title) || $title)
+    @elseif($title)
         {{-- Alert with title but no icon --}}
         <h4 class="alert-heading">{{ $title }}</h4>
         @if ($slot->isNotEmpty())

@@ -151,7 +151,7 @@
     @else
         <div class="offcanvas-header">
             <h2 class="offcanvas-title" id="{{ $id }}Label">
-                {{ $title ?? $title }}
+                {{ $title }}
             </h2>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
