@@ -17,6 +17,7 @@ function getNavItems()
             'icon' => 'package',
             'active' => request()->routeIs(
                 'demo.alert',
+                'demo.avatar',
                 'demo.badge',
                 'demo.button',
                 'demo.cards',
@@ -26,7 +27,21 @@ function getNavItems()
                 'demo.offcanvas',
                 'demo.tables',
                 'demo.tabs',
-                'demo.toasts'
+                'demo.toasts',
+                'demo.progress',
+                'demo.spinner',
+                'demo.pagination',
+                'demo.steps',
+                'demo.status',
+                'demo.ribbon',
+                'demo.empty',
+                'demo.divider',
+                'demo.timeline',
+                'demo.accordion',
+                'demo.carousel',
+                'demo.list-group',
+                'demo.nav',
+                'demo.placeholder'
             ),
             'columns' => 2,
             'children' => [
@@ -90,6 +105,97 @@ function getNavItems()
                     'url' => url('/demo/toasts'),
                     'icon' => 'bread',
                     'active' => request()->routeIs('demo.toasts'),
+                ],
+                ['divider' => true],
+                [
+                    'title' => 'Accordion',
+                    'url' => url('/demo/accordion'),
+                    'icon' => 'list',
+                    'active' => request()->routeIs('demo.accordion'),
+                ],
+                [
+                    'title' => 'Avatars',
+                    'url' => url('/demo/avatars'),
+                    'icon' => 'user-circle',
+                    'active' => request()->routeIs('demo.avatars'),
+                ],
+                [
+                    'title' => 'Carousel',
+                    'url' => url('/demo/carousel'),
+                    'icon' => 'carousel-horizontal',
+                    'active' => request()->routeIs('demo.carousel'),
+                ],
+                [
+                    'title' => 'Divider',
+                    'url' => url('/demo/divider'),
+                    'icon' => 'separator-horizontal',
+                    'active' => request()->routeIs('demo.divider'),
+                ],
+                [
+                    'title' => 'Empty States',
+                    'url' => url('/demo/empty'),
+                    'icon' => 'folder-x',
+                    'active' => request()->routeIs('demo.empty'),
+                ],
+                [
+                    'title' => 'List Group',
+                    'url' => url('/demo/list-group'),
+                    'icon' => 'list-check',
+                    'active' => request()->routeIs('demo.list-group'),
+                ],
+                [
+                    'title' => 'Navigation',
+                    'url' => url('/demo/nav'),
+                    'icon' => 'menu',
+                    'active' => request()->routeIs('demo.nav'),
+                ],
+                [
+                    'title' => 'Pagination',
+                    'url' => url('/demo/pagination'),
+                    'icon' => 'dots',
+                    'active' => request()->routeIs('demo.pagination'),
+                ],
+                [
+                    'title' => 'Placeholder',
+                    'url' => url('/demo/placeholder'),
+                    'icon' => 'text-size',
+                    'active' => request()->routeIs('demo.placeholder'),
+                ],
+                [
+                    'title' => 'Progress',
+                    'url' => url('/demo/progress'),
+                    'icon' => 'progress',
+                    'active' => request()->routeIs('demo.progress'),
+                ],
+                [
+                    'title' => 'Ribbon',
+                    'url' => url('/demo/ribbon'),
+                    'icon' => 'flag',
+                    'active' => request()->routeIs('demo.ribbon'),
+                ],
+                [
+                    'title' => 'Spinner',
+                    'url' => url('/demo/spinner'),
+                    'icon' => 'loader',
+                    'active' => request()->routeIs('demo.spinner'),
+                ],
+                [
+                    'title' => 'Status',
+                    'url' => url('/demo/status'),
+                    'icon' => 'point',
+                    'active' => request()->routeIs('demo.status'),
+                ],
+                [
+                    'title' => 'Steps',
+                    'url' => url('/demo/steps'),
+                    'icon' => 'stairs',
+                    'active' => request()->routeIs('demo.steps'),
+                ],
+                [
+                    'title' => 'Timeline',
+                    'url' => url('/demo/timeline'),
+                    'icon' => 'timeline',
+                    'active' => request()->routeIs('demo.timeline'),
                 ],
             ],
         ],
@@ -163,6 +269,66 @@ Route::group(['prefix' => 'demo'], function () {
     Route::get('/toasts', function () {
         return view('demo.toasts', ['navItems' => getNavItems()]);
     })->name('demo.toasts');
+
+    Route::get('/progress', function () {
+        return view('demo.progress', ['navItems' => getNavItems()]);
+    })->name('demo.progress');
+
+    Route::get('/spinner', function () {
+        return view('demo.spinner', ['navItems' => getNavItems()]);
+    })->name('demo.spinner');
+
+    Route::get('/pagination', function () {
+        return view('demo.pagination', ['navItems' => getNavItems()]);
+    })->name('demo.pagination');
+
+    Route::get('/steps', function () {
+        return view('demo.steps', ['navItems' => getNavItems()]);
+    })->name('demo.steps');
+
+    Route::get('/avatars', function () {
+        return view('demo.avatars', ['navItems' => getNavItems()]);
+    })->name('demo.avatars');
+
+    Route::get('/status', function () {
+        return view('demo.status', ['navItems' => getNavItems()]);
+    })->name('demo.status');
+
+    Route::get('/ribbon', function () {
+        return view('demo.ribbon', ['navItems' => getNavItems()]);
+    })->name('demo.ribbon');
+
+    Route::get('/empty', function () {
+        return view('demo.empty', ['navItems' => getNavItems()]);
+    })->name('demo.empty');
+
+    Route::get('/divider', function () {
+        return view('demo.divider', ['navItems' => getNavItems()]);
+    })->name('demo.divider');
+
+    Route::get('/timeline', function () {
+        return view('demo.timeline', ['navItems' => getNavItems()]);
+    })->name('demo.timeline');
+
+    Route::get('/accordion', function () {
+        return view('demo.accordion', ['navItems' => getNavItems()]);
+    })->name('demo.accordion');
+
+    Route::get('/carousel', function () {
+        return view('demo.carousel', ['navItems' => getNavItems()]);
+    })->name('demo.carousel');
+
+    Route::get('/list-group', function () {
+        return view('demo.list-group', ['navItems' => getNavItems()]);
+    })->name('demo.list-group');
+
+    Route::get('/nav', function () {
+        return view('demo.nav', ['navItems' => getNavItems()]);
+    })->name('demo.nav');
+
+    Route::get('/placeholder', function () {
+        return view('demo.placeholder', ['navItems' => getNavItems()]);
+    })->name('demo.placeholder');
 
     Route::get('/layout-vertical', function () {
         return view('demo.layouts.vertical', [
