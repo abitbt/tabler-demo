@@ -1,0 +1,9 @@
+@import '@tabler/core/scss/tabler';
+
+@media (min-width: 992px) {
+    :root,
+    :host {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
