@@ -68,15 +68,11 @@
 ])
 
 <label {{ $attributes->merge(['class' => 'form-imagecheck']) }}>
-    <input
-        @if($name) name="{{ $name }}" @endif
-        type="{{ $type }}"
-        @if($value !== null) value="{{ $value }}" @endif
-        class="form-imagecheck-input"
-        @if($checked) checked @endif
-    />
+    <input @if ($name) name="{{ $name }}" @endif type="{{ $type }}"
+        @if ($value !== null) value="{{ $value }}" @endif class="form-imagecheck-input"
+        @if ($checked) checked @endif />
     <span class="form-imagecheck-figure">
-        @if($image)
+        @if ($image)
             <img src="{{ $image }}" alt="{{ $alt }}" class="form-imagecheck-image" />
         @else
             <span class="form-imagecheck-image">

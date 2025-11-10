@@ -48,13 +48,13 @@
 ])
 
 <div {{ $attributes->merge(['class' => 'input-group']) }}>
-    @if($prepend)
+    @if ($prepend)
         <span class="input-group-text">{{ $prepend }}</span>
     @endif
 
     {{ $slot }}
 
-    @if($append)
+    @if ($append)
         <span class="input-group-text">{{ $append }}</span>
     @endif
 </div>

@@ -125,14 +125,7 @@
     </x-tabler::modals.modal>
 --}}
 
-@props([
-    'id',
-    'size' => null,
-    'scrollable' => false,
-    'centered' => true,
-    'blur' => true,
-    'static' => false,
-])
+@props(['id', 'size' => null, 'scrollable' => false, 'centered' => true, 'blur' => true, 'static' => false])
 
 @php
     // Build modal classes
@@ -165,18 +158,10 @@
     $staticAttr = $static ? 'static' : null;
 @endphp
 
-<div
-    id="{{ $id }}"
-    {{ $attributes->merge(['class' => implode(' ', $modalClasses)]) }}
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="{{ $id }}-title"
-    aria-hidden="true"
-    @if($staticAttr)
-        data-bs-backdrop="{{ $staticAttr }}"
-        data-bs-keyboard="false"
-    @endif
->
+<div id="{{ $id }}" {{ $attributes->merge(['class' => implode(' ', $modalClasses)]) }} tabindex="-1"
+    role="dialog" aria-labelledby="{{ $id }}-title" aria-hidden="true"
+    @if ($staticAttr) data-bs-backdrop="{{ $staticAttr }}"
+        data-bs-keyboard="false" @endif>
     <div class="{{ implode(' ', $dialogClasses) }}" role="document">
         <div class="modal-content">
             {{ $slot }}

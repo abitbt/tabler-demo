@@ -11,10 +11,7 @@
 @extends('layouts.app')
 
 @section('page-header')
-    <x-tabler::page-header
-        title="Badge Components"
-        subtitle="Comprehensive showcase of all badge variations"
-    />
+    <x-tabler::page-header title="Badge Components" subtitle="Comprehensive showcase of all badge variations" />
 @endsection
 
 @section('content')
@@ -50,7 +47,7 @@
                         <x-tabler::badge color="cyan">Cyan</x-tabler::badge>
                     </div>
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::badge color="primary"&gt;Primary&lt;/x-tabler::badge&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::badge color="primary"&gt;Primary&lt;/x-tabler::badge&gt;
 &lt;x-tabler::badge color="success"&gt;Success&lt;/x-tabler::badge&gt;
 &lt;x-tabler::badge color="danger"&gt;Danger&lt;/x-tabler::badge&gt;</code></pre>
                     </div>
@@ -87,7 +84,7 @@
                         <x-tabler::badge color="cyan" variant="light">Cyan</x-tabler::badge>
                     </div>
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::badge color="blue" variant="light"&gt;Blue&lt;/x-tabler::badge&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::badge color="blue" variant="light"&gt;Blue&lt;/x-tabler::badge&gt;
 &lt;x-tabler::badge color="green" variant="light"&gt;Green&lt;/x-tabler::badge&gt;
 &lt;x-tabler::badge color="purple" variant="light"&gt;Purple&lt;/x-tabler::badge&gt;</code></pre>
                     </div>
@@ -116,7 +113,7 @@
                         <x-tabler::badge color="red" variant="outline">Red</x-tabler::badge>
                     </div>
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::badge color="primary" variant="outline"&gt;Primary&lt;/x-tabler::badge&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::badge color="primary" variant="outline"&gt;Primary&lt;/x-tabler::badge&gt;
 &lt;x-tabler::badge color="danger" variant="outline"&gt;Danger&lt;/x-tabler::badge&gt;</code></pre>
                     </div>
                 </x-tabler::cards.body>
@@ -144,7 +141,7 @@
                         <x-tabler::badge color="red" variant="light" class="badge-pill">Sale</x-tabler::badge>
                     </div>
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::badge color="primary" class="badge-pill"&gt;1&lt;/x-tabler::badge&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::badge color="primary" class="badge-pill"&gt;1&lt;/x-tabler::badge&gt;
 &lt;x-tabler::badge color="blue" class="badge-pill"&gt;99+&lt;/x-tabler::badge&gt;
 &lt;x-tabler::badge color="purple" class="badge-pill"&gt;New&lt;/x-tabler::badge&gt;</code></pre>
                     </div>
@@ -163,7 +160,7 @@
                     <div class="space-y">
                         {{-- Leading icons --}}
                         <div>
-                            <div class="mb-2 text-secondary">Leading Icons</div>
+                            <div class="text-secondary mb-2">Leading Icons</div>
                             <div class="badges-list">
                                 <x-tabler::badge icon="star" color="warning">Featured</x-tabler::badge>
                                 <x-tabler::badge icon="check" color="success">Verified</x-tabler::badge>
@@ -176,7 +173,7 @@
 
                         {{-- Trailing icons --}}
                         <div>
-                            <div class="mb-2 text-secondary">Trailing Icons</div>
+                            <div class="text-secondary mb-2">Trailing Icons</div>
                             <div class="badges-list">
                                 <x-tabler::badge icon-end="arrow-right" color="primary">Next</x-tabler::badge>
                                 <x-tabler::badge icon-end="external-link" color="info">Open</x-tabler::badge>
@@ -188,19 +185,19 @@
 
                         {{-- Icon-only badges --}}
                         <div>
-                            <div class="mb-2 text-secondary">Icon-Only Badges</div>
+                            <div class="text-secondary mb-2">Icon-Only Badges</div>
                             <div class="badges-list">
-                                <x-tabler::badge icon="star" iconOnly color="warning"/>
-                                <x-tabler::badge icon="heart" iconOnly color="red"/>
-                                <x-tabler::badge icon="check" iconOnly color="success"/>
-                                <x-tabler::badge icon="x" iconOnly color="danger"/>
-                                <x-tabler::badge icon="plus" iconOnly color="primary"/>
-                                <x-tabler::badge icon="minus" iconOnly color="secondary"/>
+                                <x-tabler::badge icon="star" iconOnly color="warning" />
+                                <x-tabler::badge icon="heart" iconOnly color="red" />
+                                <x-tabler::badge icon="check" iconOnly color="success" />
+                                <x-tabler::badge icon="x" iconOnly color="danger" />
+                                <x-tabler::badge icon="plus" iconOnly color="primary" />
+                                <x-tabler::badge icon="minus" iconOnly color="secondary" />
                             </div>
                         </div>
                     </div>
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::badge icon="star" color="warning"&gt;Featured&lt;/x-tabler::badge&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::badge icon="star" color="warning"&gt;Featured&lt;/x-tabler::badge&gt;
 &lt;x-tabler::badge icon-end="arrow-right" color="primary"&gt;Next&lt;/x-tabler::badge&gt;
 &lt;x-tabler::badge icon="star" iconOnly color="warning" /&gt;</code></pre>
                     </div>
@@ -219,7 +216,7 @@
                     <div class="space-y">
                         {{-- Small --}}
                         <div>
-                            <div class="mb-2 text-secondary">Small Badges</div>
+                            <div class="text-secondary mb-2">Small Badges</div>
                             <div class="badges-list">
                                 <x-tabler::badge size="sm" color="primary">Small</x-tabler::badge>
                                 <x-tabler::badge size="sm" color="blue" class="badge-pill">1</x-tabler::badge>
@@ -229,7 +226,7 @@
 
                         {{-- Medium (Default) --}}
                         <div>
-                            <div class="mb-2 text-secondary">Medium Badges (Default)</div>
+                            <div class="text-secondary mb-2">Medium Badges (Default)</div>
                             <div class="badges-list">
                                 <x-tabler::badge color="primary">Medium</x-tabler::badge>
                                 <x-tabler::badge color="blue" class="badge-pill">1</x-tabler::badge>
@@ -239,7 +236,7 @@
 
                         {{-- Large --}}
                         <div>
-                            <div class="mb-2 text-secondary">Large Badges</div>
+                            <div class="text-secondary mb-2">Large Badges</div>
                             <div class="badges-list">
                                 <x-tabler::badge size="lg" color="primary">Large</x-tabler::badge>
                                 <x-tabler::badge size="lg" color="blue" class="badge-pill">1</x-tabler::badge>
@@ -248,7 +245,7 @@
                         </div>
                     </div>
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::badge size="sm" color="primary"&gt;Small&lt;/x-tabler::badge&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::badge size="sm" color="primary"&gt;Small&lt;/x-tabler::badge&gt;
 &lt;x-tabler::badge color="primary"&gt;Medium&lt;/x-tabler::badge&gt;
 &lt;x-tabler::badge size="lg" color="primary"&gt;Large&lt;/x-tabler::badge&gt;</code></pre>
                     </div>
@@ -283,7 +280,7 @@
                         <x-tabler::badge color="warning">Pro</x-tabler::badge>
                     </h6>
                     <div class="mt-3">
-                        <pre class="p-3 rounded"><code>&lt;h2&gt;Product Title &lt;x-tabler::badge color="success"&gt;New&lt;/x-tabler::badge&gt;&lt;/h2&gt;</code></pre>
+                        <pre class="rounded p-3"><code>&lt;h2&gt;Product Title &lt;x-tabler::badge color="success"&gt;New&lt;/x-tabler::badge&gt;&lt;/h2&gt;</code></pre>
                     </div>
                 </x-tabler::cards.body>
             </x-tabler::cards.card>
@@ -312,7 +309,7 @@
                         <x-tabler::badge href="#" color="cyan" variant="light">Cyan</x-tabler::badge>
                     </div>
                     <div class="mt-3">
-                        <pre class="p-3 rounded"><code>&lt;x-tabler::badge href="/profile" color="blue" variant="light"&gt;View Profile&lt;/x-tabler::badge&gt;</code></pre>
+                        <pre class="rounded p-3"><code>&lt;x-tabler::badge href="/profile" color="blue" variant="light"&gt;View Profile&lt;/x-tabler::badge&gt;</code></pre>
                     </div>
                 </x-tabler::cards.body>
             </x-tabler::cards.card>
@@ -329,7 +326,7 @@
                     <div class="space-y">
                         {{-- Inline badges --}}
                         <div>
-                            <div class="mb-2 text-secondary">Inline Badges</div>
+                            <div class="text-secondary mb-2">Inline Badges</div>
                             <div class="btn-list">
                                 <button type="button" class="btn">
                                     Notifications
@@ -348,7 +345,7 @@
 
                         {{-- Positioned badges (with numbers) --}}
                         <div>
-                            <div class="mb-2 text-secondary">Positioned Notification Badges (with count)</div>
+                            <div class="text-secondary mb-2">Positioned Notification Badges (with count)</div>
                             <div class="btn-list">
                                 <button type="button" class="btn position-relative">
                                     Inbox
@@ -370,44 +367,43 @@
 
                         {{-- Dot indicators --}}
                         <div>
-                            <div class="mb-2 text-secondary">Dot Notification Indicators</div>
+                            <div class="text-secondary mb-2">Dot Notification Indicators</div>
                             <div class="btn-list">
                                 <button type="button" class="btn position-relative">
                                     Profile
-                                    <x-tabler::badge color="red" dot class="badge-notification"/>
+                                    <x-tabler::badge color="red" dot class="badge-notification" />
                                 </button>
                                 <button type="button" class="btn btn-primary position-relative">
                                     Dashboard
-                                    <x-tabler::badge color="green" dot class="badge-notification"/>
+                                    <x-tabler::badge color="green" dot class="badge-notification" />
                                 </button>
                                 <x-tabler::button icon="bell" iconOnly class="position-relative">
-                                    <x-tabler::badge color="red" dot class="badge-notification"/>
+                                    <x-tabler::badge color="red" dot class="badge-notification" />
                                 </x-tabler::button>
                             </div>
                         </div>
 
                         {{-- Blinking badges --}}
                         <div>
-                            <div class="mb-2 text-secondary">Blinking/Animated Badges</div>
+                            <div class="text-secondary mb-2">Blinking/Animated Badges</div>
                             <div class="btn-list">
                                 <button type="button" class="btn position-relative">
                                     Settings
-                                    <x-tabler::badge color="red" dot class="badge-notification badge-blink"/>
+                                    <x-tabler::badge color="red" dot class="badge-notification badge-blink" />
                                 </button>
                                 <button type="button" class="btn btn-primary position-relative">
                                     Updates
-                                    <x-tabler::badge color="red"
-                                                     class="badge-notification badge-pill badge-blink">3
+                                    <x-tabler::badge color="red" class="badge-notification badge-pill badge-blink">3
                                     </x-tabler::badge>
                                 </button>
                                 <x-tabler::button icon="bell" iconOnly class="position-relative">
-                                    <x-tabler::badge color="red" dot class="badge-notification badge-blink"/>
+                                    <x-tabler::badge color="red" dot class="badge-notification badge-blink" />
                                 </x-tabler::button>
                             </div>
                         </div>
                     </div>
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;!-- Inline badge --&gt;
+                        <pre class="rounded p-3"><code>&lt;!-- Inline badge --&gt;
 &lt;button class="btn"&gt;
     Notifications &lt;x-tabler::badge color="red" class="ms-2"&gt;4&lt;/x-tabler::badge&gt;
 &lt;/button&gt;
@@ -442,7 +438,7 @@
                     <div class="space-y">
                         {{-- Tags/Categories --}}
                         <div>
-                            <div class="mb-2 text-secondary">Tags/Categories</div>
+                            <div class="text-secondary mb-2">Tags/Categories</div>
                             <div class="badges-list">
                                 <x-tabler::badge color="blue" variant="light">Design</x-tabler::badge>
                                 <x-tabler::badge color="green" variant="light">Development</x-tabler::badge>
@@ -455,7 +451,7 @@
 
                         {{-- Status badges --}}
                         <div>
-                            <div class="mb-2 text-secondary">Status Indicators</div>
+                            <div class="text-secondary mb-2">Status Indicators</div>
                             <div class="badges-list">
                                 <x-tabler::badge icon="check" color="success">Active</x-tabler::badge>
                                 <x-tabler::badge icon="clock" color="warning">Pending</x-tabler::badge>
@@ -467,7 +463,7 @@
 
                         {{-- Skill tags --}}
                         <div>
-                            <div class="mb-2 text-secondary">Skill Tags</div>
+                            <div class="text-secondary mb-2">Skill Tags</div>
                             <div class="badges-list">
                                 <x-tabler::badge href="#" variant="outline" color="blue">PHP</x-tabler::badge>
                                 <x-tabler::badge href="#" variant="outline" color="indigo">Laravel
@@ -483,7 +479,7 @@
                         </div>
                     </div>
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;!-- Badge list wrapper --&gt;
+                        <pre class="rounded p-3"><code>&lt;!-- Badge list wrapper --&gt;
 &lt;div class="badges-list"&gt;
     &lt;x-tabler::badge color="blue" variant="light"&gt;Design&lt;/x-tabler::badge&gt;
     &lt;x-tabler::badge color="green" variant="light"&gt;Development&lt;/x-tabler::badge&gt;
@@ -503,76 +499,77 @@
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Prop</th>
-                                <th>Type</th>
-                                <th>Default</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Prop</th>
+                                    <th>Type</th>
+                                    <th>Default</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>color</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Badge color. Options: <code>primary</code>, <code>secondary</code>,
-                                    <code>success</code>,
-                                    <code>danger</code>, <code>warning</code>, <code>info</code>,
-                                    <code>blue</code>, <code>purple</code>, etc.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>variant</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Badge style variant. Options: <code>light</code> (subtle/pastel),
-                                    <code>outline</code>
-                                    (border only)
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>size</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Badge size. Options: <code>sm</code>, <code>lg</code> (omit for
-                                    default/medium)
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>icon</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Leading icon name (without <code>tabler-</code> prefix)</td>
-                            </tr>
-                            <tr>
-                                <td><code>iconEnd</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Trailing icon name (without <code>tabler-</code> prefix)</td>
-                            </tr>
-                            <tr>
-                                <td><code>iconOnly</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Icon-only badge with no text. Requires <code>icon</code> or
-                                    <code>iconEnd</code> prop
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>href</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>URL to link to. When set, renders as <code>&lt;a&gt;</code> instead of
-                                    <code>&lt;span&gt;</code></td>
-                            </tr>
-                            <tr>
-                                <td><code>dot</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Minimal dot indicator (for notifications)</td>
-                            </tr>
+                                <tr>
+                                    <td><code>color</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Badge color. Options: <code>primary</code>, <code>secondary</code>,
+                                        <code>success</code>,
+                                        <code>danger</code>, <code>warning</code>, <code>info</code>,
+                                        <code>blue</code>, <code>purple</code>, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>variant</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Badge style variant. Options: <code>light</code> (subtle/pastel),
+                                        <code>outline</code>
+                                        (border only)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>size</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Badge size. Options: <code>sm</code>, <code>lg</code> (omit for
+                                        default/medium)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>icon</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Leading icon name (without <code>tabler-</code> prefix)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>iconEnd</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Trailing icon name (without <code>tabler-</code> prefix)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>iconOnly</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Icon-only badge with no text. Requires <code>icon</code> or
+                                        <code>iconEnd</code> prop
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>href</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>URL to link to. When set, renders as <code>&lt;a&gt;</code> instead of
+                                        <code>&lt;span&gt;</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>dot</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Minimal dot indicator (for notifications)</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -624,40 +621,40 @@
                         for additional styling:</p>
 
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Class</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>badge-pill</code></td>
-                                <td>Rounded pill shape (good for counters and numbers)</td>
-                            </tr>
-                            <tr>
-                                <td><code>badge-blink</code></td>
-                                <td>Animated blinking effect to draw attention</td>
-                            </tr>
-                            <tr>
-                                <td><code>badge-notification</code></td>
-                                <td>Position badge in top-right corner (requires <code>position-relative</code>
-                                    on parent)
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>badges-list</code></td>
-                                <td>Container for multiple badges with proper spacing</td>
-                            </tr>
-                            <tr>
-                                <td><code>ms-2</code>, <code>me-2</code></td>
-                                <td>Margin utilities for spacing inline badges</td>
-                            </tr>
-                            <tr>
-                                <td><code>text-bg-secondary</code></td>
-                                <td>Bootstrap text + background combo class</td>
-                            </tr>
+                                <tr>
+                                    <td><code>badge-pill</code></td>
+                                    <td>Rounded pill shape (good for counters and numbers)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>badge-blink</code></td>
+                                    <td>Animated blinking effect to draw attention</td>
+                                </tr>
+                                <tr>
+                                    <td><code>badge-notification</code></td>
+                                    <td>Position badge in top-right corner (requires <code>position-relative</code>
+                                        on parent)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>badges-list</code></td>
+                                    <td>Container for multiple badges with proper spacing</td>
+                                </tr>
+                                <tr>
+                                    <td><code>ms-2</code>, <code>me-2</code></td>
+                                    <td>Margin utilities for spacing inline badges</td>
+                                </tr>
+                                <tr>
+                                    <td><code>text-bg-secondary</code></td>
+                                    <td>Bootstrap text + background combo class</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

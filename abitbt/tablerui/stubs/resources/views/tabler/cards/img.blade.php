@@ -48,10 +48,12 @@
     }
 @endphp
 
-@if($src)
-    @if($responsive && $ratio)
-<div {{ $attributes->merge(['class' => implode(' ', $imgClasses)]) }} style="background-image: url('{{ $src }}')"></div>
+@if ($src)
+    @if ($responsive && $ratio)
+        <div {{ $attributes->merge(['class' => implode(' ', $imgClasses)]) }}
+            style="background-image: url('{{ $src }}')"></div>
     @else
-<img src="{{ $src }}" alt="{{ $alt }}" {{ $attributes->merge(['class' => implode(' ', $imgClasses)]) }} />
+        <img src="{{ $src }}" alt="{{ $alt }}"
+            {{ $attributes->merge(['class' => implode(' ', $imgClasses)]) }} />
     @endif
 @endif

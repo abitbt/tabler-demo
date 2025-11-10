@@ -143,79 +143,76 @@
 
     // Icon-only button style
     // Don't add btn-icon if btn-action is already present (they conflict)
-    if ($iconOnly && !str_contains($attributes->get('class', ''), 'btn-action')) {
-        $classes[] = 'btn-icon';
+if ($iconOnly && !str_contains($attributes->get('class', ''), 'btn-action')) {
+    $classes[] = 'btn-icon';
+}
+
+// Loading state
+if ($loading) {
+    $classes[] = 'btn-loading';
+}
+
+// Disabled state (for links, add 'disabled' class)
+if ($disabled && $href) {
+    $classes[] = 'disabled';
+}
+
+// Icon animations
+if ($animate) {
+    $classes[] = 'btn-animate-icon';
+    if ($animate !== true) {
+        $classes[] = 'btn-animate-icon-' . $animate;
     }
+}
 
-    // Loading state
-    if ($loading) {
-        $classes[] = 'btn-loading';
+// Layout modifiers
+if ($fullWidth) {
+    $classes[] = 'w-100';
+}
+
+// Build element-specific attributes
+$elementAttributes = [];
+
+if ($element === 'a') {
+    $elementAttributes['href'] = $href;
+    $elementAttributes['role'] = 'button';
+    if ($disabled) {
+        $elementAttributes['aria-disabled'] = 'true';
+        $elementAttributes['tabindex'] = '-1';
     }
-
-    // Disabled state (for links, add 'disabled' class)
-    if ($disabled && $href) {
-        $classes[] = 'disabled';
+} else {
+    $elementAttributes['type'] = $type;
+    if ($disabled) {
+        $elementAttributes['disabled'] = 'disabled';
     }
+}
 
-    // Icon animations
-    if ($animate) {
-        $classes[] = 'btn-animate-icon';
-        if ($animate !== true) {
-            $classes[] = 'btn-animate-icon-' . $animate;
-        }
-    }
+// Accessibility: Auto-generate aria-label for icon-only buttons
+if ($iconOnly && !$attributes->has('aria-label')) {
+    $iconName = $icon ?? ($iconEnd ?? 'button');
+    $elementAttributes['aria-label'] = ucfirst(str_replace('-', ' ', $iconName));
+}
 
-    // Layout modifiers
-    if ($fullWidth) {
-        $classes[] = 'w-100';
-    }
-
-    // Build element-specific attributes
-    $elementAttributes = [];
-
-    if ($element === 'a') {
-        $elementAttributes['href'] = $href;
-        $elementAttributes['role'] = 'button';
-        if ($disabled) {
-            $elementAttributes['aria-disabled'] = 'true';
-            $elementAttributes['tabindex'] = '-1';
-        }
-    } else {
-        $elementAttributes['type'] = $type;
-        if ($disabled) {
-            $elementAttributes['disabled'] = 'disabled';
-        }
-    }
-
-    // Accessibility: Auto-generate aria-label for icon-only buttons
-    if ($iconOnly && !$attributes->has('aria-label')) {
-        $iconName = $icon ?? $iconEnd ?? 'button';
-        $elementAttributes['aria-label'] = ucfirst(str_replace('-', ' ', $iconName));
-    }
-
-    // Prepare icon component names (add 'tabler-' prefix)
-    $leadingIcon = $icon ? 'tabler-' . $icon : null;
-    $trailingIcon = $iconEnd ? 'tabler-' . $iconEnd : null;
+// Prepare icon component names (add 'tabler-' prefix)
+$leadingIcon = $icon ? 'tabler-' . $icon : null;
+$trailingIcon = $iconEnd ? 'tabler-' . $iconEnd : null;
 @endphp
 
-<{{ $element }}
-    {{ $attributes->merge(['class' => implode(' ', $classes)]) }}
-    @foreach($elementAttributes as $attr => $value)
-        @if(is_bool($value))
+<{{ $element }} {{ $attributes->merge(['class' => implode(' ', $classes)]) }}
+    @foreach ($elementAttributes as $attr => $value)
+        @if (is_bool($value))
             {{ $attr }}
         @else
             {{ $attr }}="{{ $value }}"
-        @endif
-    @endforeach
->
+        @endif @endforeach>
     {{-- Leading icon or icon-only --}}
-    @if($iconOnly)
-        @if($leadingIcon || $trailingIcon)
+    @if ($iconOnly)
+        @if ($leadingIcon || $trailingIcon)
             <x-dynamic-component :component="$leadingIcon ?: $trailingIcon" class="icon" />
         @endif
     @else
         {{-- Leading icon for regular buttons --}}
-        @if($leadingIcon)
+        @if ($leadingIcon)
             <x-dynamic-component :component="$leadingIcon" class="icon" />
         @endif
 
@@ -223,8 +220,8 @@
         {{ $slot }}
 
         {{-- Trailing icon --}}
-        @if($trailingIcon)
+        @if ($trailingIcon)
             <x-dynamic-component :component="$trailingIcon" class="icon-end" />
         @endif
     @endif
-</{{ $element }}>
+    </{{ $element }}>

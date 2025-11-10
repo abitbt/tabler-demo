@@ -22,9 +22,5 @@
     </x-tabler::modals.modal>
 --}}
 
-<button
-    type="button"
-    {{ $attributes->merge(['class' => 'btn-close']) }}
-    data-bs-dismiss="modal"
-    aria-label="Close"
-></button>
+<button type="button" {{ $attributes->merge(['class' => 'btn-close']) }} data-bs-dismiss="modal"
+    aria-label="Close"></button>

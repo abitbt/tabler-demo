@@ -117,7 +117,7 @@
         <div class="row g-2 align-items-center">
             <div class="col">
                 {{-- Pretitle --}}
-                @if(isset($pretitle) || $pretitle)
+                @if (isset($pretitle) || $pretitle)
                     <div class="page-pretitle">
                         {{ $pretitle ?? $pretitle }}
                     </div>
@@ -125,7 +125,7 @@
 
                 {{-- Page Title --}}
                 <h2 class="page-title">
-                    @if($iconComponent)
+                    @if ($iconComponent)
                         <x-dynamic-component :component="$iconComponent" class="icon" />
                     @endif
 
@@ -133,7 +133,7 @@
                 </h2>
 
                 {{-- Subtitle/Description --}}
-                @if(isset($subtitle) || $subtitle)
+                @if (isset($subtitle) || $subtitle)
                     <div class="page-subtitle">
                         {{ $subtitle ?? $subtitle }}
                     </div>
@@ -142,7 +142,7 @@
 
             {{-- Actions --}}
             @isset($actions)
-                <div class="col-auto ms-auto d-print-none">
+                <div class="d-print-none col-auto ms-auto">
                     {{ $actions }}
                 </div>
             @endisset

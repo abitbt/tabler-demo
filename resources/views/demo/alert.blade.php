@@ -11,10 +11,7 @@
 @extends('layouts.app')
 
 @section('page-header')
-    <x-tabler::page-header
-        title="Alert Components"
-        subtitle="Comprehensive showcase of all alert variations"
-    />
+    <x-tabler::page-header title="Alert Components" subtitle="Comprehensive showcase of all alert variations" />
 @endsection
 
 @section('content')
@@ -45,7 +42,7 @@
                     </x-tabler::alert>
 
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::alert type="success" title="Success!"&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::alert type="success" title="Success!"&gt;
     Your changes have been saved.
 &lt;/x-tabler::alert&gt;
 &lt;x-tabler::alert type="danger" title="Error"&gt;
@@ -81,7 +78,7 @@
                     </x-tabler::alert>
 
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::alert type="success" icon="check" title="Completed!"&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::alert type="success" icon="check" title="Completed!"&gt;
     Your account has been created.
 &lt;/x-tabler::alert&gt;
 &lt;x-tabler::alert type="warning" icon="alert-triangle" title="Caution"&gt;
@@ -117,7 +114,7 @@
                     </x-tabler::alert>
 
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::alert type="success" dismissible title="Success!"&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::alert type="success" dismissible title="Success!"&gt;
     Click the × to dismiss.
 &lt;/x-tabler::alert&gt;
 &lt;x-tabler::alert type="info" icon="info-circle" dismissible title="Tip"&gt;
@@ -153,7 +150,7 @@
                     </x-tabler::alert>
 
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::alert type="success" important dismissible icon="check"&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::alert type="success" important dismissible icon="check"&gt;
     Payment processed successfully!
 &lt;/x-tabler::alert&gt;
 &lt;x-tabler::alert type="danger" important dismissible icon="alert-circle"&gt;
@@ -189,7 +186,7 @@
                     </x-tabler::alert>
 
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::alert type="success"&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::alert type="success"&gt;
     Your settings have been saved.
 &lt;/x-tabler::alert&gt;
 &lt;x-tabler::alert type="warning"&gt;
@@ -221,12 +218,13 @@
                     </x-tabler::alert>
 
                     <x-tabler::alert type="danger" title="Error">
-                        Payment failed. <a href="#" class="alert-link">Try again</a> or <a href="#" class="alert-link">contact
+                        Payment failed. <a href="#" class="alert-link">Try again</a> or <a href="#"
+                            class="alert-link">contact
                             support</a>.
                     </x-tabler::alert>
 
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::alert type="success" title="Success!"&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::alert type="success" title="Success!"&gt;
     Profile updated. &lt;a href="#" class="alert-link"&gt;View profile&lt;/a&gt;
 &lt;/x-tabler::alert&gt;</code></pre>
                     </div>
@@ -261,7 +259,7 @@
                     </x-tabler::alert>
 
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::alert type="success" dismissible&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::alert type="success" dismissible&gt;
     &lt;x-slot:title&gt;Update Available&lt;/x-slot:title&gt;
     A new version is ready.
     &lt;x-slot:actions&gt;
@@ -295,12 +293,12 @@
                     </x-tabler::alert>
 
                     <x-tabler::alert class="alert-facebook alert-important" dismissible icon="brand-facebook"
-                                     title="Facebook">
+                        title="Facebook">
                         Connect your Facebook account.
                     </x-tabler::alert>
 
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::alert class="alert-primary" title="Primary Alert"&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::alert class="alert-primary" title="Primary Alert"&gt;
     Primary color theme.
 &lt;/x-tabler::alert&gt;
 &lt;x-tabler::alert class="alert-lime" icon="check" title="Lime"&gt;
@@ -321,7 +319,7 @@
                 <x-tabler::cards.body>
                     <div class="space-y">
                         <div>
-                            <div class="mb-2 text-secondary">Success with List</div>
+                            <div class="text-secondary mb-2">Success with List</div>
                             <x-tabler::alert type="success" icon="check" dismissible>
                                 <x-slot:title>Account Created Successfully!</x-slot:title>
                                 <p class="mb-2">Welcome to our platform! Here's what you can do next:</p>
@@ -334,7 +332,7 @@
                         </div>
 
                         <div>
-                            <div class="mb-2 text-secondary">Important Warning with Requirements</div>
+                            <div class="text-secondary mb-2">Important Warning with Requirements</div>
                             <x-tabler::alert type="warning" icon="alert-triangle" important dismissible>
                                 <x-slot:title>Password Requirements Not Met</x-slot:title>
                                 <p class="mb-2">Your password must include:</p>
@@ -347,7 +345,7 @@
                         </div>
 
                         <div>
-                            <div class="mb-2 text-secondary">Info with Multiple Paragraphs</div>
+                            <div class="text-secondary mb-2">Info with Multiple Paragraphs</div>
                             <x-tabler::alert type="info" icon="info-circle">
                                 <x-slot:title>System Maintenance Scheduled</x-slot:title>
                                 <p class="mb-2">We will be performing scheduled maintenance on our servers this
@@ -360,7 +358,7 @@
                     </div>
 
                     <div class="mt-3">
-                                        <pre class="p-3 rounded"><code>&lt;x-tabler::alert type="success" icon="check" dismissible&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::alert type="success" icon="check" dismissible&gt;
     &lt;x-slot:title&gt;Account Created Successfully!&lt;/x-slot:title&gt;
     &lt;p class="mb-2"&gt;Welcome! Here's what you can do next:&lt;/p&gt;
     &lt;ul class="mb-0"&gt;
@@ -383,50 +381,52 @@
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Prop</th>
-                                <th>Type</th>
-                                <th>Default</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Prop</th>
+                                    <th>Type</th>
+                                    <th>Default</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>type</code></td>
-                                <td><span class="badge bg-azure-lt">string</span></td>
-                                <td><code>'info'</code></td>
-                                <td>Alert type. Options: <code>success</code>, <code>info</code>, <code>warning</code>,
-                                    <code>danger</code></td>
-                            </tr>
-                            <tr>
-                                <td><code>title</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Alert title/heading text</td>
-                            </tr>
-                            <tr>
-                                <td><code>icon</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Tabler icon name (without <code>tabler-</code> prefix). Example: <code>check</code>,
-                                    <code>alert-triangle</code></td>
-                            </tr>
-                            <tr>
-                                <td><code>dismissible</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Show close button to dismiss the alert</td>
-                            </tr>
-                            <tr>
-                                <td><code>important</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Use filled background style for more prominence (adds <code>alert-important</code>
-                                    class)
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td><code>type</code></td>
+                                    <td><span class="badge bg-azure-lt">string</span></td>
+                                    <td><code>'info'</code></td>
+                                    <td>Alert type. Options: <code>success</code>, <code>info</code>, <code>warning</code>,
+                                        <code>danger</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>title</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Alert title/heading text</td>
+                                </tr>
+                                <tr>
+                                    <td><code>icon</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Tabler icon name (without <code>tabler-</code> prefix). Example: <code>check</code>,
+                                        <code>alert-triangle</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>dismissible</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Show close button to dismiss the alert</td>
+                                </tr>
+                                <tr>
+                                    <td><code>important</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Use filled background style for more prominence (adds <code>alert-important</code>
+                                        class)
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -434,29 +434,29 @@
                     <div class="mt-4">
                         <h4>Available Slots</h4>
                         <div class="table-responsive">
-                            <table class="table table-vcenter">
+                            <table class="table-vcenter table">
                                 <thead>
-                                <tr>
-                                    <th>Slot</th>
-                                    <th>Description</th>
-                                </tr>
+                                    <tr>
+                                        <th>Slot</th>
+                                        <th>Description</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td><code>default</code></td>
-                                    <td>Main alert content/message. Supports HTML, text, lists, and other markup.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>title</code></td>
-                                    <td>Optional slot for custom title markup (alternative to <code>title</code> prop)
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><code>actions</code></td>
-                                    <td>Optional slot for action buttons. Buttons are wrapped in a <code>btn-list</code>
-                                        container.
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td><code>default</code></td>
+                                        <td>Main alert content/message. Supports HTML, text, lists, and other markup.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>title</code></td>
+                                        <td>Optional slot for custom title markup (alternative to <code>title</code> prop)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>actions</code></td>
+                                        <td>Optional slot for action buttons. Buttons are wrapped in a <code>btn-list</code>
+                                            container.
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -474,7 +474,8 @@
                             <li>Dismissible alerts require Bootstrap 5's JavaScript for the close functionality. The
                                 dismiss button uses <code>data-bs-dismiss="alert"</code>.
                             </li>
-                            <li>When an <code>icon</code> is present, the alert uses <code>&lt;div class="alert-icon"&gt;</code>
+                            <li>When an <code>icon</code> is present, the alert uses <code>&lt;div
+                                    class="alert-icon"&gt;</code>
                                 wrapper for the icon.
                             </li>
                             <li>Titles use <code>&lt;h4 class="alert-heading"&gt;</code> and descriptions use <code>&lt;div
@@ -489,8 +490,10 @@
                             <li>The component automatically includes <code>role="alert"</code> for accessibility.</li>
                             <li>You can use custom colors by applying <code>class="alert-{color}"</code> for any Tabler
                                 color: <code>blue</code>, <code>azure</code>, <code>indigo</code>, <code>purple</code>,
-                                <code>pink</code>, <code>red</code>, <code>orange</code>, <code>yellow</code>, <code>lime</code>,
-                                <code>green</code>, <code>teal</code>, <code>cyan</code>, <code>facebook</code>, <code>twitter</code>,
+                                <code>pink</code>, <code>red</code>, <code>orange</code>, <code>yellow</code>,
+                                <code>lime</code>,
+                                <code>green</code>, <code>teal</code>, <code>cyan</code>, <code>facebook</code>,
+                                <code>twitter</code>,
                                 <code>linkedin</code>, <code>google</code>, <code>youtube</code>, etc.
                             </li>
                         </ul>
@@ -511,36 +514,36 @@
                         additional styling:</p>
 
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Class</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>alert-{color}</code></td>
-                                <td>Any Tabler color: <code>primary</code>, <code>secondary</code>, <code>lime</code>,
-                                    <code>cyan</code>, <code>facebook</code>, etc.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><code>alert-important</code></td>
-                                <td>Filled background style (also available via <code>important</code> prop)</td>
-                            </tr>
-                            <tr>
-                                <td><code>alert-dismissible</code></td>
-                                <td>Can be closed (also available via <code>dismissible</code> prop)</td>
-                            </tr>
-                            <tr>
-                                <td><code>alert-link</code></td>
-                                <td>Apply to <code>&lt;a&gt;</code> tags within alerts for proper link styling</td>
-                            </tr>
-                            <tr>
-                                <td><code>mb-3</code>, <code>mt-3</code></td>
-                                <td>Margin utilities for spacing between alerts</td>
-                            </tr>
+                                <tr>
+                                    <td><code>alert-{color}</code></td>
+                                    <td>Any Tabler color: <code>primary</code>, <code>secondary</code>, <code>lime</code>,
+                                        <code>cyan</code>, <code>facebook</code>, etc.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>alert-important</code></td>
+                                    <td>Filled background style (also available via <code>important</code> prop)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>alert-dismissible</code></td>
+                                    <td>Can be closed (also available via <code>dismissible</code> prop)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>alert-link</code></td>
+                                    <td>Apply to <code>&lt;a&gt;</code> tags within alerts for proper link styling</td>
+                                </tr>
+                                <tr>
+                                    <td><code>mb-3</code>, <code>mt-3</code></td>
+                                    <td>Margin utilities for spacing between alerts</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

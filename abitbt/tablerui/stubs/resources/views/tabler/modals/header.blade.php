@@ -36,13 +36,13 @@
 ])
 
 <div {{ $attributes->merge(['class' => 'modal-header']) }}>
-    @if(isset($title) && $title)
+    @if (isset($title) && $title)
         <h5 class="modal-title">{{ $title }}</h5>
     @endif
 
     {{ $slot }}
 
-    @unless($hideClose)
+    @unless ($hideClose)
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     @endunless
 </div>

@@ -84,36 +84,32 @@
     $errorMessage = $error ?? ($name ? $errors->first($name) : null);
 @endphp
 
-@if($wrapper)
-<div class="mb-3">
+@if ($wrapper)
+    <div class="mb-3">
 @endif
-    @if($label)
-        <label for="{{ $fileId }}" class="form-label">
-            {{ $label }}
-            @if($required)
-                <span class="text-danger">*</span>
-            @endif
-        </label>
-    @endif
+@if ($label)
+    <label for="{{ $fileId }}" class="form-label">
+        {{ $label }}
+        @if ($required)
+            <span class="text-danger">*</span>
+        @endif
+    </label>
+@endif
 
-    @if($help)
-        <small class="form-hint">{{ $help }}</small>
-    @endif
+@if ($help)
+    <small class="form-hint">{{ $help }}</small>
+@endif
 
-    <input
-        type="file"
-        id="{{ $fileId }}"
-        @if($name) name="{{ $name }}{{ $multiple ? '[]' : '' }}" @endif
-        @if($accept) accept="{{ $accept }}" @endif
-        @if($multiple) multiple @endif
-        @if($required) required @endif
-        @if($disabled) disabled @endif
-        {{ $attributes->merge(['class' => implode(' ', $fileClasses)]) }}
-    />
+<input type="file" id="{{ $fileId }}"
+    @if ($name) name="{{ $name }}{{ $multiple ? '[]' : '' }}" @endif
+    @if ($accept) accept="{{ $accept }}" @endif
+    @if ($multiple) multiple @endif @if ($required) required @endif
+    @if ($disabled) disabled @endif
+    {{ $attributes->merge(['class' => implode(' ', $fileClasses)]) }} />
 
-    @if($errorMessage)
-        <div class="invalid-feedback d-block">{{ $errorMessage }}</div>
-    @endif
-@if($wrapper)
-</div>
+@if ($errorMessage)
+    <div class="invalid-feedback d-block">{{ $errorMessage }}</div>
+@endif
+@if ($wrapper)
+    </div>
 @endif

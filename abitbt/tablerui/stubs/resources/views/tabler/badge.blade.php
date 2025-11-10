@@ -142,80 +142,77 @@
         } else {
             // Solid style: bg-{color} text-{color}-fg
             // Note: Dot badges don't need text color class (no text content)
-            $classes[] = 'bg-' . $color;
-            if (!$dot) {
-                $classes[] = 'text-' . $color . '-fg';
-            }
+        $classes[] = 'bg-' . $color;
+        if (!$dot) {
+            $classes[] = 'text-' . $color . '-fg';
         }
-    } elseif ($variant === 'outline') {
-        // Outline without color
-        $classes[] = 'badge-outline';
     }
+} elseif ($variant === 'outline') {
+    // Outline without color
+    $classes[] = 'badge-outline';
+}
 
-    // Size modifiers
-    if ($size && $size !== 'md') {
-        $classes[] = 'badge-' . $size;
-    }
+// Size modifiers
+if ($size && $size !== 'md') {
+    $classes[] = 'badge-' . $size;
+}
 
-    // Dot indicator
-    if ($dot) {
-        $classes[] = 'badge-dot';
-    }
+// Dot indicator
+if ($dot) {
+    $classes[] = 'badge-dot';
+}
 
-    // Icon-only badge style
-    if ($iconOnly) {
-        $classes[] = 'badge-icononly';
-    }
+// Icon-only badge style
+if ($iconOnly) {
+    $classes[] = 'badge-icononly';
+}
 
-    // Build element-specific attributes
-    $elementAttributes = [];
+// Build element-specific attributes
+$elementAttributes = [];
 
-    if ($element === 'a') {
-        $elementAttributes['href'] = $href;
-    }
+if ($element === 'a') {
+    $elementAttributes['href'] = $href;
+}
 
-    // Accessibility: Auto-generate aria-label for icon-only badges
-    if ($iconOnly && !$attributes->has('aria-label')) {
-        $iconName = $icon ?? $iconEnd ?? 'badge';
-        $elementAttributes['aria-label'] = ucfirst(str_replace('-', ' ', $iconName));
-    }
+// Accessibility: Auto-generate aria-label for icon-only badges
+if ($iconOnly && !$attributes->has('aria-label')) {
+    $iconName = $icon ?? ($iconEnd ?? 'badge');
+    $elementAttributes['aria-label'] = ucfirst(str_replace('-', ' ', $iconName));
+}
 
-    // Prepare icon component names (add 'tabler-' prefix)
-    $leadingIcon = $icon ? 'tabler-' . $icon : null;
-    $trailingIcon = $iconEnd ? 'tabler-' . $iconEnd : null;
+// Prepare icon component names (add 'tabler-' prefix)
+$leadingIcon = $icon ? 'tabler-' . $icon : null;
+$trailingIcon = $iconEnd ? 'tabler-' . $iconEnd : null;
 @endphp
 
-<{{ $element }}
-    {{ $attributes->merge(['class' => implode(' ', $classes)]) }}
-    @foreach($elementAttributes as $attr => $value)
-        @if(is_bool($value))
+<{{ $element }} {{ $attributes->merge(['class' => implode(' ', $classes)]) }}
+    @foreach ($elementAttributes as $attr => $value)
+        @if (is_bool($value))
             {{ $attr }}
         @else
             {{ $attr }}="{{ $value }}"
-        @endif
-    @endforeach
->
+        @endif @endforeach>
     {{-- Icon-only badge (no text) --}}
-    @if($iconOnly)
-        @if($leadingIcon || $trailingIcon)
+    @if ($iconOnly)
+        @if ($leadingIcon || $trailingIcon)
             <x-dynamic-component :component="$leadingIcon ?: $trailingIcon" class="icon" />
         @endif
-    {{-- Dot indicator (no text or icon) --}}
+        {{-- Dot indicator (no text or icon) --}}
     @elseif($dot)
         {{-- Dot has no content, only visual indicator --}}
-        @if($slot->hasActualContent())
+        @if ($slot->hasActualContent())
             <span class="visually-hidden">{{ $slot }}</span>
         @endif
     @else
         {{-- Regular badge with optional icons and text --}}
-        @if($leadingIcon)
+        @if ($leadingIcon)
             <x-dynamic-component :component="$leadingIcon" class="icon" />
         @endif
 
         {{ $slot }}
 
-        @if($trailingIcon)
+        @if ($trailingIcon)
             <x-dynamic-component :component="$trailingIcon" class="icon" />
         @endif
     @endif
-</{{ $element }}>
+    </{{ $element }}>

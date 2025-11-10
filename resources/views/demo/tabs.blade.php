@@ -17,10 +17,7 @@
 @extends('layouts.app')
 
 @section('page-header')
-    <x-tabler::page-header
-        title="Tabs Components"
-        subtitle="Comprehensive showcase of all tabs variations"
-    />
+    <x-tabler::page-header title="Tabs Components" subtitle="Comprehensive showcase of all tabs variations" />
 @endsection
 
 @section('content')
@@ -33,7 +30,7 @@
                     <x-tabler::tabs.nav inCard>
                         <x-tabler::tabs.nav-item href="#tabs-home-1" active>Home</x-tabler::tabs.nav-item>
                         <x-tabler::tabs.nav-item href="#tabs-profile-1">Profile</x-tabler::tabs.nav-item>
-                        <x-tabler::tabs.nav-item href="#tabs-settings-1" icon="settings" iconOnly class="ms-auto"/>
+                        <x-tabler::tabs.nav-item href="#tabs-settings-1" icon="settings" iconOnly class="ms-auto" />
                     </x-tabler::tabs.nav>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
@@ -68,7 +65,7 @@
                     <x-tabler::tabs.nav inCard class="flex-row-reverse">
                         <x-tabler::tabs.nav-item href="#tabs-home-2" active>Home</x-tabler::tabs.nav-item>
                         <x-tabler::tabs.nav-item href="#tabs-profile-2">Profile</x-tabler::tabs.nav-item>
-                        <x-tabler::tabs.nav-item href="#tabs-settings-2" icon="settings" iconOnly class="me-auto"/>
+                        <x-tabler::tabs.nav-item href="#tabs-settings-2" icon="settings" iconOnly class="me-auto" />
                     </x-tabler::tabs.nav>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
@@ -264,10 +261,10 @@
             <x-tabler::cards.card>
                 <x-tabler::cards.header>
                     <x-tabler::tabs.nav inCard>
-                        <x-tabler::tabs.nav-item href="#tabs-home-8" active icon="home" iconOnly/>
-                        <x-tabler::tabs.nav-item href="#tabs-profile-8" icon="user" iconOnly/>
-                        <x-tabler::tabs.nav-item href="#tabs-bell-8" icon="bell" iconOnly/>
-                        <x-tabler::tabs.nav-item href="#tabs-settings-8" icon="settings" iconOnly/>
+                        <x-tabler::tabs.nav-item href="#tabs-home-8" active icon="home" iconOnly />
+                        <x-tabler::tabs.nav-item href="#tabs-profile-8" icon="user" iconOnly />
+                        <x-tabler::tabs.nav-item href="#tabs-bell-8" icon="bell" iconOnly />
+                        <x-tabler::tabs.nav-item href="#tabs-settings-8" icon="settings" iconOnly />
                     </x-tabler::tabs.nav>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
@@ -331,7 +328,7 @@
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
                     <h4>Basic Tabs in Card</h4>
-                    <pre class="p-3 rounded mb-4"><code>&lt;x-tabler::cards.card&gt;
+                    <pre class="mb-4 rounded p-3"><code>&lt;x-tabler::cards.card&gt;
     &lt;x-tabler::cards.header&gt;
         &lt;x-tabler::tabs.nav inCard&gt;
             &lt;x-tabler::tabs.nav-item href="#home" active&gt;Home&lt;/x-tabler::tabs.nav-item&gt;
@@ -358,24 +355,24 @@
 &lt;/x-tabler::cards.card&gt;</code></pre>
 
                     <h4>Tabs with Icons</h4>
-                    <pre class="p-3 rounded mb-4"><code>&lt;x-tabler::tabs.nav-item href="#home" active icon="home"&gt;Home&lt;/x-tabler::tabs.nav-item&gt;
+                    <pre class="mb-4 rounded p-3"><code>&lt;x-tabler::tabs.nav-item href="#home" active icon="home"&gt;Home&lt;/x-tabler::tabs.nav-item&gt;
 &lt;x-tabler::tabs.nav-item href="#profile" icon="user"&gt;Profile&lt;/x-tabler::tabs.nav-item&gt;</code></pre>
 
                     <h4>Icon-Only Tabs</h4>
-                    <pre class="p-3 rounded mb-4"><code>&lt;x-tabler::tabs.nav-item href="#home" active icon="home" iconOnly /&gt;
+                    <pre class="mb-4 rounded p-3"><code>&lt;x-tabler::tabs.nav-item href="#home" active icon="home" iconOnly /&gt;
 &lt;x-tabler::tabs.nav-item href="#settings" icon="settings" iconOnly class="ms-auto" /&gt;</code></pre>
 
                     <h4>Disabled Tabs</h4>
-                    <pre class="p-3 rounded mb-4"><code>&lt;x-tabler::tabs.nav-item href="#tab" disabled&gt;Disabled&lt;/x-tabler::tabs.nav-item&gt;</code></pre>
+                    <pre class="mb-4 rounded p-3"><code>&lt;x-tabler::tabs.nav-item href="#tab" disabled&gt;Disabled&lt;/x-tabler::tabs.nav-item&gt;</code></pre>
 
                     <h4>Pills Style</h4>
-                    <pre class="p-3 rounded mb-4"><code>&lt;x-tabler::tabs.nav inCard pills&gt;
+                    <pre class="mb-4 rounded p-3"><code>&lt;x-tabler::tabs.nav inCard pills&gt;
     &lt;x-tabler::tabs.nav-item href="#tab1" active&gt;Tab 1&lt;/x-tabler::tabs.nav-item&gt;
     &lt;x-tabler::tabs.nav-item href="#tab2"&gt;Tab 2&lt;/x-tabler::tabs.nav-item&gt;
 &lt;/x-tabler::tabs.nav&gt;</code></pre>
 
                     <h4>Fill and Justified Layouts</h4>
-                    <pre class="p-3 rounded"><code>&lt;x-tabler::tabs.nav inCard fill&gt;...&lt;/x-tabler::tabs.nav&gt;
+                    <pre class="rounded p-3"><code>&lt;x-tabler::tabs.nav inCard fill&gt;...&lt;/x-tabler::tabs.nav&gt;
 &lt;x-tabler::tabs.nav inCard justified&gt;...&lt;/x-tabler::tabs.nav&gt;</code></pre>
                 </x-tabler::cards.body>
             </x-tabler::cards.card>
@@ -391,108 +388,109 @@
                 <x-tabler::cards.body>
                     <h4>tabs.tabs Component</h4>
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Prop</th>
-                                <th>Type</th>
-                                <th>Default</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Prop</th>
+                                    <th>Type</th>
+                                    <th>Default</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>id</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Optional container ID attribute</td>
-                            </tr>
+                                <tr>
+                                    <td><code>id</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Optional container ID attribute</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <h4 class="mt-4">tabs.nav Component</h4>
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Prop</th>
-                                <th>Type</th>
-                                <th>Default</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Prop</th>
+                                    <th>Type</th>
+                                    <th>Default</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>inCard</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Whether tabs are inside a card header (adds card-header-tabs class)</td>
-                            </tr>
-                            <tr>
-                                <td><code>pills</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Use pills style instead of tabs (rounded background style)</td>
-                            </tr>
-                            <tr>
-                                <td><code>fill</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Make tabs fill full width proportionally based on content</td>
-                            </tr>
-                            <tr>
-                                <td><code>justified</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Make tabs equal width regardless of content length</td>
-                            </tr>
+                                <tr>
+                                    <td><code>inCard</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Whether tabs are inside a card header (adds card-header-tabs class)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>pills</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Use pills style instead of tabs (rounded background style)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>fill</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Make tabs fill full width proportionally based on content</td>
+                                </tr>
+                                <tr>
+                                    <td><code>justified</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Make tabs equal width regardless of content length</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <h4 class="mt-4">tabs.nav-item Component</h4>
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Prop</th>
-                                <th>Type</th>
-                                <th>Default</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Prop</th>
+                                    <th>Type</th>
+                                    <th>Default</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>href</code></td>
-                                <td><span class="badge bg-azure-lt">string</span></td>
-                                <td><code>'#'</code></td>
-                                <td>Target tab pane ID (e.g., "#home"). Must match pane's id attribute</td>
-                            </tr>
-                            <tr>
-                                <td><code>active</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Whether this tab is currently active/selected</td>
-                            </tr>
-                            <tr>
-                                <td><code>disabled</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Disable the tab link (adds disabled class, tabindex="-1", aria-disabled="true")</td>
-                            </tr>
-                            <tr>
-                                <td><code>icon</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Tabler icon name (without 'tabler-' prefix, e.g., "home", "user")</td>
-                            </tr>
-                            <tr>
-                                <td><code>iconOnly</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Show only icon without text (automatically adds aria-label for accessibility)</td>
-                            </tr>
+                                <tr>
+                                    <td><code>href</code></td>
+                                    <td><span class="badge bg-azure-lt">string</span></td>
+                                    <td><code>'#'</code></td>
+                                    <td>Target tab pane ID (e.g., "#home"). Must match pane's id attribute</td>
+                                </tr>
+                                <tr>
+                                    <td><code>active</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Whether this tab is currently active/selected</td>
+                                </tr>
+                                <tr>
+                                    <td><code>disabled</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Disable the tab link (adds disabled class, tabindex="-1", aria-disabled="true")
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>icon</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Tabler icon name (without 'tabler-' prefix, e.g., "home", "user")</td>
+                                </tr>
+                                <tr>
+                                    <td><code>iconOnly</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Show only icon without text (automatically adds aria-label for accessibility)</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -502,34 +500,34 @@
 
                     <h4 class="mt-4">tabs.pane Component</h4>
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Prop</th>
-                                <th>Type</th>
-                                <th>Default</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Prop</th>
+                                    <th>Type</th>
+                                    <th>Default</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>id</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Unique pane ID (must match href in nav-item without the # symbol)</td>
-                            </tr>
-                            <tr>
-                                <td><code>active</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Whether this pane is currently active/visible</td>
-                            </tr>
-                            <tr>
-                                <td><code>fade</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>true</code></td>
-                                <td>Enable fade transition (automatically adds show class when active)</td>
-                            </tr>
+                                <tr>
+                                    <td><code>id</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Unique pane ID (must match href in nav-item without the # symbol)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>active</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Whether this pane is currently active/visible</td>
+                                </tr>
+                                <tr>
+                                    <td><code>fade</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>true</code></td>
+                                    <td>Enable fade transition (automatically adds show class when active)</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -538,40 +536,40 @@
                         <h4>Available Slots</h4>
                         <p class="text-secondary">Named slots for flexible content placement.</p>
                         <div class="table-responsive">
-                            <table class="table table-vcenter">
+                            <table class="table-vcenter table">
                                 <thead>
-                                <tr>
-                                    <th>Component</th>
-                                    <th>Slot</th>
-                                    <th>Description</th>
-                                </tr>
+                                    <tr>
+                                        <th>Component</th>
+                                        <th>Slot</th>
+                                        <th>Description</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td><code>tabs.tabs</code></td>
-                                    <td><code>default</code></td>
-                                    <td>Contains nav and content components</td>
-                                </tr>
-                                <tr>
-                                    <td><code>tabs.nav</code></td>
-                                    <td><code>default</code></td>
-                                    <td>Contains nav-item components</td>
-                                </tr>
-                                <tr>
-                                    <td><code>tabs.nav-item</code></td>
-                                    <td><code>default</code></td>
-                                    <td>Tab label text (hidden when iconOnly is true)</td>
-                                </tr>
-                                <tr>
-                                    <td><code>tabs.content</code></td>
-                                    <td><code>default</code></td>
-                                    <td>Contains pane components</td>
-                                </tr>
-                                <tr>
-                                    <td><code>tabs.pane</code></td>
-                                    <td><code>default</code></td>
-                                    <td>Tab pane content (any HTML or components)</td>
-                                </tr>
+                                    <tr>
+                                        <td><code>tabs.tabs</code></td>
+                                        <td><code>default</code></td>
+                                        <td>Contains nav and content components</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>tabs.nav</code></td>
+                                        <td><code>default</code></td>
+                                        <td>Contains nav-item components</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>tabs.nav-item</code></td>
+                                        <td><code>default</code></td>
+                                        <td>Tab label text (hidden when iconOnly is true)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>tabs.content</code></td>
+                                        <td><code>default</code></td>
+                                        <td>Contains pane components</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>tabs.pane</code></td>
+                                        <td><code>default</code></td>
+                                        <td>Tab pane content (any HTML or components)</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -616,79 +614,79 @@
 
                     <h4>Nav Classes (on tabs.nav)</h4>
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Class</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>flex-row-reverse</code></td>
-                                <td>Reverse the order of tabs (right to left)</td>
-                            </tr>
-                            <tr>
-                                <td><code>nav-fill</code></td>
-                                <td>Tabs fill full width proportionally (use prop instead: <code>fill</code>)</td>
-                            </tr>
-                            <tr>
-                                <td><code>nav-justified</code></td>
-                                <td>Tabs have equal width (use prop instead: <code>justified</code>)</td>
-                            </tr>
-                            <tr>
-                                <td><code>card-header-tabs</code></td>
-                                <td>Applied automatically when <code>inCard</code> prop is true</td>
-                            </tr>
-                            <tr>
-                                <td><code>card-header-pills</code></td>
-                                <td>Applied automatically when <code>inCard</code> and <code>pills</code> props are true
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td><code>flex-row-reverse</code></td>
+                                    <td>Reverse the order of tabs (right to left)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>nav-fill</code></td>
+                                    <td>Tabs fill full width proportionally (use prop instead: <code>fill</code>)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>nav-justified</code></td>
+                                    <td>Tabs have equal width (use prop instead: <code>justified</code>)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>card-header-tabs</code></td>
+                                    <td>Applied automatically when <code>inCard</code> prop is true</td>
+                                </tr>
+                                <tr>
+                                    <td><code>card-header-pills</code></td>
+                                    <td>Applied automatically when <code>inCard</code> and <code>pills</code> props are true
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <h4 class="mt-4">Nav-Item Classes (on tabs.nav-item)</h4>
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Class</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>ms-auto</code></td>
-                                <td>Push tab to the right (useful for settings or action tabs)</td>
-                            </tr>
-                            <tr>
-                                <td><code>me-auto</code></td>
-                                <td>Push subsequent tabs to the right</td>
-                            </tr>
+                                <tr>
+                                    <td><code>ms-auto</code></td>
+                                    <td>Push tab to the right (useful for settings or action tabs)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>me-auto</code></td>
+                                    <td>Push subsequent tabs to the right</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <h4 class="mt-4">Pane Classes (on tabs.pane)</h4>
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Class</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>p-4</code>, <code>p-3</code></td>
-                                <td>Add padding inside tab pane (use Bootstrap spacing utilities)</td>
-                            </tr>
-                            <tr>
-                                <td><code>bg-light</code></td>
-                                <td>Add background color to tab pane</td>
-                            </tr>
+                                <tr>
+                                    <td><code>p-4</code>, <code>p-3</code></td>
+                                    <td>Add padding inside tab pane (use Bootstrap spacing utilities)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>bg-light</code></td>
+                                    <td>Add background color to tab pane</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

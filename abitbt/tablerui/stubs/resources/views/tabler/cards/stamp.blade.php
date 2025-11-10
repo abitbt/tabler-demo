@@ -34,7 +34,7 @@
 
 <div {{ $attributes->merge(['class' => implode(' ', $stampClasses)]) }}>
     <div class="card-stamp-icon bg-{{ $color }}">
-        @if($iconComponent)
+        @if ($iconComponent)
             <x-dynamic-component :component="$iconComponent" />
         @else
             {{ $slot }}

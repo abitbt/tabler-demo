@@ -37,8 +37,9 @@
 @endphp
 
 <div {{ $attributes->merge(['class' => implode(' ', $progressClasses)]) }}>
-    <div class="{{ implode(' ', $barClasses) }}" style="width: {{ $value }}%" role="progressbar" aria-valuenow="{{ $value }}" aria-valuemin="0" aria-valuemax="100">
-        @if($slot->isNotEmpty())
+    <div class="{{ implode(' ', $barClasses) }}" style="width: {{ $value }}%" role="progressbar"
+        aria-valuenow="{{ $value }}" aria-valuemin="0" aria-valuemax="100">
+        @if ($slot->isNotEmpty())
             <span>{{ $slot }}</span>
         @endif
     </div>

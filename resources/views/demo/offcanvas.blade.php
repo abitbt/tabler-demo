@@ -44,13 +44,14 @@
                                 <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">
                                     Top
                                 </button>
-                                <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">
+                                <button class="btn btn-primary" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasBottom">
                                     Bottom
                                 </button>
                             </div>
 
                             <div class="mt-3">
-                                <pre class="p-3 rounded"><code>&lt;x-tabler::offcanvas id="myOffcanvas" title="Menu"&gt;
+                                <pre class="rounded p-3"><code>&lt;x-tabler::offcanvas id="myOffcanvas" title="Menu"&gt;
     Content here
 &lt;/x-tabler::offcanvas&gt;
 
@@ -72,19 +73,22 @@
                         </x-tabler::cards.header>
                         <x-tabler::cards.body>
                             <div class="btn-list">
-                                <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop">
+                                <button class="btn btn-primary" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasWithBackdrop">
                                     With Backdrop (Default)
                                 </button>
-                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNoBackdrop">
+                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasNoBackdrop">
                                     No Backdrop
                                 </button>
-                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrollable">
+                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasScrollable">
                                     Allow Body Scroll
                                 </button>
                             </div>
 
                             <div class="mt-3">
-                                <pre class="p-3 rounded"><code>&lt;x-tabler::offcanvas id="noBackdrop" :backdrop="false"&gt;
+                                <pre class="rounded p-3"><code>&lt;x-tabler::offcanvas id="noBackdrop" :backdrop="false"&gt;
     No backdrop overlay
 &lt;/x-tabler::offcanvas&gt;
 
@@ -108,7 +112,8 @@
                                 <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSmall">
                                     Small (320px)
                                 </button>
-                                <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMedium">
+                                <button class="btn btn-primary" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasMedium">
                                     Medium (400px)
                                 </button>
                                 <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLarge">
@@ -120,7 +125,7 @@
                             </div>
 
                             <div class="mt-3">
-                                <pre class="p-3 rounded"><code>&lt;x-tabler::offcanvas id="large" class="offcanvas-lg"&gt;
+                                <pre class="rounded p-3"><code>&lt;x-tabler::offcanvas id="large" class="offcanvas-lg"&gt;
     Large offcanvas panel
 &lt;/x-tabler::offcanvas&gt;</code></pre>
                             </div>
@@ -141,7 +146,7 @@
                             </button>
 
                             <div class="mt-3">
-                                <pre class="p-3 rounded"><code>&lt;x-tabler::offcanvas id="custom"&gt;
+                                <pre class="rounded p-3"><code>&lt;x-tabler::offcanvas id="custom"&gt;
     &lt;x-slot:header&gt;
         &lt;div class="offcanvas-header bg-primary text-white"&gt;
             &lt;h5&gt;Custom Header&lt;/h5&gt;
@@ -153,7 +158,7 @@
     Content here
 
     &lt;x-slot:footer&gt;
-        &lt;div class="p-3 border-top"&gt;
+        &lt;div class="border-top p-3"&gt;
             &lt;button class="btn btn-primary"&gt;Save&lt;/button&gt;
         &lt;/div&gt;
     &lt;/x-slot:footer&gt;
@@ -172,23 +177,28 @@
                         </x-tabler::cards.header>
                         <x-tabler::cards.body>
                             <div class="btn-list">
-                                <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavigation">
+                                <button class="btn btn-primary" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasNavigation">
                                     <x-tabler-menu class="icon" />
                                     Mobile Navigation
                                 </button>
-                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSettings">
+                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasSettings">
                                     <x-tabler-settings class="icon" />
                                     Settings Panel
                                 </button>
-                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasCart">
                                     <x-tabler-shopping-cart class="icon" />
                                     Shopping Cart
                                 </button>
-                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNotifications">
+                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasNotifications">
                                     <x-tabler-bell class="icon" />
                                     Notifications
                                 </button>
-                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCookies">
+                                <button class="btn btn-outline-primary" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasCookies">
                                     <x-tabler-cookie class="icon" />
                                     Cookie Banner
                                 </button>
@@ -206,46 +216,49 @@
                         </x-tabler::cards.header>
                         <x-tabler::cards.body>
                             <div class="table-responsive">
-                                <table class="table table-vcenter">
+                                <table class="table-vcenter table">
                                     <thead>
-                                    <tr>
-                                        <th>Prop</th>
-                                        <th>Type</th>
-                                        <th>Default</th>
-                                        <th>Description</th>
-                                    </tr>
+                                        <tr>
+                                            <th>Prop</th>
+                                            <th>Type</th>
+                                            <th>Default</th>
+                                            <th>Description</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td><code>id</code></td>
-                                        <td><span class="badge bg-azure-lt">string</span></td>
-                                        <td><em>required</em></td>
-                                        <td>Unique ID for the offcanvas. Required for Bootstrap toggle functionality</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>title</code></td>
-                                        <td><span class="badge bg-azure-lt">string|null</span></td>
-                                        <td><code>null</code></td>
-                                        <td>Offcanvas title text displayed in header</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>placement</code></td>
-                                        <td><span class="badge bg-azure-lt">string</span></td>
-                                        <td><code>'start'</code></td>
-                                        <td>Position of offcanvas. Options: <code>start</code>, <code>end</code>, <code>top</code>, <code>bottom</code></td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>backdrop</code></td>
-                                        <td><span class="badge bg-purple-lt">bool</span></td>
-                                        <td><code>true</code></td>
-                                        <td>Show backdrop overlay. Set to <code>false</code> to disable</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>scroll</code></td>
-                                        <td><span class="badge bg-purple-lt">bool</span></td>
-                                        <td><code>false</code></td>
-                                        <td>Allow body scrolling when offcanvas is open</td>
-                                    </tr>
+                                        <tr>
+                                            <td><code>id</code></td>
+                                            <td><span class="badge bg-azure-lt">string</span></td>
+                                            <td><em>required</em></td>
+                                            <td>Unique ID for the offcanvas. Required for Bootstrap toggle functionality
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>title</code></td>
+                                            <td><span class="badge bg-azure-lt">string|null</span></td>
+                                            <td><code>null</code></td>
+                                            <td>Offcanvas title text displayed in header</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>placement</code></td>
+                                            <td><span class="badge bg-azure-lt">string</span></td>
+                                            <td><code>'start'</code></td>
+                                            <td>Position of offcanvas. Options: <code>start</code>, <code>end</code>,
+                                                <code>top</code>, <code>bottom</code>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>backdrop</code></td>
+                                            <td><span class="badge bg-purple-lt">bool</span></td>
+                                            <td><code>true</code></td>
+                                            <td>Show backdrop overlay. Set to <code>false</code> to disable</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>scroll</code></td>
+                                            <td><span class="badge bg-purple-lt">bool</span></td>
+                                            <td><code>false</code></td>
+                                            <td>Allow body scrolling when offcanvas is open</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -254,30 +267,30 @@
                                 <h4>Available Slots</h4>
                                 <p class="text-secondary">Named slots for flexible content placement.</p>
                                 <div class="table-responsive">
-                                    <table class="table table-vcenter">
+                                    <table class="table-vcenter table">
                                         <thead>
-                                        <tr>
-                                            <th>Slot</th>
-                                            <th>Description</th>
-                                        </tr>
+                                            <tr>
+                                                <th>Slot</th>
+                                                <th>Description</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td><code>default</code></td>
-                                            <td>Main offcanvas content (placed in offcanvas-body)</td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>title</code></td>
-                                            <td>Custom title markup (alternative to title prop)</td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>header</code></td>
-                                            <td>Custom header content (replaces entire default header)</td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>footer</code></td>
-                                            <td>Optional footer content (shown below body)</td>
-                                        </tr>
+                                            <tr>
+                                                <td><code>default</code></td>
+                                                <td>Main offcanvas content (placed in offcanvas-body)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>title</code></td>
+                                                <td>Custom title markup (alternative to title prop)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>header</code></td>
+                                                <td>Custom header content (replaces entire default header)</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>footer</code></td>
+                                                <td>Optional footer content (shown below body)</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -287,11 +300,14 @@
                                 <h4>Usage Notes</h4>
                                 <ul class="text-secondary">
                                     <li>Requires Bootstrap JavaScript for toggle functionality</li>
-                                    <li>Use <code>data-bs-toggle="offcanvas"</code> and <code>data-bs-target="#id"</code> on trigger elements</li>
+                                    <li>Use <code>data-bs-toggle="offcanvas"</code> and <code>data-bs-target="#id"</code>
+                                        on trigger elements</li>
                                     <li>The <code>id</code> prop is required and must be unique on the page</li>
-                                    <li>When <code>backdrop</code> is <code>false</code>, clicking outside won't close the offcanvas</li>
+                                    <li>When <code>backdrop</code> is <code>false</code>, clicking outside won't close the
+                                        offcanvas</li>
                                     <li>When <code>scroll</code> is <code>true</code>, the page body remains scrollable</li>
-                                    <li>Use Bootstrap data attributes for additional control: <code>data-bs-backdrop="static"</code>, etc.</li>
+                                    <li>Use Bootstrap data attributes for additional control:
+                                        <code>data-bs-backdrop="static"</code>, etc.</li>
                                 </ul>
                             </div>
                         </x-tabler::cards.body>
@@ -306,49 +322,50 @@
                             <x-slot:subtitle>Additional styling options via class attribute</x-slot>
                         </x-tabler::cards.header>
                         <x-tabler::cards.body>
-                            <p class="text-secondary">You can use these classes via the <code>class=""</code> attribute for additional styling:</p>
+                            <p class="text-secondary">You can use these classes via the <code>class=""</code> attribute
+                                for additional styling:</p>
 
                             <div class="table-responsive">
-                                <table class="table table-vcenter">
+                                <table class="table-vcenter table">
                                     <thead>
-                                    <tr>
-                                        <th>Class</th>
-                                        <th>Description</th>
-                                    </tr>
+                                        <tr>
+                                            <th>Class</th>
+                                            <th>Description</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td><code>offcanvas-sm</code></td>
-                                        <td>Small offcanvas width (320px) - for start/end placements</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>offcanvas-md</code></td>
-                                        <td>Medium offcanvas width (400px) - for start/end placements</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>offcanvas-lg</code></td>
-                                        <td>Large offcanvas width (500px) - for start/end placements</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>offcanvas-xl</code></td>
-                                        <td>Extra large offcanvas width (800px) - for start/end placements</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>h-auto</code></td>
-                                        <td>Auto height based on content - useful for top/bottom placements</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>h-25</code>, <code>h-50</code>, <code>h-75</code></td>
-                                        <td>Height percentages - for top/bottom placements</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>vh-100</code></td>
-                                        <td>Full viewport height</td>
-                                    </tr>
-                                    <tr>
-                                        <td><code>w-100</code>, <code>w-75</code>, <code>w-50</code></td>
-                                        <td>Custom width percentages - for start/end placements</td>
-                                    </tr>
+                                        <tr>
+                                            <td><code>offcanvas-sm</code></td>
+                                            <td>Small offcanvas width (320px) - for start/end placements</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>offcanvas-md</code></td>
+                                            <td>Medium offcanvas width (400px) - for start/end placements</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>offcanvas-lg</code></td>
+                                            <td>Large offcanvas width (500px) - for start/end placements</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>offcanvas-xl</code></td>
+                                            <td>Extra large offcanvas width (800px) - for start/end placements</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>h-auto</code></td>
+                                            <td>Auto height based on content - useful for top/bottom placements</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>h-25</code>, <code>h-50</code>, <code>h-75</code></td>
+                                            <td>Height percentages - for top/bottom placements</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>vh-100</code></td>
+                                            <td>Full viewport height</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>w-100</code>, <code>w-75</code>, <code>w-50</code></td>
+                                            <td>Custom width percentages - for start/end placements</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -373,10 +390,13 @@
 
                             <div class="mt-4">
                                 <h4>Bootstrap Data Attributes</h4>
-                                <p class="text-secondary">Control offcanvas behavior via data attributes on trigger elements:</p>
+                                <p class="text-secondary">Control offcanvas behavior via data attributes on trigger
+                                    elements:</p>
                                 <ul class="text-secondary">
-                                    <li><code>data-bs-toggle="offcanvas"</code> - Required to enable toggle functionality</li>
-                                    <li><code>data-bs-target="#offcanvasId"</code> - Required to specify which offcanvas to toggle</li>
+                                    <li><code>data-bs-toggle="offcanvas"</code> - Required to enable toggle functionality
+                                    </li>
+                                    <li><code>data-bs-target="#offcanvasId"</code> - Required to specify which offcanvas to
+                                    toggle</li>
                                     <li><code>data-bs-backdrop="true|false|static"</code> - Override backdrop behavior</li>
                                     <li><code>data-bs-scroll="true|false"</code> - Override scroll behavior</li>
                                     <li><code>data-bs-dismiss="offcanvas"</code> - Close button functionality</li>
@@ -459,7 +479,8 @@
         <x-slot:header>
             <div class="offcanvas-header bg-primary text-white">
                 <h5 class="offcanvas-title">Custom Styled Header</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
             </div>
         </x-slot:header>
 
@@ -467,7 +488,7 @@
         <p>You can style the header however you like using slots.</p>
 
         <x-slot:footer>
-            <div class="offcanvas-footer border-top p-3 d-flex gap-2">
+            <div class="offcanvas-footer border-top d-flex gap-2 p-3">
                 <button class="btn btn-primary">Save Changes</button>
                 <button class="btn" data-bs-dismiss="offcanvas">Cancel</button>
             </div>
@@ -504,7 +525,7 @@
         </div>
 
         <x-slot:footer>
-            <div class="p-3 border-top d-flex gap-2">
+            <div class="border-top d-flex gap-2 p-3">
                 <button class="btn btn-primary">Save Settings</button>
                 <button class="btn" data-bs-dismiss="offcanvas">Cancel</button>
             </div>
@@ -512,7 +533,7 @@
     </x-tabler::offcanvas>
 
     <x-tabler::offcanvas id="offcanvasCart" title="Shopping Cart" placement="end" class="offcanvas-lg">
-        <div class="d-flex align-items-center mb-3 pb-3 border-bottom">
+        <div class="d-flex align-items-center border-bottom mb-3 pb-3">
             <div class="avatar me-3" style="background-color: #e9ecef;">
                 <x-tabler-package class="icon" />
             </div>
@@ -522,7 +543,7 @@
             </div>
             <button class="btn btn-sm btn-ghost-danger"><x-tabler-trash class="icon" /></button>
         </div>
-        <div class="d-flex align-items-center mb-3 pb-3 border-bottom">
+        <div class="d-flex align-items-center border-bottom mb-3 pb-3">
             <div class="avatar me-3" style="background-color: #e9ecef;">
                 <x-tabler-package class="icon" />
             </div>
@@ -534,7 +555,7 @@
         </div>
 
         <x-slot:footer>
-            <div class="p-3 border-top">
+            <div class="border-top p-3">
                 <div class="d-flex justify-content-between mb-3">
                     <strong>Total:</strong>
                     <strong>$79.98</strong>
@@ -592,5 +613,4 @@
             </div>
         </div>
     </x-tabler::offcanvas>
-
 @endsection

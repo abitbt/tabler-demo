@@ -111,72 +111,67 @@
     $errorMessage = $error ?? ($name ? $errors->first($name) : null);
 @endphp
 
-@if($wrapper)
-<div class="mb-3">
+@if ($wrapper)
+    <div class="mb-3">
 @endif
-    {{-- Label --}}
-    @if($label)
-        <label for="{{ $inputId }}" class="form-label">
-            {{ $label }}
-            @if($required)
-                <span class="text-danger">*</span>
-            @endif
-        </label>
-    @endif
+{{-- Label --}}
+@if ($label)
+    <label for="{{ $inputId }}" class="form-label">
+        {{ $label }}
+        @if ($required)
+            <span class="text-danger">*</span>
+        @endif
+    </label>
+@endif
 
-    {{-- Help Text (above input) --}}
-    @if($help)
-        <small class="form-hint">{{ $help }}</small>
-    @endif
+{{-- Help Text (above input) --}}
+@if ($help)
+    <small class="form-hint">{{ $help }}</small>
+@endif
 
-    {{-- Input with optional icon wrapper --}}
-    @if($hasIcon)
-        <div class="input-icon @if($iconPosition === 'start') input-icon-start @endif">
-    @endif
+{{-- Input with optional icon wrapper --}}
+@if ($hasIcon)
+    <div class="input-icon @if ($iconPosition === 'start') input-icon-start @endif">
+@endif
 
-    {{-- Icon (start position) --}}
-    @if($hasIcon && $iconPosition === 'start')
-        <span class="input-icon-addon">
-            @if($loading)
-                <div class="spinner-border spinner-border-sm text-secondary" role="status"></div>
-            @elseif($icon)
-                <x-dynamic-component :component="'tabler-' . $icon" class="icon" />
-            @endif
-        </span>
-    @endif
+{{-- Icon (start position) --}}
+@if ($hasIcon && $iconPosition === 'start')
+    <span class="input-icon-addon">
+        @if ($loading)
+            <div class="spinner-border spinner-border-sm text-secondary" role="status"></div>
+        @elseif($icon)
+            <x-dynamic-component :component="'tabler-' . $icon" class="icon" />
+        @endif
+    </span>
+@endif
 
-    {{-- The actual input element --}}
-    <input
-        type="{{ $type }}"
-        id="{{ $inputId }}"
-        @if($name) name="{{ $name }}" @endif
-        value="{{ old($name, $value) }}"
-        @if($placeholder) placeholder="{{ $placeholder }}" @endif
-        @if($required) required @endif
-        @if($disabled) disabled @endif
-        @if($readonly) readonly @endif
-        {{ $attributes->merge(['class' => implode(' ', $inputClasses)]) }}
-    >
+{{-- The actual input element --}}
+<input type="{{ $type }}" id="{{ $inputId }}"
+    @if ($name) name="{{ $name }}" @endif value="{{ old($name, $value) }}"
+    @if ($placeholder) placeholder="{{ $placeholder }}" @endif
+    @if ($required) required @endif @if ($disabled) disabled @endif
+    @if ($readonly) readonly @endif
+    {{ $attributes->merge(['class' => implode(' ', $inputClasses)]) }}>
 
-    {{-- Icon (end position) --}}
-    @if($hasIcon && $iconPosition === 'end')
-        <span class="input-icon-addon">
-            @if($loading)
-                <div class="spinner-border spinner-border-sm text-secondary" role="status"></div>
-            @elseif($icon)
-                <x-dynamic-component :component="'tabler-' . $icon" class="icon" />
-            @endif
-        </span>
-    @endif
+{{-- Icon (end position) --}}
+@if ($hasIcon && $iconPosition === 'end')
+    <span class="input-icon-addon">
+        @if ($loading)
+            <div class="spinner-border spinner-border-sm text-secondary" role="status"></div>
+        @elseif($icon)
+            <x-dynamic-component :component="'tabler-' . $icon" class="icon" />
+        @endif
+    </span>
+@endif
 
-    @if($hasIcon)
-        </div>
-    @endif
+@if ($hasIcon)
+    </div>
+@endif
 
-    {{-- Error Message --}}
-    @if($errorMessage)
-        <div class="invalid-feedback d-block">{{ $errorMessage }}</div>
-    @endif
-@if($wrapper)
-</div>
+{{-- Error Message --}}
+@if ($errorMessage)
+    <div class="invalid-feedback d-block">{{ $errorMessage }}</div>
+@endif
+@if ($wrapper)
+    </div>
 @endif

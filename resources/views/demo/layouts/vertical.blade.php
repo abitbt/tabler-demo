@@ -7,10 +7,7 @@
 @extends('tabler::layouts.vertical')
 
 @section('page-header')
-    <x-tabler::page-header
-        title="Vertical Layout"
-        subtitle="Sidebar navigation layout for admin dashboards"
-    >
+    <x-tabler::page-header title="Vertical Layout" subtitle="Sidebar navigation layout for admin dashboards">
         <x-slot:pretitle>Demo</x-slot:pretitle>
         <x-slot:actions>
             <x-tabler::button color="primary" icon="plus">
@@ -43,7 +40,7 @@
 
                     <h3 class="mt-4">Configuration</h3>
                     <p>Set these variables before extending the layout:</p>
-                    <pre class="p-3 rounded"><code>@@php
+                    <pre class="rounded p-3"><code>@@php
                                 $sidebarDark = true;           // Dark theme (default: true)
                                 $sidebarPosition = 'left';     // 'left' or 'right' (default: 'left')
                                 $sidebarTransparent = false;   // Transparent background
@@ -59,7 +56,7 @@
 
                     <h3 class="mt-4">Navigation Structure</h3>
                     <p>The <code>$navItems</code> array supports simple links and dropdown menus:</p>
-                    <pre class="p-3 rounded"><code>$navItems = [
+                    <pre class="rounded p-3"><code>$navItems = [
     // Simple link
     [
         'title' => 'Dashboard',
@@ -91,7 +88,7 @@
                 <x-tabler::cards.body>
                     <div class="d-flex align-items-center">
                         <div class="subheader">Total Users</div>
-                        <div class="ms-auto lh-1">
+                        <div class="lh-1 ms-auto">
                             <span class="badge bg-green text-green-fg">+12%</span>
                         </div>
                     </div>
@@ -108,7 +105,7 @@
                 <x-tabler::cards.body>
                     <div class="d-flex align-items-center">
                         <div class="subheader">Revenue</div>
-                        <div class="ms-auto lh-1">
+                        <div class="lh-1 ms-auto">
                             <span class="badge bg-red text-red-fg">-3%</span>
                         </div>
                     </div>
@@ -125,7 +122,7 @@
                 <x-tabler::cards.body>
                     <div class="d-flex align-items-center">
                         <div class="subheader">Orders</div>
-                        <div class="ms-auto lh-1">
+                        <div class="lh-1 ms-auto">
                             <span class="badge bg-azure text-azure-fg">+8%</span>
                         </div>
                     </div>
@@ -142,7 +139,7 @@
                 <x-tabler::cards.body>
                     <div class="d-flex align-items-center">
                         <div class="subheader">Conversion</div>
-                        <div class="ms-auto lh-1">
+                        <div class="lh-1 ms-auto">
                             <span class="badge bg-yellow text-yellow-fg">+2%</span>
                         </div>
                     </div>
@@ -162,7 +159,7 @@
                     <x-slot:subtitle>Use light theme for the sidebar</x-slot>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                <pre class="mb-0"><code>@@php
+                    <pre class="mb-0"><code>@@php
                             $sidebarDark = false;
                         @@endphp
 @@extends('tabler::layouts.vertical')</code></pre>
@@ -177,7 +174,7 @@
                     <x-slot:subtitle>Position sidebar on the right</x-slot>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                <pre class="mb-0"><code>@@php
+                    <pre class="mb-0"><code>@@php
                             $sidebarPosition = 'right';
                         @@endphp
 @@extends('tabler::layouts.vertical')</code></pre>
@@ -192,7 +189,7 @@
                     <x-slot:subtitle>Modern transparent background</x-slot>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                <pre class="mb-0"><code>@@php
+                    <pre class="mb-0"><code>@@php
                             $sidebarTransparent = true;
                         @@endphp
 @@extends('tabler::layouts.vertical')</code></pre>
@@ -207,7 +204,7 @@
                     <x-slot:subtitle>Use any Tabler color</x-slot>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                <pre class="mb-0"><code>@@php
+                    <pre class="mb-0"><code>@@php
                             $sidebarBackground = 'primary';
                             $sidebarDark = true;
                         @@endphp
@@ -336,7 +333,7 @@
 @section('footer')
     <footer class="footer footer-transparent d-print-none">
         <div class="container-xl">
-            <div class="row text-center align-items-center flex-row-reverse">
+            <div class="row align-items-center flex-row-reverse text-center">
                 <div class="col-lg-auto ms-lg-auto">
                     <ul class="list-inline list-inline-dots mb-0">
                         <li class="list-inline-item"><a href="#" class="link-secondary">Documentation</a></li>
@@ -344,11 +341,11 @@
                         <li class="list-inline-item"><a href="#" class="link-secondary">Support</a></li>
                     </ul>
                 </div>
-                <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+                <div class="col-12 col-lg-auto mt-lg-0 mt-3">
                     <ul class="list-inline list-inline-dots mb-0">
                         <li class="list-inline-item">
-                            © {{ date('Y') }} <a href="#" class="link-secondary">Tabler UI Laravel</a>. Built with <a
-                                href="https://tabler.io" target="_blank" class="link-secondary">Tabler</a>.
+                            © {{ date('Y') }} <a href="#" class="link-secondary">Tabler UI Laravel</a>. Built
+                            with <a href="https://tabler.io" target="_blank" class="link-secondary">Tabler</a>.
                         </li>
                     </ul>
                 </div>

@@ -30,8 +30,6 @@
     </x-tabler::modals.modal>
 --}}
 
-@props([
-    'color',
-])
+@props(['color'])
 
 <div {{ $attributes->merge(['class' => 'modal-status bg-' . $color]) }}></div>

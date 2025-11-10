@@ -11,10 +11,7 @@
 @extends('layouts.app')
 
 @section('page-header')
-    <x-tabler::page-header
-        title="Toast Components"
-        subtitle="Comprehensive showcase of all toast variations"
-    />
+    <x-tabler::page-header title="Toast Components" subtitle="Comprehensive showcase of all toast variations" />
 @endsection
 
 @section('content')
@@ -28,17 +25,13 @@
                     <x-slot:subtitle>Simple toast with default settings</x-slot:subtitle>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                    <x-tabler::toast
-                        :show="true"
-                        title="Mallory Hulme"
-                        subtitle="11 mins ago"
-                        avatar="/static/avatars/002m.jpg"
-                    >
+                    <x-tabler::toast :show="true" title="Mallory Hulme" subtitle="11 mins ago"
+                        avatar="/static/avatars/002m.jpg">
                         Hello, world! This is a toast message.
                     </x-tabler::toast>
 
                     <div class="mt-3">
-                        <pre class="p-3 rounded"><code>&lt;x-tabler::toast
+                        <pre class="rounded p-3"><code>&lt;x-tabler::toast
     :show="true"
     title="Mallory Hulme"
     subtitle="11 mins ago"
@@ -59,16 +52,12 @@
                     <x-slot:subtitle>Title and subtitle only</x-slot:subtitle>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                    <x-tabler::toast
-                        :show="true"
-                        title="System Notification"
-                        subtitle="Just now"
-                    >
+                    <x-tabler::toast :show="true" title="System Notification" subtitle="Just now">
                         Your changes have been saved successfully.
                     </x-tabler::toast>
 
                     <div class="mt-3">
-                        <pre class="p-3 rounded"><code>&lt;x-tabler::toast
+                        <pre class="rounded p-3"><code>&lt;x-tabler::toast
     :show="true"
     title="System Notification"
     subtitle="Just now"
@@ -93,7 +82,7 @@
                     </x-tabler::toast>
 
                     <div class="mt-3">
-                        <pre class="p-3 rounded"><code>&lt;x-tabler::toast :show="true" :hideHeader="true"&gt;
+                        <pre class="rounded p-3"><code>&lt;x-tabler::toast :show="true" :hideHeader="true"&gt;
     This is a simple notification without a header.
 &lt;/x-tabler::toast&gt;</code></pre>
                     </div>
@@ -109,17 +98,12 @@
                     <x-slot:subtitle>No close button</x-slot:subtitle>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                    <x-tabler::toast
-                        :show="true"
-                        :dismissible="false"
-                        title="Important Notice"
-                        subtitle="2 mins ago"
-                    >
+                    <x-tabler::toast :show="true" :dismissible="false" title="Important Notice" subtitle="2 mins ago">
                         This notification cannot be dismissed by the user.
                     </x-tabler::toast>
 
                     <div class="mt-3">
-                        <pre class="p-3 rounded"><code>&lt;x-tabler::toast
+                        <pre class="rounded p-3"><code>&lt;x-tabler::toast
     :show="true"
     :dismissible="false"
     title="Important Notice"
@@ -140,25 +124,21 @@
                     <x-slot:subtitle>Includes custom HTML, buttons, and styling</x-slot:subtitle>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                    <x-tabler::toast
-                        :show="true"
-                        title="Cookie Notice"
-                        subtitle="Just now"
-                    >
+                    <x-tabler::toast :show="true" title="Cookie Notice" subtitle="Just now">
                         🍪&nbsp;Our site uses cookies. By continuing to use our site, you agree to our Cookie Policy.
-                        <div class="mt-2 pt-2 border-top">
+                        <div class="border-top mt-2 pt-2">
                             <a href="#" class="btn btn-primary btn-sm">I understand</a>
                         </div>
                     </x-tabler::toast>
 
                     <div class="mt-3">
-                        <pre class="p-3 rounded"><code>&lt;x-tabler::toast
+                        <pre class="rounded p-3"><code>&lt;x-tabler::toast
     :show="true"
     title="Cookie Notice"
     subtitle="Just now"
 &gt;
     🍪&amp;nbsp;Our site uses cookies.
-    &lt;div class="mt-2 pt-2 border-top"&gt;
+    &lt;div class="border-top mt-2 pt-2"&gt;
         &lt;a href="#" class="btn btn-primary btn-sm"&gt;I understand&lt;/a&gt;
     &lt;/div&gt;
 &lt;/x-tabler::toast&gt;</code></pre>
@@ -188,7 +168,7 @@
                     </div>
 
                     <div class="mt-3">
-                        <pre class="p-3 rounded"><code>&lt;!-- Trigger buttons --&gt;
+                        <pre class="rounded p-3"><code>&lt;!-- Trigger buttons --&gt;
 &lt;x-tabler::button color="primary" data-bs-toggle="toast" data-bs-target="#toast-success"&gt;
     Show Success Toast
 &lt;/x-tabler::button&gt;
@@ -217,7 +197,7 @@
                     </x-tabler::button>
 
                     <div class="mt-3">
-                        <pre class="p-3 rounded"><code>&lt;x-tabler::toast
+                        <pre class="rounded p-3"><code>&lt;x-tabler::toast
     id="toast-autohide"
     :autohide="true"
     :delay="3000"
@@ -243,12 +223,12 @@
                         Show First Toast
                     </x-tabler::button>
                     <x-tabler::button color="secondary" data-bs-toggle="toast" data-bs-target="#toast-stack-2"
-                                      class="ms-2">
+                        class="ms-2">
                         Show Second Toast
                     </x-tabler::button>
 
                     <div class="mt-3">
-                        <pre class="p-3 rounded"><code>&lt;div class="toast-container position-fixed bottom-0 end-0 p-3"&gt;
+                        <pre class="rounded p-3"><code>&lt;div class="toast-container position-fixed bottom-0 end-0 p-3"&gt;
     &lt;x-tabler::toast id="toast-1" title="First" subtitle="now"&gt;
         First notification
     &lt;/x-tabler::toast&gt;
@@ -270,70 +250,70 @@
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Prop</th>
-                                <th>Type</th>
-                                <th>Default</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Prop</th>
+                                    <th>Type</th>
+                                    <th>Default</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>id</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>HTML ID attribute for the toast element. Required for JavaScript triggers.</td>
-                            </tr>
-                            <tr>
-                                <td><code>show</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Whether to show the toast immediately. Adds 'show' class to make toast visible.</td>
-                            </tr>
-                            <tr>
-                                <td><code>autohide</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Whether to automatically hide the toast after the specified delay.</td>
-                            </tr>
-                            <tr>
-                                <td><code>delay</code></td>
-                                <td><span class="badge bg-green-lt">int</span></td>
-                                <td><code>5000</code></td>
-                                <td>Milliseconds before auto-hiding the toast (only applies if autohide is true).</td>
-                            </tr>
-                            <tr>
-                                <td><code>hideHeader</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>false</code></td>
-                                <td>Hide the toast header section entirely. Only shows the body content.</td>
-                            </tr>
-                            <tr>
-                                <td><code>avatar</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>URL to avatar image. Renders as small circular avatar in header.</td>
-                            </tr>
-                            <tr>
-                                <td><code>title</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Toast title or author name displayed in header.</td>
-                            </tr>
-                            <tr>
-                                <td><code>subtitle</code></td>
-                                <td><span class="badge bg-azure-lt">string|null</span></td>
-                                <td><code>null</code></td>
-                                <td>Timestamp or additional info displayed as small text in header.</td>
-                            </tr>
-                            <tr>
-                                <td><code>dismissible</code></td>
-                                <td><span class="badge bg-purple-lt">bool</span></td>
-                                <td><code>true</code></td>
-                                <td>Show close button in header. Set to false for non-dismissible toasts.</td>
-                            </tr>
+                                <tr>
+                                    <td><code>id</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>HTML ID attribute for the toast element. Required for JavaScript triggers.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>show</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Whether to show the toast immediately. Adds 'show' class to make toast visible.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>autohide</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Whether to automatically hide the toast after the specified delay.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>delay</code></td>
+                                    <td><span class="badge bg-green-lt">int</span></td>
+                                    <td><code>5000</code></td>
+                                    <td>Milliseconds before auto-hiding the toast (only applies if autohide is true).</td>
+                                </tr>
+                                <tr>
+                                    <td><code>hideHeader</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>false</code></td>
+                                    <td>Hide the toast header section entirely. Only shows the body content.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>avatar</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>URL to avatar image. Renders as small circular avatar in header.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>title</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Toast title or author name displayed in header.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>subtitle</code></td>
+                                    <td><span class="badge bg-azure-lt">string|null</span></td>
+                                    <td><code>null</code></td>
+                                    <td>Timestamp or additional info displayed as small text in header.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>dismissible</code></td>
+                                    <td><span class="badge bg-purple-lt">bool</span></td>
+                                    <td><code>true</code></td>
+                                    <td>Show close button in header. Set to false for non-dismissible toasts.</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -342,18 +322,18 @@
                         <h4>Available Slots</h4>
                         <p class="text-secondary">Named slots for flexible content placement.</p>
                         <div class="table-responsive">
-                            <table class="table table-vcenter">
+                            <table class="table-vcenter table">
                                 <thead>
-                                <tr>
-                                    <th>Slot</th>
-                                    <th>Description</th>
-                                </tr>
+                                    <tr>
+                                        <th>Slot</th>
+                                        <th>Description</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td><code>default</code></td>
-                                    <td>Main toast message content. Supports plain text and HTML.</td>
-                                </tr>
+                                    <tr>
+                                        <td><code>default</code></td>
+                                        <td>Main toast message content. Supports plain text and HTML.</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -394,34 +374,34 @@
                         additional styling:</p>
 
                     <div class="table-responsive">
-                        <table class="table table-vcenter">
+                        <table class="table-vcenter table">
                             <thead>
-                            <tr>
-                                <th>Class</th>
-                                <th>Description</th>
-                            </tr>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Description</th>
+                                </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td><code>toast-container</code></td>
-                                <td>Container for positioning toasts. Use with position utilities.</td>
-                            </tr>
-                            <tr>
-                                <td><code>position-fixed</code></td>
-                                <td>Fix toast container position on viewport</td>
-                            </tr>
-                            <tr>
-                                <td><code>bottom-0</code>, <code>top-0</code></td>
-                                <td>Position container at bottom or top of viewport</td>
-                            </tr>
-                            <tr>
-                                <td><code>end-0</code>, <code>start-0</code></td>
-                                <td>Position container at right or left edge</td>
-                            </tr>
-                            <tr>
-                                <td><code>p-3</code>, <code>p-2</code></td>
-                                <td>Add padding around toast container</td>
-                            </tr>
+                                <tr>
+                                    <td><code>toast-container</code></td>
+                                    <td>Container for positioning toasts. Use with position utilities.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>position-fixed</code></td>
+                                    <td>Fix toast container position on viewport</td>
+                                </tr>
+                                <tr>
+                                    <td><code>bottom-0</code>, <code>top-0</code></td>
+                                    <td>Position container at bottom or top of viewport</td>
+                                </tr>
+                                <tr>
+                                    <td><code>end-0</code>, <code>start-0</code></td>
+                                    <td>Position container at right or left edge</td>
+                                </tr>
+                                <tr>
+                                    <td><code>p-3</code>, <code>p-2</code></td>
+                                    <td>Add padding around toast container</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

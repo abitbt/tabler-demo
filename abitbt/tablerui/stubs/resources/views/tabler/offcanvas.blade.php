@@ -135,32 +135,18 @@
     </x-tabler::offcanvas>
 --}}
 
-@props([
-    'id',
-    'title' => null,
-    'placement' => 'start',
-    'backdrop' => true,
-    'scroll' => false,
-])
+@props(['id', 'title' => null, 'placement' => 'start', 'backdrop' => true, 'scroll' => false])
 
 @php
     // Build offcanvas classes
-    $classes = [
-        'offcanvas',
-        'offcanvas-' . $placement,
-    ];
+    $classes = ['offcanvas', 'offcanvas-' . $placement];
 @endphp
 
-<div
-    {{ $attributes->merge(['class' => implode(' ', $classes)]) }}
-    tabindex="-1"
-    id="{{ $id }}"
-    aria-labelledby="{{ $id }}Label"
-    @if(!$backdrop) data-bs-backdrop="false" @endif
-    @if($scroll) data-bs-scroll="true" @endif
->
+<div {{ $attributes->merge(['class' => implode(' ', $classes)]) }} tabindex="-1" id="{{ $id }}"
+    aria-labelledby="{{ $id }}Label" @if (!$backdrop) data-bs-backdrop="false" @endif
+    @if ($scroll) data-bs-scroll="true" @endif>
     {{-- Header --}}
-    @if(isset($header))
+    @if (isset($header))
         {{ $header }}
     @else
         <div class="offcanvas-header">

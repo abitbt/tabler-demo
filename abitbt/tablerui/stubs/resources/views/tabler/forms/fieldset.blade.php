@@ -32,7 +32,7 @@
 ])
 
 <fieldset {{ $attributes->merge(['class' => 'form-fieldset']) }}>
-    @if($legend)
+    @if ($legend)
         <legend>{{ $legend }}</legend>
     @endif
 

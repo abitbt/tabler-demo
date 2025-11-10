@@ -40,27 +40,26 @@
 ])
 
 @php
-// Build pane classes
-$classes = ['tab-pane'];
+    // Build pane classes
+    $classes = ['tab-pane'];
 
-if ($fade) {
-    $classes[] = 'fade';
-}
-
-if ($active) {
-    $classes[] = 'active';
     if ($fade) {
-        $classes[] = 'show';
+        $classes[] = 'fade';
     }
-}
+
+    if ($active) {
+        $classes[] = 'active';
+        if ($fade) {
+            $classes[] = 'show';
+        }
+    }
 @endphp
 
 <div
     {{ $attributes->merge([
         'class' => implode(' ', $classes),
         'id' => $id,
-        'role' => 'tabpanel'
-    ]) }}
->
+        'role' => 'tabpanel',
+    ]) }}>
     {{ $slot }}
 </div>

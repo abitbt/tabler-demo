@@ -4,9 +4,13 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "format": "prettier --write 'resources/**/*.blade.php' 'abitbt/tablerui/stubs/**/*.blade.php' 'resources/**/*.js' 'resources/**/*.scss'",
+        "format:blade": "prettier --write 'resources/**/*.blade.php'",
+        "format:check": "prettier --check 'resources/**/*.blade.php' 'resources/**/*.js' 'resources/**/*.scss'"
     },
     "devDependencies": {
+        "@shufo/prettier-plugin-blade": "^1.16.1",
         "@tabler/core": "^1.4.0",
         "alpinejs": "^3.15.1",
         "axios": "^1.11.0",

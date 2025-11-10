@@ -53,18 +53,14 @@
 @endphp
 
 <label {{ $attributes->merge(['class' => 'form-selectgroup-item']) }}>
-    <input
-        type="{{ $type }}"
-        @if($name) name="{{ $name }}" @endif
-        @if($value !== null) value="{{ $value }}" @endif
-        class="form-selectgroup-input"
-        @if($checked) checked @endif
-    />
+    <input type="{{ $type }}" @if ($name) name="{{ $name }}" @endif
+        @if ($value !== null) value="{{ $value }}" @endif class="form-selectgroup-input"
+        @if ($checked) checked @endif />
     <span class="form-selectgroup-label">
-        @if($iconComponent)
+        @if ($iconComponent)
             <x-dynamic-component :component="$iconComponent" class="me-1" />
         @endif
-        @if($text)
+        @if ($text)
             {{ $text }}
         @else
             {{ $slot }}

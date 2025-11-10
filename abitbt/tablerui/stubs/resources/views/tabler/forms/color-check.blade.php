@@ -48,12 +48,8 @@
 @endphp
 
 <label {{ $attributes->merge(['class' => 'form-colorinput']) }}>
-    <input
-        @if($name) name="{{ $name }}" @endif
-        type="{{ $type }}"
-        @if($value !== null) value="{{ $value }}" @endif
-        class="form-colorinput-input"
-        @if($checked) checked @endif
-    />
+    <input @if ($name) name="{{ $name }}" @endif type="{{ $type }}"
+        @if ($value !== null) value="{{ $value }}" @endif class="form-colorinput-input"
+        @if ($checked) checked @endif />
     <span class="form-colorinput-color {{ $colorClass }}"></span>
 </label>

@@ -65,45 +65,63 @@
     }
 
     // Search classes
-    $searchClasses = ['ms-md-auto', 'ps-md-4', 'py-2', 'py-md-0', 'me-md-4', 'order-first', 'order-md-last', 'flex-grow-1'];
+    $searchClasses = [
+        'ms-md-auto',
+        'ps-md-4',
+        'py-2',
+        'py-md-0',
+        'me-md-4',
+        'order-first',
+        'order-md-last',
+        'flex-grow-1',
+    ];
     if (!$fluidSearch) {
         $searchClasses[] = 'flex-md-grow-0';
     }
 @endphp
 
-@if($sticky)
-<div class="sticky-top">
+@if ($sticky)
+    <div class="sticky-top">
 @endif
 
 <!-- BEGIN CONDENSED NAVBAR (SINGLE ROW) -->
-<header class="{{ implode(' ', $navbarClasses) }}"@if($dark) data-bs-theme="dark"@endif>
+<header class="{{ implode(' ', $navbarClasses) }}"@if ($dark) data-bs-theme="dark" @endif>
     <div class="container-xl">
         <!-- BEGIN NAVBAR TOGGLER -->
         @include('tabler::layouts.navbar.partials.toggler', ['target' => 'navbar-menu'])
         <!-- END NAVBAR TOGGLER -->
 
-        @unless($hideBrand)
+        @unless ($hideBrand)
             <!-- BEGIN NAVBAR LOGO -->
-            @include('tabler::layouts.navbar.partials.logo', ['class' => 'd-none-navbar-horizontal pe-0 pe-md-3'])
+            @include('tabler::layouts.navbar.partials.logo', [
+                'class' => 'd-none-navbar-horizontal pe-0 pe-md-3',
+            ])
             <!-- END NAVBAR LOGO -->
         @endunless
 
         <!-- BEGIN NAVBAR UTILITIES (RIGHT SIDE) -->
-        <div class="navbar-nav flex-row order-md-last ms-auto">
+        <div class="navbar-nav order-md-last ms-auto flex-row">
             @stack('navbar-utilities-start')
 
             <!-- Theme Toggle -->
             <div class="d-none d-md-flex me-3">
                 <div class="nav-item">
-                    <a href="#" class="nav-link px-0 hide-theme-dark" title="Enable dark mode" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-theme-toggle="dark">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/>
+                    <a href="#" class="nav-link hide-theme-dark px-0" title="Enable dark mode"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-theme-toggle="dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="icon">
+                            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
                         </svg>
                     </a>
-                    <a href="#" class="nav-link px-0 hide-theme-light" title="Enable light mode" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-theme-toggle="light">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
-                            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/>
-                            <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/>
+                    <a href="#" class="nav-link hide-theme-light px-0" title="Enable light mode"
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-theme-toggle="light">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="icon">
+                            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                            <path
+                                d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
                         </svg>
                     </a>
                 </div>
@@ -115,12 +133,12 @@
             @auth
                 @include('tabler::layouts.navbar.partials.user-menu', ['dark' => $dark])
             @else
-                @if(Route::has('login'))
-                <div class="nav-item">
-                    <a href="{{ route('login') }}" class="nav-link">
-                        <span class="nav-link-title">Sign in</span>
-                    </a>
-                </div>
+                @if (Route::has('login'))
+                    <div class="nav-item">
+                        <a href="{{ route('login') }}" class="nav-link">
+                            <span class="nav-link-title">Sign in</span>
+                        </a>
+                    </div>
                 @endif
             @endauth
 
@@ -129,7 +147,7 @@
         <!-- END NAVBAR UTILITIES (RIGHT SIDE) -->
 
         <!-- BEGIN COLLAPSIBLE NAVBAR CONTENT -->
-        <div class="collapse navbar-collapse" id="navbar-menu">
+        <div class="navbar-collapse collapse" id="navbar-menu">
             <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
                 <!-- BEGIN NAVBAR MENU -->
                 <nav aria-label="Primary">
@@ -137,10 +155,12 @@
                 </nav>
                 <!-- END NAVBAR MENU -->
 
-                @unless($hideSearch)
-                <!-- BEGIN NAVBAR SEARCH -->
-                @include('tabler::layouts.navbar.partials.search', ['class' => implode(' ', $searchClasses)])
-                <!-- END NAVBAR SEARCH -->
+                @unless ($hideSearch)
+                    <!-- BEGIN NAVBAR SEARCH -->
+                    @include('tabler::layouts.navbar.partials.search', [
+                        'class' => implode(' ', $searchClasses),
+                    ])
+                    <!-- END NAVBAR SEARCH -->
                 @endunless
             </div>
         </div>
@@ -149,6 +169,6 @@
 </header>
 <!-- END CONDENSED NAVBAR (SINGLE ROW) -->
 
-@if($sticky)
-</div>
+@if ($sticky)
+    </div>
 @endif

@@ -56,29 +56,29 @@
 ])
 
 @php
-// Build classes array
-$classes = ['nav'];
+    // Build classes array
+    $classes = ['nav'];
 
-// Style: tabs or pills
-if ($pills) {
-    $classes[] = 'nav-pills';
-    if ($inCard) {
-        $classes[] = 'card-header-pills';
+    // Style: tabs or pills
+    if ($pills) {
+        $classes[] = 'nav-pills';
+        if ($inCard) {
+            $classes[] = 'card-header-pills';
+        }
+    } else {
+        $classes[] = 'nav-tabs';
+        if ($inCard) {
+            $classes[] = 'card-header-tabs';
+        }
     }
-} else {
-    $classes[] = 'nav-tabs';
-    if ($inCard) {
-        $classes[] = 'card-header-tabs';
-    }
-}
 
-// Layout modifiers
-if ($fill) {
-    $classes[] = 'nav-fill';
-}
-if ($justified) {
-    $classes[] = 'nav-justified';
-}
+    // Layout modifiers
+    if ($fill) {
+        $classes[] = 'nav-fill';
+    }
+    if ($justified) {
+        $classes[] = 'nav-justified';
+    }
 @endphp
 
 <ul {{ $attributes->merge(['class' => implode(' ', $classes)]) }} data-bs-toggle="tabs" role="tablist">

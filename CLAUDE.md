@@ -1,3 +1,6 @@
+# IMPORTANT
+- Always run `pint` and `npm run format` before git commits
+- 
 <laravel-boost-guidelines>
 === foundation rules ===
 

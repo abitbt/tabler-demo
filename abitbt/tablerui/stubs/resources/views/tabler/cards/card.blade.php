@@ -98,12 +98,12 @@
     }
 @endphp
 
-@if($link)
-<a {{ $attributes->merge(['class' => implode(' ', $cardClasses)]) }}>
-    {{ $slot }}
-</a>
+@if ($link)
+    <a {{ $attributes->merge(['class' => implode(' ', $cardClasses)]) }}>
+        {{ $slot }}
+    </a>
 @else
-<div {{ $attributes->merge(['class' => implode(' ', $cardClasses)]) }}>
-    {{ $slot }}
-</div>
+    <div {{ $attributes->merge(['class' => implode(' ', $cardClasses)]) }}>
+        {{ $slot }}
+    </div>
 @endif

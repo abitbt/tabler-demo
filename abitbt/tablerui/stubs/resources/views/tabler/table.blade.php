@@ -110,7 +110,7 @@
     }
 @endphp
 
-@if($responsive)
+@if ($responsive)
     <div class="table-responsive">
         <table {{ $attributes->merge(['class' => implode(' ', $tableClasses)]) }}>
             {{ $slot }}

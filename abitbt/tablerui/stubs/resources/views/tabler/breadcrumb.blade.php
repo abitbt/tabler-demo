@@ -124,14 +124,14 @@
 
 <nav aria-label="breadcrumb">
     <ol {{ $attributes->merge(['class' => implode(' ', $classes)]) }}>
-        @if($slot->isEmpty() && $breadcrumbItems->isNotEmpty())
-            @foreach($breadcrumbItems as $index => $item)
+        @if ($slot->isEmpty() && $breadcrumbItems->isNotEmpty())
+            @foreach ($breadcrumbItems as $index => $item)
                 @php
                     $isLast = $index === $breadcrumbItems->count() - 1;
                     $isFirst = $index === 0;
                 @endphp
 
-                @if($isLast)
+                @if ($isLast)
                     {{-- Last item (current page) --}}
                     <li class="breadcrumb-item active" aria-current="page">
                         {{ $item['label'] }}
@@ -139,7 +139,7 @@
                 @else
                     {{-- Regular item with link --}}
                     <li class="breadcrumb-item">
-                        @if($isFirst && $homeIcon)
+                        @if ($isFirst && $homeIcon)
                             {{-- Home icon for first item --}}
                             <a href="{{ $item['url'] ?? '/' }}">
                                 <x-tabler-home class="icon" />

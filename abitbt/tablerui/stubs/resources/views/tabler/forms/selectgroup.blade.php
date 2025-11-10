@@ -46,12 +46,12 @@
     'wrapper' => true,
 ])
 
-@if($wrapper)
-<div class="mb-3">
+@if ($wrapper)
+    <div class="mb-3">
 @endif
-    <div {{ $attributes->merge(['class' => 'form-selectgroup']) }}>
-        {{ $slot }}
-    </div>
-@if($wrapper)
+<div {{ $attributes->merge(['class' => 'form-selectgroup']) }}>
+    {{ $slot }}
 </div>
+@if ($wrapper)
+    </div>
 @endif

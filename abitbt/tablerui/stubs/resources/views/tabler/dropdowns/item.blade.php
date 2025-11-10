@@ -63,12 +63,9 @@
     }
 @endphp
 
-<a
-    href="{{ $href }}"
-    {{ $attributes->merge(['class' => implode(' ', $classes)]) }}
-    @if($disabled) tabindex="-1" aria-disabled="true" @endif
->
-    @if($icon)
+<a href="{{ $href }}" {{ $attributes->merge(['class' => implode(' ', $classes)]) }}
+    @if ($disabled) tabindex="-1" aria-disabled="true" @endif>
+    @if ($icon)
         <x-dynamic-component :component="'tabler-' . $icon" class="icon dropdown-item-icon" />
     @endif
     {{ $slot }}

@@ -54,56 +54,48 @@
 
     // Determine if we should add 'btn' class
     // Don't add 'btn' if user is using non-button styles like 'nav-link'
-    $nonButtonPatterns = ['nav-link', 'link'];
-    $shouldAddBtn = true;
+$nonButtonPatterns = ['nav-link', 'link'];
+$shouldAddBtn = true;
 
-    foreach ($nonButtonPatterns as $pattern) {
-        if (str_contains($userClasses, $pattern)) {
-            $shouldAddBtn = false;
-            break;
-        }
+foreach ($nonButtonPatterns as $pattern) {
+    if (str_contains($userClasses, $pattern)) {
+        $shouldAddBtn = false;
+        break;
     }
+}
 
-    // Add btn class unless user is using non-button styles
-    if ($shouldAddBtn) {
-        $classes[] = 'btn';
-    }
+// Add btn class unless user is using non-button styles
+if ($shouldAddBtn) {
+    $classes[] = 'btn';
+}
 
-    // Add color class if specified
-    if ($color) {
-        $classes[] = 'btn-' . $color;
+// Add color class if specified
+if ($color) {
+    $classes[] = 'btn-' . $color;
     }
 @endphp
 
 @php
     // Icon classes - only add margin if there's content before the icon
-    $iconClasses = 'icon';
-    if (!$slot->isEmpty()) {
-        $iconClasses .= ' ms-1';
+$iconClasses = 'icon';
+if (!$slot->isEmpty()) {
+    $iconClasses .= ' ms-1';
     }
 @endphp
 
-@if($href)
-    <a
-        href="{{ $href }}"
-        {{ $attributes->merge(['class' => implode(' ', $classes)]) }}
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-    >
+@if ($href)
+    <a href="{{ $href }}" {{ $attributes->merge(['class' => implode(' ', $classes)]) }} data-bs-toggle="dropdown"
+        aria-expanded="false">
         {{ $slot }}
-        @if($icon)
+        @if ($icon)
             <x-dynamic-component :component="'tabler-' . $icon" class="{{ $iconClasses }}" />
         @endif
     </a>
 @else
-    <button
-        type="button"
-        {{ $attributes->merge(['class' => implode(' ', $classes)]) }}
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-    >
+    <button type="button" {{ $attributes->merge(['class' => implode(' ', $classes)]) }} data-bs-toggle="dropdown"
+        aria-expanded="false">
         {{ $slot }}
-        @if($icon)
+        @if ($icon)
             <x-dynamic-component :component="'tabler-' . $icon" class="{{ $iconClasses }}" />
         @endif
     </button>

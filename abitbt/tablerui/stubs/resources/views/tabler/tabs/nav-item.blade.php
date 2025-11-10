@@ -44,43 +44,34 @@
 ])
 
 @php
-// Build link classes
-$linkClasses = ['nav-link'];
+    // Build link classes
+    $linkClasses = ['nav-link'];
 
-if ($active) {
-    $linkClasses[] = 'active';
-}
+    if ($active) {
+        $linkClasses[] = 'active';
+    }
 
-if ($disabled) {
-    $linkClasses[] = 'disabled';
-}
+    if ($disabled) {
+        $linkClasses[] = 'disabled';
+    }
 
-// Generate icon component name if icon is provided
-$iconComponent = $icon ? 'tabler-' . $icon : null;
+    // Generate icon component name if icon is provided
+    $iconComponent = $icon ? 'tabler-' . $icon : null;
 
-// Generate aria-label for icon-only tabs
-$ariaLabel = $iconOnly && $icon ? str_replace('-', ' ', $icon) : null;
+    // Generate aria-label for icon-only tabs
+    $ariaLabel = $iconOnly && $icon ? str_replace('-', ' ', $icon) : null;
 @endphp
 
 <li {{ $attributes->only('class')->class(['nav-item']) }} role="presentation">
-    <a
-        href="{{ $href }}"
-        class="{{ implode(' ', $linkClasses) }}"
-        data-bs-toggle="tab"
-        role="tab"
-        @if($disabled)
-            tabindex="-1"
-            aria-disabled="true"
-        @endif
-        @if($ariaLabel)
-            aria-label="{{ ucfirst($ariaLabel) }}"
-        @endif
-        {{ $attributes->except('class') }}
-    >
-        @if($icon)
+    <a href="{{ $href }}" class="{{ implode(' ', $linkClasses) }}" data-bs-toggle="tab" role="tab"
+        @if ($disabled) tabindex="-1"
+            aria-disabled="true" @endif
+        @if ($ariaLabel) aria-label="{{ ucfirst($ariaLabel) }}" @endif
+        {{ $attributes->except('class') }}>
+        @if ($icon)
             <x-dynamic-component :component="$iconComponent" class="icon {{ $iconOnly ? '' : 'me-2' }}" />
         @endif
-        @unless($iconOnly)
+        @unless ($iconOnly)
             {{ $slot }}
         @endunless
     </a>

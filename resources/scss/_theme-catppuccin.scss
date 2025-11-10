@@ -5,81 +5,81 @@
  * Mocha flavor adapted for Tabler's gray scale system
  */
 
-[data-bs-theme-base="catppuccin"] {
-  // Catppuccin Mocha - adapted to Tabler's gray scale
-  // These colors work beautifully with both light and dark modes
+[data-bs-theme-base='catppuccin'] {
+    // Catppuccin Mocha - adapted to Tabler's gray scale
+    // These colors work beautifully with both light and dark modes
 
-  --tblr-gray-50: #f5e0dc;   // Rosewater (lightest)
-  --tblr-gray-100: #f2cdcd;  // Flamingo
-  --tblr-gray-200: #f5c2e7;  // Pink
-  --tblr-gray-300: #cba6f7;  // Mauve
-  --tblr-gray-400: #89b4fa;  // Blue
-  --tblr-gray-500: #74c7ec;  // Sapphire
-  --tblr-gray-600: #89dceb;  // Sky
-  --tblr-gray-700: #a6e3a1;  // Green
-  --tblr-gray-800: #313244;  // Surface0
-  --tblr-gray-900: #1e1e2e;  // Base
-  --tblr-gray-950: #11111b;  // Crust (darkest)
+    --tblr-gray-50: #f5e0dc; // Rosewater (lightest)
+    --tblr-gray-100: #f2cdcd; // Flamingo
+    --tblr-gray-200: #f5c2e7; // Pink
+    --tblr-gray-300: #cba6f7; // Mauve
+    --tblr-gray-400: #89b4fa; // Blue
+    --tblr-gray-500: #74c7ec; // Sapphire
+    --tblr-gray-600: #89dceb; // Sky
+    --tblr-gray-700: #a6e3a1; // Green
+    --tblr-gray-800: #313244; // Surface0
+    --tblr-gray-900: #1e1e2e; // Base
+    --tblr-gray-950: #11111b; // Crust (darkest)
 
-  // Catppuccin accent colors as Tabler primaries
-  --tblr-primary: #89b4fa;   // Blue
-  --tblr-secondary: #6c7086; // Overlay0
-  --tblr-success: #a6e3a1;   // Green
-  --tblr-info: #74c7ec;      // Sapphire
-  --tblr-warning: #fab387;   // Peach
-  --tblr-danger: #f38ba8;    // Red
-  --tblr-light: #cdd6f4;     // Text
-  --tblr-dark: #1e1e2e;      // Base
+    // Catppuccin accent colors as Tabler primaries
+    --tblr-primary: #89b4fa; // Blue
+    --tblr-secondary: #6c7086; // Overlay0
+    --tblr-success: #a6e3a1; // Green
+    --tblr-info: #74c7ec; // Sapphire
+    --tblr-warning: #fab387; // Peach
+    --tblr-danger: #f38ba8; // Red
+    --tblr-light: #cdd6f4; // Text
+    --tblr-dark: #1e1e2e; // Base
 }
 
 // Alternative: Catppuccin Mocha with neutral grays (better for general UI)
-[data-bs-theme-base="catppuccin-mocha"] {
-  // More neutral gray scale for better UI compatibility
-  --tblr-gray-50: #cdd6f4;   // Text
-  --tblr-gray-100: #bac2de;  // Subtext1
-  --tblr-gray-200: #a6adc8;  // Subtext0
-  --tblr-gray-300: #9399b2;  // Overlay2
-  --tblr-gray-400: #7f849c;  // Overlay1
-  --tblr-gray-500: #6c7086;  // Overlay0
-  --tblr-gray-600: #585b70;  // Surface2
-  --tblr-gray-700: #45475a;  // Surface1
-  --tblr-gray-800: #313244;  // Surface0
-  --tblr-gray-900: #1e1e2e;  // Base
-  --tblr-gray-950: #11111b;  // Crust
+[data-bs-theme-base='catppuccin-mocha'] {
+    // More neutral gray scale for better UI compatibility
+    --tblr-gray-50: #cdd6f4; // Text
+    --tblr-gray-100: #bac2de; // Subtext1
+    --tblr-gray-200: #a6adc8; // Subtext0
+    --tblr-gray-300: #9399b2; // Overlay2
+    --tblr-gray-400: #7f849c; // Overlay1
+    --tblr-gray-500: #6c7086; // Overlay0
+    --tblr-gray-600: #585b70; // Surface2
+    --tblr-gray-700: #45475a; // Surface1
+    --tblr-gray-800: #313244; // Surface0
+    --tblr-gray-900: #1e1e2e; // Base
+    --tblr-gray-950: #11111b; // Crust
 
-  // Catppuccin Mocha accent colors
-  --tblr-primary: #89b4fa;   // Blue
-  --tblr-secondary: #6c7086; // Overlay0
-  --tblr-success: #a6e3a1;   // Green
-  --tblr-info: #74c7ec;      // Sapphire
-  --tblr-warning: #fab387;   // Peach
-  --tblr-danger: #f38ba8;    // Red
-  --tblr-light: #cdd6f4;     // Text
-  --tblr-dark: #1e1e2e;      // Base
+    // Catppuccin Mocha accent colors
+    --tblr-primary: #89b4fa; // Blue
+    --tblr-secondary: #6c7086; // Overlay0
+    --tblr-success: #a6e3a1; // Green
+    --tblr-info: #74c7ec; // Sapphire
+    --tblr-warning: #fab387; // Peach
+    --tblr-danger: #f38ba8; // Red
+    --tblr-light: #cdd6f4; // Text
+    --tblr-dark: #1e1e2e; // Base
 }
 
 // Catppuccin Latte (Light theme variant)
-[data-bs-theme-base="catppuccin-latte"] {
-  // Catppuccin Latte - light theme colors
-  --tblr-gray-50: #eff1f5;   // Base (lightest)
-  --tblr-gray-100: #e6e9ef;  // Mantle
-  --tblr-gray-200: #dce0e8;  // Crust
-  --tblr-gray-300: #ccd0da;  // Surface0
-  --tblr-gray-400: #bcc0cc;  // Surface1
-  --tblr-gray-500: #acb0be;  // Surface2
-  --tblr-gray-600: #9ca0b0;  // Overlay0
-  --tblr-gray-700: #8c8fa1;  // Overlay1
-  --tblr-gray-800: #7c7f93;  // Overlay2
-  --tblr-gray-900: #5c5f77;  // Subtext0
-  --tblr-gray-950: #4c4f69;  // Text (darkest)
+[data-bs-theme-base='catppuccin-latte'] {
+    // Catppuccin Latte - light theme colors
+    --tblr-gray-50: #eff1f5; // Base (lightest)
+    --tblr-gray-100: #e6e9ef; // Mantle
+    --tblr-gray-200: #dce0e8; // Crust
+    --tblr-gray-300: #ccd0da; // Surface0
+    --tblr-gray-400: #bcc0cc; // Surface1
+    --tblr-gray-500: #acb0be; // Surface2
+    --tblr-gray-600: #9ca0b0; // Overlay0
+    --tblr-gray-700: #8c8fa1; // Overlay1
+    --tblr-gray-800: #7c7f93; // Overlay2
+    --tblr-gray-900: #5c5f77; // Subtext0
+    --tblr-gray-950: #4c4f69; // Text (darkest)
 
-  // Catppuccin Latte accent colors
-  --tblr-primary: #1e66f5;   // Blue
-  --tblr-secondary: #7c7f93; // Overlay2
-  --tblr-success: #40a02b;   // Green
-  --tblr-info: #209fb5;      // Sapphire
-  --tblr-warning: #fe640b;   // Peach
-  --tblr-danger: #d20f39;    // Red
-  --tblr-light: #eff1f5;     // Base
-  --tblr-dark: #4c4f69;      // Text
+    // Catppuccin Latte accent colors
+    --tblr-primary: #1e66f5; // Blue
+    --tblr-secondary: #7c7f93; // Overlay2
+    --tblr-success: #40a02b; // Green
+    --tblr-info: #209fb5; // Sapphire
+    --tblr-warning: #fe640b; // Peach
+    --tblr-danger: #d20f39; // Red
+    --tblr-light: #eff1f5; // Base
+    --tblr-dark: #4c4f69; // Text
 }

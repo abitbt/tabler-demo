@@ -121,15 +121,15 @@
 @endphp
 
 <div {{ $attributes->merge(['class' => implode(' ', $classes)]) }} role="alert">
-    @if($iconComponent)
+    @if ($iconComponent)
         {{-- Alert with icon layout (uses alert-icon wrapper) --}}
         <div class="alert-icon">
             <x-dynamic-component :component="$iconComponent" class="icon alert-icon" />
         </div>
         <div>
-            @if(isset($title) || $title)
+            @if (isset($title) || $title)
                 <h4 class="alert-heading">{{ $title }}</h4>
-                @if($slot->isNotEmpty())
+                @if ($slot->isNotEmpty())
                     <div class="alert-description">{{ $slot }}</div>
                 @endif
             @else
@@ -143,7 +143,7 @@
     @elseif(isset($title) || $title)
         {{-- Alert with title but no icon --}}
         <h4 class="alert-heading">{{ $title }}</h4>
-        @if($slot->isNotEmpty())
+        @if ($slot->isNotEmpty())
             <div class="alert-description">{{ $slot }}</div>
         @endif
         @isset($actions)
@@ -158,7 +158,7 @@
     @endif
 
     {{-- Dismissible close button --}}
-    @if($dismissible)
+    @if ($dismissible)
         <a class="{{ $closeButtonClass }}" data-bs-dismiss="alert" aria-label="close"></a>
     @endif
 </div>

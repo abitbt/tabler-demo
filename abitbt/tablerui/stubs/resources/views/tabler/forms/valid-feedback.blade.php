@@ -35,7 +35,7 @@
 ])
 
 <div {{ $attributes->merge(['class' => 'valid-feedback']) }}>
-    @if($message)
+    @if ($message)
         {{ $message }}
     @else
         {{ $slot }}

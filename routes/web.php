@@ -170,7 +170,7 @@ Route::group(['prefix' => 'demo'], function () {
             'bsThemeBase' => 'neutral',
             'bsThemeRadius' => 2,
             'layoutFluid' => true,
-            'sidebarPosition' => 'left'
+            'sidebarPosition' => 'left',
         ]);
     })->name('demo.layout-vertical');
 

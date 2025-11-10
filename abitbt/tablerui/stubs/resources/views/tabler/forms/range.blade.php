@@ -70,23 +70,16 @@
     $rangeId = $id ?? ($name ? str_replace(['[', ']'], ['-', ''], $name) : 'range-' . uniqid());
 @endphp
 
-@if($wrapper)
-<div class="mb-3">
+@if ($wrapper)
+    <div class="mb-3">
 @endif
-    @if($label)
-        <label for="{{ $rangeId }}" class="form-label">{{ $label }}</label>
-    @endif
+@if ($label)
+    <label for="{{ $rangeId }}" class="form-label">{{ $label }}</label>
+@endif
 
-    <input
-        type="range"
-        id="{{ $rangeId }}"
-        @if($name) name="{{ $name }}" @endif
-        value="{{ old($name, $value) }}"
-        min="{{ $min }}"
-        max="{{ $max }}"
-        step="{{ $step }}"
-        {{ $attributes->merge(['class' => 'form-range']) }}
-    />
-@if($wrapper)
-</div>
+<input type="range" id="{{ $rangeId }}" @if ($name) name="{{ $name }}" @endif
+    value="{{ old($name, $value) }}" min="{{ $min }}" max="{{ $max }}" step="{{ $step }}"
+    {{ $attributes->merge(['class' => 'form-range']) }} />
+@if ($wrapper)
+    </div>
 @endif

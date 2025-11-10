@@ -1,0 +1,22 @@
+# Dependencies
+/node_modules
+/vendor
+
+# Build outputs
+/public/build
+/public/hot
+/public/storage
+
+# Storage
+/storage/*.key
+/storage/framework
+/storage/logs
+
+# Other
+/.phpunit.cache
+/.vite
+/bootstrap/cache
+*.min.js
+*.min.css
+package-lock.json
+composer.lock

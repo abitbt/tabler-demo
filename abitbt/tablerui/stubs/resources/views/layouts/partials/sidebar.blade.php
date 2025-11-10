@@ -52,7 +52,7 @@
 --}}
 
 @php
-    $dark = $dark ?? true;  // Dark by default for sidebars
+    $dark = $dark ?? true; // Dark by default for sidebars
     $position = $position ?? 'left';
     $transparent = $transparent ?? false;
     $background = $background ?? null;
@@ -78,23 +78,23 @@
     }
 
     // Get navigation items - prefer $sidebarItems, fallback to $navItems
-    $menuItems = $sidebarItems ?? $navItems ?? [];
+    $menuItems = $sidebarItems ?? ($navItems ?? []);
 @endphp
 
-<aside class="{{ implode(' ', $sidebarClasses) }}"@if($dark) data-bs-theme="dark"@endif>
+<aside class="{{ implode(' ', $sidebarClasses) }}"@if ($dark) data-bs-theme="dark" @endif>
     <div class="container-fluid">
         <!-- BEGIN NAVBAR TOGGLER (Mobile) -->
         @include('tabler::layouts.navbar.partials.toggler', ['target' => 'sidebar-menu'])
         <!-- END NAVBAR TOGGLER -->
 
-        @unless($hideBrand)
+        @unless ($hideBrand)
             <!-- BEGIN NAVBAR LOGO -->
             @include('tabler::layouts.navbar.partials.logo', ['breakpoint' => $breakpoint])
             <!-- END NAVBAR LOGO -->
         @endunless
 
         <!-- BEGIN MOBILE USER MENU (Visible on mobile only) -->
-        <div class="navbar-nav flex-row d-{{ $breakpoint }}-none">
+        <div class="navbar-nav d-{{ $breakpoint }}-none flex-row">
             @stack('sidebar-mobile-utilities-start')
 
             @auth
@@ -106,26 +106,30 @@
         <!-- END MOBILE USER MENU -->
 
         <!-- BEGIN SIDEBAR MENU -->
-        <div class="collapse navbar-collapse" id="sidebar-menu">
-            @if(!empty($menuItems))
+        <div class="navbar-collapse collapse" id="sidebar-menu">
+            @if (!empty($menuItems))
                 <ul class="navbar-nav pt-{{ $breakpoint }}-3">
-                    @foreach($menuItems as $index => $item)
-                        @if(isset($item['children']) && is_array($item['children']))
+                    @foreach ($menuItems as $index => $item)
+                        @if (isset($item['children']) && is_array($item['children']))
                             {{-- Dropdown Menu Item --}}
                             <li class="nav-item dropdown{{ $item['active'] ?? false ? ' active' : '' }}">
-                                <a class="nav-link dropdown-toggle" href="#navbar-{{ $index }}" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-haspopup="true" aria-expanded="{{ $item['active'] ?? false ? 'true' : 'false' }}">
-                                    @if(isset($item['icon']))
-                                    <span class="nav-link-icon d-md-none d-{{ $breakpoint }}-inline-block">
-                                        <x-dynamic-component :component="'tabler-' . $item['icon']" class="icon" />
-                                    </span>
+                                <a class="nav-link dropdown-toggle" href="#navbar-{{ $index }}"
+                                    data-bs-toggle="dropdown" data-bs-auto-close="false" role="button"
+                                    aria-haspopup="true"
+                                    aria-expanded="{{ $item['active'] ?? false ? 'true' : 'false' }}">
+                                    @if (isset($item['icon']))
+                                        <span class="nav-link-icon d-md-none d-{{ $breakpoint }}-inline-block">
+                                            <x-dynamic-component :component="'tabler-' . $item['icon']" class="icon" />
+                                        </span>
                                     @endif
                                     <span class="nav-link-title">{{ $item['title'] }}</span>
-                                    @if(isset($item['badge']))
-                                    <span class="badge badge-sm bg-red text-red-fg ms-auto">{{ $item['badge'] }}</span>
+                                    @if (isset($item['badge']))
+                                        <span
+                                            class="badge badge-sm bg-red text-red-fg ms-auto">{{ $item['badge'] }}</span>
                                     @endif
                                 </a>
                                 <div class="dropdown-menu{{ $item['active'] ?? false ? ' show' : '' }}">
-                                    @if(isset($item['columns']) && $item['columns'] > 1)
+                                    @if (isset($item['columns']) && $item['columns'] > 1)
                                         {{-- Multi-column dropdown --}}
                                         <div class="dropdown-menu-columns">
                                             @php
@@ -133,111 +137,124 @@
                                                 $columnIndex = 0;
                                             @endphp
                                             <div class="dropdown-menu-column">
-                                            @foreach($item['children'] as $childIndex => $child)
-                                                @if($childIndex > 0 && $childIndex % $perColumn == 0)
-                                                    </div><div class="dropdown-menu-column">
-                                                @endif
+                                                @foreach ($item['children'] as $childIndex => $child)
+                                                    @if ($childIndex > 0 && $childIndex % $perColumn == 0)
+                                            </div>
+                                            <div class="dropdown-menu-column">
+                                    @endif
 
-                                                @if(isset($child['divider']) && $child['divider'])
-                                                    <div class="dropdown-divider"></div>
-                                                @elseif(isset($child['children']) && is_array($child['children']))
-                                                    {{-- Third-level nested menu (dropend) --}}
-                                                    <div class="dropend">
-                                                        <a class="dropdown-item dropdown-toggle" href="#sidebar-{{ $index }}-{{ $childIndex }}" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-haspopup="true" aria-expanded="false">
-                                                            @if(isset($child['icon']))
-                                                                <x-dynamic-component :component="'tabler-' . $child['icon']" class="icon dropdown-item-icon" />
-                                                            @endif
-                                                            {{ $child['title'] }}
-                                                        </a>
-                                                        <div class="dropdown-menu">
-                                                            @foreach($child['children'] as $grandchild)
-                                                                <a href="{{ $grandchild['url'] }}" class="dropdown-item{{ $grandchild['active'] ?? false ? ' active' : '' }}">
-                                                                    {{ $grandchild['title'] }}
-                                                                </a>
-                                                            @endforeach
-                                                        </div>
-                                                    </div>
-                                                @else
-                                                    {{-- Regular dropdown item --}}
-                                                    <a class="dropdown-item{{ $child['active'] ?? false ? ' active' : '' }}" href="{{ $child['url'] }}"{{ $child['active'] ?? false ? ' aria-current="page"' : '' }}>
-                                                        @if(isset($child['icon']))
-                                                            <x-dynamic-component :component="'tabler-' . $child['icon']" class="icon dropdown-item-icon" />
-                                                        @endif
-                                                        {{ $child['title'] }}
-                                                        @if(isset($child['badge']))
-                                                        <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">{{ $child['badge'] }}</span>
-                                                        @endif
-                                                    </a>
+                                    @if (isset($child['divider']) && $child['divider'])
+                                        <div class="dropdown-divider"></div>
+                                    @elseif(isset($child['children']) && is_array($child['children']))
+                                        {{-- Third-level nested menu (dropend) --}}
+                                        <div class="dropend">
+                                            <a class="dropdown-item dropdown-toggle"
+                                                href="#sidebar-{{ $index }}-{{ $childIndex }}"
+                                                data-bs-toggle="dropdown" data-bs-auto-close="false" role="button"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                @if (isset($child['icon']))
+                                                    <x-dynamic-component :component="'tabler-' . $child['icon']"
+                                                        class="icon dropdown-item-icon" />
                                                 @endif
-                                            @endforeach
+                                                {{ $child['title'] }}
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                @foreach ($child['children'] as $grandchild)
+                                                    <a href="{{ $grandchild['url'] }}"
+                                                        class="dropdown-item{{ $grandchild['active'] ?? false ? ' active' : '' }}">
+                                                        {{ $grandchild['title'] }}
+                                                    </a>
+                                                @endforeach
                                             </div>
                                         </div>
                                     @else
-                                        {{-- Single column dropdown --}}
-                                        @foreach($item['children'] as $childIndex => $child)
-                                            @if(isset($child['divider']) && $child['divider'])
-                                                <div class="dropdown-divider"></div>
-                                            @elseif(isset($child['children']) && is_array($child['children']))
-                                                {{-- Third-level nested menu (dropend) --}}
-                                                <div class="dropend">
-                                                    <a class="dropdown-item dropdown-toggle" href="#sidebar-{{ $index }}-{{ $childIndex }}" data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-haspopup="true" aria-expanded="false">
-                                                        @if(isset($child['icon']))
-                                                            <x-dynamic-component :component="'tabler-' . $child['icon']" class="icon dropdown-item-icon" />
-                                                        @endif
-                                                        {{ $child['title'] }}
-                                                    </a>
-                                                    <div class="dropdown-menu">
-                                                        @foreach($child['children'] as $grandchild)
-                                                            <a href="{{ $grandchild['url'] }}" class="dropdown-item{{ $grandchild['active'] ?? false ? ' active' : '' }}">
-                                                                {{ $grandchild['title'] }}
-                                                            </a>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            @else
-                                                {{-- Regular dropdown item --}}
-                                                <a class="dropdown-item{{ $child['active'] ?? false ? ' active' : '' }}" href="{{ $child['url'] }}"{{ $child['active'] ?? false ? ' aria-current="page"' : '' }}>
-                                                    @if(isset($child['icon']))
-                                                        <x-dynamic-component :component="'tabler-' . $child['icon']" class="icon dropdown-item-icon" />
-                                                    @endif
-                                                    {{ $child['title'] }}
-                                                    @if(isset($child['badge']))
-                                                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">{{ $child['badge'] }}</span>
-                                                    @endif
-                                                </a>
+                                        {{-- Regular dropdown item --}}
+                                        <a class="dropdown-item{{ $child['active'] ?? false ? ' active' : '' }}"
+                                            href="{{ $child['url'] }}"{{ $child['active'] ?? false ? ' aria-current="page"' : '' }}>
+                                            @if (isset($child['icon']))
+                                                <x-dynamic-component :component="'tabler-' . $child['icon']"
+                                                    class="icon dropdown-item-icon" />
                                             @endif
-                                        @endforeach
+                                            {{ $child['title'] }}
+                                            @if (isset($child['badge']))
+                                                <span
+                                                    class="badge badge-sm bg-green-lt text-uppercase ms-auto">{{ $child['badge'] }}</span>
+                                            @endif
+                                        </a>
                                     @endif
-                                </div>
-                            </li>
-                        @else
-                            {{-- Regular Menu Item --}}
-                            <li class="nav-item{{ $item['active'] ?? false ? ' active' : '' }}">
-                                <a class="nav-link" href="{{ $item['url'] }}"{{ $item['active'] ?? false ? ' aria-current="page"' : '' }}>
-                                    @if(isset($item['icon']))
-                                    <span class="nav-link-icon d-md-none d-{{ $breakpoint }}-inline-block">
-                                        <x-dynamic-component :component="'tabler-' . $item['icon']" class="icon" />
-                                    </span>
-                                    @endif
-                                    <span class="nav-link-title">{{ $item['title'] }}</span>
-                                    @if(isset($item['badge']))
-                                    <span class="badge badge-sm bg-red text-red-fg ms-auto">{{ $item['badge'] }}</span>
-                                    @endif
-                                </a>
-                            </li>
-                        @endif
+                        @endforeach
+        </div>
+    </div>
+@else
+    {{-- Single column dropdown --}}
+    @foreach ($item['children'] as $childIndex => $child)
+        @if (isset($child['divider']) && $child['divider'])
+            <div class="dropdown-divider"></div>
+        @elseif(isset($child['children']) && is_array($child['children']))
+            {{-- Third-level nested menu (dropend) --}}
+            <div class="dropend">
+                <a class="dropdown-item dropdown-toggle" href="#sidebar-{{ $index }}-{{ $childIndex }}"
+                    data-bs-toggle="dropdown" data-bs-auto-close="false" role="button" aria-haspopup="true"
+                    aria-expanded="false">
+                    @if (isset($child['icon']))
+                        <x-dynamic-component :component="'tabler-' . $child['icon']" class="icon dropdown-item-icon" />
+                    @endif
+                    {{ $child['title'] }}
+                </a>
+                <div class="dropdown-menu">
+                    @foreach ($child['children'] as $grandchild)
+                        <a href="{{ $grandchild['url'] }}"
+                            class="dropdown-item{{ $grandchild['active'] ?? false ? ' active' : '' }}">
+                            {{ $grandchild['title'] }}
+                        </a>
                     @endforeach
-                </ul>
-            @else
-                {{-- Allow custom menu via yield --}}
-                @hasSection('sidebar-menu')
-                    <ul class="navbar-nav pt-{{ $breakpoint }}-3">
-                        @yield('sidebar-menu')
-                    </ul>
-                @else
-                    {{-- Default empty menu with helpful comment --}}
-                    <ul class="navbar-nav pt-{{ $breakpoint }}-3">
-                        {{--
+                </div>
+            </div>
+        @else
+            {{-- Regular dropdown item --}}
+            <a class="dropdown-item{{ $child['active'] ?? false ? ' active' : '' }}"
+                href="{{ $child['url'] }}"{{ $child['active'] ?? false ? ' aria-current="page"' : '' }}>
+                @if (isset($child['icon']))
+                    <x-dynamic-component :component="'tabler-' . $child['icon']" class="icon dropdown-item-icon" />
+                @endif
+                {{ $child['title'] }}
+                @if (isset($child['badge']))
+                    <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">{{ $child['badge'] }}</span>
+                @endif
+            </a>
+        @endif
+    @endforeach
+    @endif
+    </div>
+    </li>
+@else
+    {{-- Regular Menu Item --}}
+    <li class="nav-item{{ $item['active'] ?? false ? ' active' : '' }}">
+        <a class="nav-link" href="{{ $item['url'] }}"{{ $item['active'] ?? false ? ' aria-current="page"' : '' }}>
+            @if (isset($item['icon']))
+                <span class="nav-link-icon d-md-none d-{{ $breakpoint }}-inline-block">
+                    <x-dynamic-component :component="'tabler-' . $item['icon']" class="icon" />
+                </span>
+            @endif
+            <span class="nav-link-title">{{ $item['title'] }}</span>
+            @if (isset($item['badge']))
+                <span class="badge badge-sm bg-red text-red-fg ms-auto">{{ $item['badge'] }}</span>
+            @endif
+        </a>
+    </li>
+    @endif
+    @endforeach
+    </ul>
+@else
+    {{-- Allow custom menu via yield --}}
+    @hasSection('sidebar-menu')
+        <ul class="navbar-nav pt-{{ $breakpoint }}-3">
+            @yield('sidebar-menu')
+        </ul>
+    @else
+        {{-- Default empty menu with helpful comment --}}
+        <ul class="navbar-nav pt-{{ $breakpoint }}-3">
+            {{--
                             Define navigation items by passing $sidebarItems or $navItems array,
                             or use @section('sidebar-menu') to define custom menu items.
 
@@ -249,10 +266,10 @@
                                 ];
                             @endphp
                         --}}
-                    </ul>
-                @endif
-            @endif
-        </div>
-        <!-- END SIDEBAR MENU -->
+        </ul>
+    @endif
+    @endif
+    </div>
+    <!-- END SIDEBAR MENU -->
     </div>
 </aside>
