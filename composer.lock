@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3ce0a49f696c9cdfe5b295afe703f70",
+    "content-hash": "12287352181c6de85580acd7d387f361",
     "packages": [
         {
-            "name": "abitbt/tablerui",
+            "name": "abitbt/tabler-blade",
             "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./tabler-blade",
-                "reference": "661423561d65f9a8567d38784bd2d9558921cb72"
+                "reference": "609cfe952fe021c9990848fd5bf910c817b178cc"
             },
             "require": {
                 "illuminate/console": "^10.0|^11.0|^12.0",
@@ -25,16 +25,13 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Tabler\\TablerServiceProvider"
-                    ],
-                    "aliases": {
-                        "Tabler": "Tabler\\Tabler"
-                    }
+                        "Abitbt\\TablerBlade\\TablerServiceProvider"
+                    ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Tabler\\": "src/"
+                    "Abitbt\\TablerBlade\\": "src/"
                 }
             },
             "license": [
@@ -42,8 +39,8 @@
             ],
             "authors": [
                 {
-                    "name": "Abi",
-                    "email": "calebporzio@gmail.com"
+                    "name": "aBit",
+                    "email": "opensource@abit.bt"
                 }
             ],
             "description": "UI component library for tabler.",
@@ -1781,16 +1778,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.30.1",
+            "version": "3.30.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "c139fd65c1f796b926f4aec0df37f6caa959a8da"
+                "reference": "5966a8ba23e62bdb518dd9e0e665c2dbd4b5b277"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/c139fd65c1f796b926f4aec0df37f6caa959a8da",
-                "reference": "c139fd65c1f796b926f4aec0df37f6caa959a8da",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/5966a8ba23e62bdb518dd9e0e665c2dbd4b5b277",
+                "reference": "5966a8ba23e62bdb518dd9e0e665c2dbd4b5b277",
                 "shasum": ""
             },
             "require": {
@@ -1858,22 +1855,22 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.30.1"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.30.2"
             },
-            "time": "2025-10-20T15:35:26+00:00"
+            "time": "2025-11-10T17:13:11+00:00"
         },
         {
             "name": "league/flysystem-local",
-            "version": "3.30.0",
+            "version": "3.30.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-local.git",
-                "reference": "6691915f77c7fb69adfb87dcd550052dc184ee10"
+                "reference": "ab4f9d0d672f601b102936aa728801dd1a11968d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/6691915f77c7fb69adfb87dcd550052dc184ee10",
-                "reference": "6691915f77c7fb69adfb87dcd550052dc184ee10",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/ab4f9d0d672f601b102936aa728801dd1a11968d",
+                "reference": "ab4f9d0d672f601b102936aa728801dd1a11968d",
                 "shasum": ""
             },
             "require": {
@@ -1907,9 +1904,9 @@
                 "local"
             ],
             "support": {
-                "source": "https://github.com/thephpleague/flysystem-local/tree/3.30.0"
+                "source": "https://github.com/thephpleague/flysystem-local/tree/3.30.2"
             },
-            "time": "2025-05-21T10:34:19+00:00"
+            "time": "2025-11-10T11:23:37+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -9866,7 +9863,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "abitbt/tablerui": 20
+        "abitbt/tabler-blade": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
