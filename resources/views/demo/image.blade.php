@@ -2,7 +2,7 @@
     Image Component Demo
 
     Component: <x-tabler::image>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/image.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/image.blade.php
 --}}
 
 @extends('layouts.app')
@@ -23,28 +23,19 @@
                 <x-tabler::cards.body>
                     <div class="row g-3">
                         <div class="col-md-4">
-                            <x-tabler::image
-                                src="https://picsum.photos/400/300"
-                                alt="Regular image"
-                                class="img-fluid rounded"
-                            />
-                            <p class="text-center mt-2 text-secondary">img-fluid rounded</p>
+                            <x-tabler::image src="https://picsum.photos/400/300" alt="Regular image"
+                                class="img-fluid rounded" />
+                            <p class="text-secondary mt-2 text-center">img-fluid rounded</p>
                         </div>
                         <div class="col-md-4">
-                            <x-tabler::image
-                                src="https://picsum.photos/300/300"
-                                alt="Circular image"
-                                class="rounded-circle"
-                            />
-                            <p class="text-center mt-2 text-secondary">rounded-circle</p>
+                            <x-tabler::image src="https://picsum.photos/300/300" alt="Circular image"
+                                class="rounded-circle" />
+                            <p class="text-secondary mt-2 text-center">rounded-circle</p>
                         </div>
                         <div class="col-md-4">
-                            <x-tabler::image
-                                src="https://picsum.photos/400/300?random=2"
-                                alt="Thumbnail"
-                                class="img-thumbnail"
-                            />
-                            <p class="text-center mt-2 text-secondary">img-thumbnail</p>
+                            <x-tabler::image src="https://picsum.photos/400/300?random=2" alt="Thumbnail"
+                                class="img-thumbnail" />
+                            <p class="text-secondary mt-2 text-center">img-thumbnail</p>
                         </div>
                     </div>
                 </x-tabler::cards.body>
@@ -83,49 +74,29 @@
                 <x-tabler::cards.body>
                     <div class="row g-3">
                         <div class="col-md-6">
-                            <x-tabler::image
-                                src="https://picsum.photos/1920/1080"
-                                ratio="16x9"
-                                responsive
-                                class="rounded"
-                            />
-                            <p class="text-center mt-2 text-secondary">16:9 Widescreen</p>
+                            <x-tabler::image src="https://picsum.photos/1920/1080" ratio="16x9" responsive
+                                class="rounded" />
+                            <p class="text-secondary mt-2 text-center">16:9 Widescreen</p>
                         </div>
                         <div class="col-md-6">
-                            <x-tabler::image
-                                src="https://picsum.photos/2560/1080"
-                                ratio="21x9"
-                                responsive
-                                class="rounded"
-                            />
-                            <p class="text-center mt-2 text-secondary">21:9 Ultrawide</p>
+                            <x-tabler::image src="https://picsum.photos/2560/1080" ratio="21x9" responsive
+                                class="rounded" />
+                            <p class="text-secondary mt-2 text-center">21:9 Ultrawide</p>
                         </div>
                         <div class="col-md-4">
-                            <x-tabler::image
-                                src="https://picsum.photos/800/800"
-                                ratio="1x1"
-                                responsive
-                                class="rounded"
-                            />
-                            <p class="text-center mt-2 text-secondary">1:1 Square</p>
+                            <x-tabler::image src="https://picsum.photos/800/800" ratio="1x1" responsive
+                                class="rounded" />
+                            <p class="text-secondary mt-2 text-center">1:1 Square</p>
                         </div>
                         <div class="col-md-4">
-                            <x-tabler::image
-                                src="https://picsum.photos/800/600"
-                                ratio="4x3"
-                                responsive
-                                class="rounded"
-                            />
-                            <p class="text-center mt-2 text-secondary">4:3 Standard</p>
+                            <x-tabler::image src="https://picsum.photos/800/600" ratio="4x3" responsive
+                                class="rounded" />
+                            <p class="text-secondary mt-2 text-center">4:3 Standard</p>
                         </div>
                         <div class="col-md-4">
-                            <x-tabler::image
-                                src="https://picsum.photos/600/800"
-                                ratio="3x4"
-                                responsive
-                                class="rounded"
-                            />
-                            <p class="text-center mt-2 text-secondary">3:4 Portrait</p>
+                            <x-tabler::image src="https://picsum.photos/600/800" ratio="3x4" responsive
+                                class="rounded" />
+                            <p class="text-secondary mt-2 text-center">3:4 Portrait</p>
                         </div>
                     </div>
                 </x-tabler::cards.body>
@@ -159,15 +130,12 @@
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
                     <div class="card">
-                        <x-tabler::image
-                            src="https://picsum.photos/800/400"
-                            ratio="21x9"
-                            responsive
-                            class="card-img-top"
-                        />
+                        <x-tabler::image src="https://picsum.photos/800/400" ratio="21x9" responsive
+                            class="card-img-top" />
                         <div class="card-body">
                             <h3 class="card-title">Beautiful Landscape</h3>
-                            <p class="text-secondary">This card uses a responsive image with 21:9 aspect ratio at the top.</p>
+                            <p class="text-secondary">This card uses a responsive image with 21:9 aspect ratio at the top.
+                            </p>
                         </div>
                     </div>
                 </x-tabler::cards.body>
@@ -198,13 +166,10 @@
                     <x-slot:subtitle>Images with srcset for high-resolution displays</x-slot>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                    <x-tabler::image
-                        src="https://picsum.photos/400/300"
-                        src2x="https://picsum.photos/800/600"
-                        alt="High-DPI image"
-                        class="img-fluid rounded"
-                    />
-                    <p class="text-secondary mt-2">This image will automatically load the @2x version on high-resolution displays.</p>
+                    <x-tabler::image src="https://picsum.photos/400/300" src2x="https://picsum.photos/800/600"
+                        alt="High-DPI image" class="img-fluid rounded" />
+                    <p class="text-secondary mt-2">This image will automatically load the @2x version on high-resolution
+                        displays.</p>
                 </x-tabler::cards.body>
             </x-tabler::cards.card>
 
@@ -228,13 +193,10 @@
                     <x-slot:subtitle>Simple background cover mode</x-slot>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                    <x-tabler::image
-                        src="https://picsum.photos/1200/400"
-                        background
-                        class="rounded"
-                        style="height: 200px;"
-                    />
-                    <p class="text-secondary mt-2">Background images use background-size: cover without aspect ratio constraints.</p>
+                    <x-tabler::image src="https://picsum.photos/1200/400" background class="rounded"
+                        style="height: 200px;" />
+                    <p class="text-secondary mt-2">Background images use background-size: cover without aspect ratio
+                        constraints.</p>
                 </x-tabler::cards.body>
             </x-tabler::cards.card>
 
@@ -258,12 +220,8 @@
                     <x-slot:subtitle>Defer image loading for performance</x-slot>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                    <x-tabler::image
-                        src="https://picsum.photos/600/400"
-                        alt="Lazy loaded image"
-                        lazy
-                        class="img-fluid rounded"
-                    />
+                    <x-tabler::image src="https://picsum.photos/600/400" alt="Lazy loaded image" lazy
+                        class="img-fluid rounded" />
                     <p class="text-secondary mt-2">This image will only load when it enters the viewport.</p>
                 </x-tabler::cards.body>
             </x-tabler::cards.card>
@@ -289,15 +247,12 @@
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
                     <div class="row g-3">
-                        @foreach(['1x1', '2x1', '1x2', '3x1', '1x3', '4x1', '1x4', '4x3', '3x4', '16x9', '9x16', '21x9', '9x21'] as $ratio)
+                        @foreach (['1x1', '2x1', '1x2', '3x1', '1x3', '4x1', '1x4', '4x3', '3x4', '16x9', '9x16', '21x9', '9x21'] as $ratio)
                             <div class="col-md-3">
                                 <x-tabler::image
                                     src="https://picsum.photos/{{ 800 + $loop->index * 10 }}/{{ 600 + $loop->index * 10 }}"
-                                    :ratio="$ratio"
-                                    responsive
-                                    class="rounded border"
-                                />
-                                <p class="text-center mt-2 text-secondary"><code>{{ $ratio }}</code></p>
+                                    :ratio="$ratio" responsive class="rounded border" />
+                                <p class="text-secondary mt-2 text-center"><code>{{ $ratio }}</code></p>
                             </div>
                         @endforeach
                     </div>
@@ -358,7 +313,8 @@
                                     <td><code>ratio</code></td>
                                     <td><span class="badge bg-blue-lt">string</span></td>
                                     <td><code>null</code></td>
-                                    <td>Aspect ratio: 1x1, 2x1, 1x2, 3x1, 1x3, 4x1, 1x4, 4x3, 3x4, 16x9, 9x16, 21x9, 9x21</td>
+                                    <td>Aspect ratio: 1x1, 2x1, 1x2, 3x1, 1x3, 4x1, 1x4, 4x3, 3x4, 16x9, 9x16, 21x9, 9x21
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><code>responsive</code></td>
@@ -391,10 +347,14 @@
                     <div class="mt-4">
                         <h4>Image Modes</h4>
                         <ul class="text-secondary">
-                            <li><strong>Regular mode:</strong> Standard <code>&lt;img&gt;</code> tag - use for normal images</li>
-                            <li><strong>Responsive mode:</strong> <code>&lt;div&gt;</code> with background-image and aspect ratio - use when you need fixed aspect ratios</li>
-                            <li><strong>Background mode:</strong> <code>&lt;div&gt;</code> with background-image without aspect ratio - use for hero sections or custom heights</li>
-                            <li><strong>High-DPI mode:</strong> <code>&lt;picture&gt;</code> with srcset - use when providing 2x resolution images</li>
+                            <li><strong>Regular mode:</strong> Standard <code>&lt;img&gt;</code> tag - use for normal images
+                            </li>
+                            <li><strong>Responsive mode:</strong> <code>&lt;div&gt;</code> with background-image and aspect
+                                ratio - use when you need fixed aspect ratios</li>
+                            <li><strong>Background mode:</strong> <code>&lt;div&gt;</code> with background-image without
+                                aspect ratio - use for hero sections or custom heights</li>
+                            <li><strong>High-DPI mode:</strong> <code>&lt;picture&gt;</code> with srcset - use when
+                                providing 2x resolution images</li>
                         </ul>
                     </div>
                 </x-tabler::cards.body>
@@ -409,7 +369,8 @@
                     <x-slot:subtitle>Additional styling options via class attribute</x-slot>
                 </x-tabler::cards.header>
                 <x-tabler::cards.body>
-                    <p class="text-secondary">You can use these classes via the <code>class=""</code> attribute for additional styling:</p>
+                    <p class="text-secondary">You can use these classes via the <code>class=""</code> attribute for
+                        additional styling:</p>
 
                     <div class="table-responsive">
                         <table class="table-vcenter table">
@@ -421,7 +382,8 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td colspan="2" class="bg-surface-secondary"><strong>Image Utility Classes</strong></td>
+                                    <td colspan="2" class="bg-surface-secondary"><strong>Image Utility Classes</strong>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><code>img-fluid</code></td>
@@ -457,7 +419,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td colspan="2" class="bg-surface-secondary"><strong>Responsive Image Classes</strong></td>
+                                    <td colspan="2" class="bg-surface-secondary"><strong>Responsive Image
+                                            Classes</strong></td>
                                 </tr>
                                 <tr>
                                     <td><code>img-responsive</code></td>
@@ -489,7 +452,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td colspan="2" class="bg-surface-secondary"><strong>Background Image Classes</strong></td>
+                                    <td colspan="2" class="bg-surface-secondary"><strong>Background Image
+                                            Classes</strong></td>
                                 </tr>
                                 <tr>
                                     <td><code>img-bg</code></td>
@@ -497,7 +461,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td colspan="2" class="bg-surface-secondary"><strong>Card Integration Classes</strong></td>
+                                    <td colspan="2" class="bg-surface-secondary"><strong>Card Integration
+                                            Classes</strong></td>
                                 </tr>
                                 <tr>
                                     <td><code>card-img-top</code></td>
@@ -537,7 +502,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td colspan="2" class="bg-surface-secondary"><strong>Object Fit Classes</strong></td>
+                                    <td colspan="2" class="bg-surface-secondary"><strong>Object Fit Classes</strong>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td><code>object-fit-contain</code></td>
@@ -568,7 +534,8 @@
                         <p class="text-secondary">You can combine multiple utility classes:</p>
                         <ul class="text-secondary">
                             <li><code>class="img-fluid rounded shadow"</code> - Responsive, rounded, with shadow</li>
-                            <li><code>class="rounded-circle border border-primary"</code> - Circular with colored border</li>
+                            <li><code>class="rounded-circle border border-primary"</code> - Circular with colored border
+                            </li>
                             <li><code>class="img-responsive img-responsive-16x9 card-img-top"</code> - 16:9 card image</li>
                         </ul>
                     </div>

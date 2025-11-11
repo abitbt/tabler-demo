@@ -605,7 +605,7 @@ public function register(): void
 ## Package Structure Recommendation
 
 ```
-abitbt/tablerui/
+tabler-blade/
 ├── config/
 │   └── tabler.php
 ├── resources/

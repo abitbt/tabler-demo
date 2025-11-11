@@ -5,8 +5,8 @@
     - <x-tabler::avatar>
     - <x-tabler::avatar-list>
 
-    Location: abitbt/tablerui/stubs/resources/views/tabler/avatar.blade.php
-    Location: abitbt/tablerui/stubs/resources/views/tabler/avatar-list.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/avatar.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/avatar-list.blade.php
 --}}
 
 @extends('layouts.app')

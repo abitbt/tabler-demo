@@ -5,7 +5,7 @@
     Based on Tabler UI modal patterns with Laravel Blade components.
 
     Components: <x-tabler::modals.*>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/modals/
+    Location: tabler-blade/stubs/resources/views/tabler/modals/
 --}}
 
 @extends('layouts.app')

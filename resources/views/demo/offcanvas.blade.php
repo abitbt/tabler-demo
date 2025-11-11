@@ -5,7 +5,7 @@
     Based on Tabler UI offcanvas patterns with Laravel Blade components.
 
     Component: <x-tabler::offcanvas>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/offcanvas.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/offcanvas.blade.php
 --}}
 
 @extends('layouts.app')

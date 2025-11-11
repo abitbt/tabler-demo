@@ -2,7 +2,7 @@
     Steps Component Demo
 
     Component: <x-tabler::steps>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/steps.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/steps.blade.php
 --}}
 
 @extends('layouts.app')

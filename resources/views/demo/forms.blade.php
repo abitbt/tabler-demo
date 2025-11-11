@@ -21,7 +21,7 @@
     - <x-tabler::forms.invalid-feedback>
 
     Locations:
-    abitbt/tablerui/stubs/resources/views/tabler/forms/*.blade.php
+    tabler-blade/stubs/resources/views/tabler/forms/*.blade.php
 --}}
 
 @extends('layouts.app')

@@ -12,7 +12,7 @@
     - <x-tabler::dropdowns.header>
     - <x-tabler::dropdowns.divider>
 
-    Location: abitbt/tablerui/stubs/resources/views/tabler/dropdowns/
+    Location: tabler-blade/stubs/resources/views/tabler/dropdowns/
 --}}
 
 @extends('layouts.app')

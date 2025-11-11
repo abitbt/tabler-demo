@@ -5,7 +5,7 @@
 ## Currently Implemented
 
 ### 1. Default Layout (Horizontal Navbar)
-**File:** `abitbt/tablerui/stubs/resources/views/layouts/app.blade.php`
+**File:** `tabler-blade/stubs/resources/views/layouts/app.blade.php`
 
 **Features:**
 - Horizontal top navbar
@@ -337,7 +337,7 @@
 Each layout should be a separate Blade layout file:
 
 ```
-abitbt/tablerui/stubs/resources/views/layouts/
+tabler-blade/stubs/resources/views/layouts/
 ├── app.blade.php                    # Default (horizontal navbar)
 ├── vertical.blade.php               # Vertical sidebar (left)
 ├── vertical-right.blade.php         # Vertical sidebar (right)
@@ -372,7 +372,7 @@ Each layout should accept configuration via slots/props:
 Create shared layout components:
 
 ```
-abitbt/tablerui/stubs/resources/views/layouts/
+tabler-blade/stubs/resources/views/layouts/
 ├── partials/
 │   ├── page-header.blade.php      # Page header with title/actions
 │   ├── page-footer.blade.php      # Page footer

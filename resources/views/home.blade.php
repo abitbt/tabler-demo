@@ -4,10 +4,6 @@
     <x-tabler::page-header title="Welcome to Tabler UI" subtitle="Laravel Blade component integration" />
 @endsection
 
-@php
-    $users = \App\Models\User::paginate(10);
-@endphp
-
 @section('content')
     <x-tabler::cards.card>
         <x-tabler::cards.header>

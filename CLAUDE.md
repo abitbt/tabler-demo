@@ -1,6 +1,10 @@
 # IMPORTANT
 - Always run `pint` and `npm run format` before git commits
-- 
+- This demo application is used to develop the `tabler-blade` package.
+- This is a brand-new project, so backwards compatibility is not required.
+- Always read the docs in `docs` folder.
+- Testing for `tabler-blade` must be done in the root project.
+
 <laravel-boost-guidelines>
 === foundation rules ===
 

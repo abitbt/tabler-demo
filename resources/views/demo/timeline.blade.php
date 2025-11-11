@@ -2,7 +2,7 @@
     Timeline Component Demo
 
     Component: <x-tabler::timeline>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/timeline.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/timeline.blade.php
 --}}
 
 @extends('layouts.app')

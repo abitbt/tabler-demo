@@ -5,7 +5,7 @@
     Based on Tabler UI button patterns with Laravel Blade components.
 
     Component: <x-tabler::button>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/button.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/button.blade.php
 --}}
 
 @extends('layouts.app')

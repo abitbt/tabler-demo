@@ -5,7 +5,7 @@
     Based on Tabler UI alert patterns with Laravel Blade components.
 
     Component: <x-tabler::alert>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/alert.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/alert.blade.php
 --}}
 
 @extends('layouts.app')

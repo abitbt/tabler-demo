@@ -5,7 +5,7 @@
     Based on Tabler UI toast patterns with Laravel Blade components.
 
     Component: <x-tabler::toast>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/toast.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/toast.blade.php
 --}}
 
 @extends('layouts.app')

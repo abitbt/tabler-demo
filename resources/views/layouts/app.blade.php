@@ -1,6 +1,3 @@
-@php
-    $bsThemeBase = 'catppuccin-mocha';
-@endphp
 @extends('tabler::layouts.app')
 
 @section('navbar')

@@ -2,7 +2,7 @@
     Pagination Component Demo
 
     Component: <x-tabler::pagination>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/pagination.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/pagination.blade.php
 --}}
 
 @extends('layouts.app')

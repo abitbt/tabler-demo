@@ -11,7 +11,7 @@
     - <x-tabler::tabs.content>
     - <x-tabler::tabs.pane>
 
-    Locations: abitbt/tablerui/stubs/resources/views/tabler/tabs/
+    Locations: tabler-blade/stubs/resources/views/tabler/tabs/
 --}}
 
 @extends('layouts.app')

@@ -15,7 +15,7 @@
     - <x-tabler::cards.progress>
     - <x-tabler::cards.actions>
 
-    Location: abitbt/tablerui/stubs/resources/views/tabler/cards/
+    Location: tabler-blade/stubs/resources/views/tabler/cards/
 --}}
 
 @extends('layouts.app')

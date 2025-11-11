@@ -4,7 +4,7 @@
     Comprehensive showcase of loading spinner variations.
 
     Component: <x-tabler::spinner>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/spinner.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/spinner.blade.php
 --}}
 
 @extends('layouts.app')

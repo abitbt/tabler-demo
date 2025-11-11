@@ -38,7 +38,7 @@ Create a Laravel Blade component for the **$1** component from Tabler UI.
      - Organize by category with descriptions
      - Include usage examples showing both props AND CSS classes
    - Follow existing component conventions from @docs/blade-components.md
-   - Save to `abitbt/tablerui/stubs/resources/views/tabler/{component-name}.blade.php`
+   - Save to `tabler-blade/stubs/resources/views/tabler/{component-name}.blade.php`
 
 4. **Format the code**:
    - Run `vendor/bin/pint` to ensure proper formatting
@@ -60,7 +60,7 @@ Create a Laravel Blade component for the **$1** component from Tabler UI.
 
 ## Notes:
 - **MUST follow @docs/decisions.md** - This is non-negotiable for consistency
-- Check sibling component files in `abitbt/tablerui/stubs/resources/views/tabler/` for existing patterns (e.g., button.blade.php, alert.blade.php)
+- Check sibling component files in `tabler-blade/stubs/resources/views/tabler/` for existing patterns (e.g., button.blade.php, alert.blade.php)
 - Ensure the component is flexible and reusable
 - Include helpful inline comments for complex sections
 - Apply the **Minimal Props Philosophy**: Don't create a prop for every CSS class - let users use `class=""` attribute

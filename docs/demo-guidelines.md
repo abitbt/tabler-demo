@@ -36,7 +36,7 @@ Provides context and quick reference for what's being demonstrated.
     Based on Tabler UI {component} patterns with Laravel Blade components.
 
     Component: <x-tabler::component-name>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/{component-name}.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/{component-name}.blade.php
 --}}
 ```
 
@@ -741,7 +741,7 @@ A minimal demo file template:
     Comprehensive showcase of component variations, states, and features.
 
     Component: <x-tabler::component>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/component.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/component.blade.php
 --}}
 
 @extends('tabler::layouts.app')

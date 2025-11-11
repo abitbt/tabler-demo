@@ -4,7 +4,7 @@
     Comprehensive showcase of progress bar variations and features.
 
     Component: <x-tabler::progress>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/progress.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/progress.blade.php
 --}}
 
 @extends('layouts.app')

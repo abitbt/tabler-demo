@@ -5,7 +5,7 @@
     Based on Tabler UI badge patterns with Laravel Blade components.
 
     Component: <x-tabler::badge>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/badge.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/badge.blade.php
 --}}
 
 @extends('layouts.app')

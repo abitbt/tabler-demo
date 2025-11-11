@@ -5,7 +5,7 @@
     Based on Tabler UI table patterns with Laravel Blade components.
 
     Component: <x-tabler::table>
-    Location: abitbt/tablerui/stubs/resources/views/tabler/table.blade.php
+    Location: tabler-blade/stubs/resources/views/tabler/table.blade.php
 --}}
 
 @extends('layouts.app')
