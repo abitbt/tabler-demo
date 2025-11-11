@@ -78,7 +78,7 @@
     "repositories": [
         {
             "type": "path",
-            "url": "./abitbt/tablerui"
+            "url": "./tabler-blade"
         }
     ],
     "extra": {

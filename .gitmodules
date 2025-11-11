@@ -1,3 +1,6 @@
 [submodule "tabler"]
 	path = tabler
 	url = https://github.com/tabler/tabler
+[submodule "tabler-blade"]
+	path = tabler-blade
+	url = https://github.com/abitbt/tabler-blade.git

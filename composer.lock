@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bcbf5eb32857268a9e3c9560c873831e",
+    "content-hash": "e3ce0a49f696c9cdfe5b295afe703f70",
     "packages": [
         {
             "name": "abitbt/tablerui",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "./abitbt/tablerui",
+                "url": "./tabler-blade",
                 "reference": "661423561d65f9a8567d38784bd2d9558921cb72"
             },
             "require": {
