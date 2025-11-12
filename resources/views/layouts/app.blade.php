@@ -15,7 +15,8 @@
             <div class="row align-items-center flex-row-reverse text-center">
                 <div class="col-lg-auto ms-lg-auto">
                     <ul class="list-inline list-inline-dots mb-0">
-                        <li class="list-inline-item"><a href="#" class="link-secondary">Documentation</a></li>
+                        <li class="list-inline-item"><a href="{{ route('docs.index') }}"
+                                class="link-secondary">Documentation</a></li>
                         <li class="list-inline-item"><a href="#" class="link-secondary">License</a></li>
                     </ul>
                 </div>

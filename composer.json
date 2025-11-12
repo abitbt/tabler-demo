@@ -11,9 +11,13 @@
     "require": {
         "php": "^8.2",
         "abitbt/tabler-blade": "@dev",
+        "http-interop/http-factory-guzzle": "^1.2",
         "laravel/fortify": "^1.31",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/scout": "^10.21",
+        "laravel/tinker": "^2.10.1",
+        "league/commonmark": "^2.7",
+        "meilisearch/meilisearch-php": "^1.16"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.16",

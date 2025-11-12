@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\DocumentationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -38,6 +39,13 @@ Route::prefix('demo')->name('demo.')->controller(DemoController::class)->group(f
     Route::get('/layout-vertical', 'layoutVertical')->name('layout-vertical');
     Route::get('/layout-boxed', 'layoutBoxed')->name('layout-boxed');
     Route::get('/auth-pages', 'authPages')->name('auth-pages');
+});
+
+// Documentation Routes
+Route::prefix('docs')->name('docs.')->controller(DocumentationController::class)->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/search', 'search')->name('search');
+    Route::get('/{path}', 'show')->where('path', '.*')->name('show');
 });
 
 // Protected Routes (require authentication)

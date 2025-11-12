@@ -1,0 +1,607 @@
+// Documentation Styles
+
+// Markdown content styling
+.markdown-body {
+    line-height: 1.6;
+    font-size: 1rem;
+
+    // Headings
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+        line-height: 1.25;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        .heading-permalink {
+            margin-left: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.2s;
+            text-decoration: none;
+            color: var(--tblr-secondary);
+            font-weight: normal;
+
+            &:hover {
+                color: var(--tblr-primary);
+            }
+        }
+
+        &:hover .heading-permalink {
+            opacity: 1;
+        }
+    }
+
+    h1 {
+        font-size: 2rem;
+        border-bottom: 1px solid var(--tblr-border-color);
+        padding-bottom: 0.3em;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        border-bottom: 1px solid var(--tblr-border-color);
+        padding-bottom: 0.3em;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    // Paragraphs and text
+    p {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    // Links
+    a {
+        color: var(--tblr-primary);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    // Lists
+    ul,
+    ol {
+        margin-top: 0;
+        margin-bottom: 1em;
+        padding-left: 2em;
+    }
+
+    li {
+        margin-bottom: 0.25em;
+
+        > p {
+            margin-top: 0.5em;
+        }
+    }
+
+    // Code blocks
+    code {
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 85%;
+        border-radius: 3px;
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+
+    pre {
+        padding: 1rem;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        border-radius: 6px;
+        margin-top: 0;
+        margin-bottom: 1em;
+
+        code {
+            padding: 0;
+            margin: 0;
+            font-size: 100%;
+            background-color: transparent;
+            border: 0;
+            word-break: normal;
+            white-space: pre;
+        }
+    }
+
+    // Tables
+    table {
+        width: 100%;
+        margin-bottom: 1em;
+        border-collapse: collapse;
+        display: block;
+        overflow: auto;
+
+        thead {
+            background-color: var(--tblr-secondary-bg);
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            border: 1px solid var(--tblr-border-color);
+            text-align: left;
+        }
+
+        th {
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--tblr-bg-surface-secondary);
+        }
+    }
+
+    // Blockquotes
+    blockquote {
+        margin: 0;
+        padding: 0 1em;
+        color: var(--tblr-secondary);
+        border-left: 0.25em solid var(--tblr-border-color);
+        margin-bottom: 1em;
+
+        > :first-child {
+            margin-top: 0;
+        }
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // Horizontal rules
+    hr {
+        height: 0.25em;
+        padding: 0;
+        margin: 1.5em 0;
+        background-color: var(--tblr-border-color);
+        border: 0;
+    }
+
+    // Images
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+
+    // Task lists
+    .task-list-item {
+        list-style-type: none;
+
+        input[type='checkbox'] {
+            margin-right: 0.5em;
+        }
+    }
+}
+
+// Table of contents
+.table-of-contents {
+    ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+
+        a {
+            color: var(--tblr-secondary);
+            text-decoration: none;
+            display: block;
+            padding: 0.25rem 0;
+            transition: color 0.15s;
+
+            &:hover {
+                color: var(--tblr-primary);
+            }
+
+            &.active {
+                color: var(--tblr-primary);
+                font-weight: 600;
+            }
+        }
+    }
+
+    .toc-level-2 {
+        padding-left: 0;
+    }
+
+    .toc-level-3 {
+        padding-left: 1rem;
+        font-size: 0.875rem;
+    }
+
+    .toc-level-4 {
+        padding-left: 2rem;
+        font-size: 0.875rem;
+    }
+}
+
+// Component preview blocks
+.component-preview {
+    margin: 1.5rem 0;
+
+    .preview-output {
+        padding: 2rem;
+        background-color: var(--tblr-bg-surface);
+        border-radius: 6px;
+    }
+
+    details {
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            padding: 0.5rem 0;
+
+            &:hover {
+                color: var(--tblr-primary);
+            }
+        }
+
+        pre {
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+// Navigation enhancements
+.navbar-vertical {
+    .nav-sub {
+        padding-left: 1rem;
+
+        .nav-link {
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+}
+
+// Responsive improvements
+@media (max-width: 991.98px) {
+    .markdown-body {
+        h1 {
+            font-size: 1.75rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+// ========================================
+// UI/UX Improvements
+// ========================================
+
+// Code block copy button
+.code-block-wrapper {
+    position: relative;
+    margin-bottom: 1em;
+
+    .btn-copy {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.375rem 0.75rem;
+        background-color: var(--tblr-bg-surface);
+        border: 1px solid var(--tblr-border-color);
+        border-radius: 4px;
+        color: var(--tblr-body-color);
+        font-size: 0.875rem;
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        opacity: 0;
+        z-index: 10;
+
+        .icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        &:hover {
+            background-color: var(--tblr-primary);
+            color: var(--tblr-primary-fg);
+            border-color: var(--tblr-primary);
+        }
+
+        &.copied {
+            background-color: var(--tblr-success);
+            color: var(--tblr-success-fg);
+            border-color: var(--tblr-success);
+        }
+    }
+
+    &:hover .btn-copy {
+        opacity: 1;
+    }
+}
+
+// Search bar and results
+.docs-search-wrapper {
+    width: 350px;
+
+    .input-icon {
+        position: relative;
+
+        .input-icon-addon-end {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            gap: 0.125rem;
+            pointer-events: none;
+            opacity: 0.5;
+            font-size: 0.75rem;
+
+            .kbd {
+                padding: 0.125rem 0.375rem;
+                font-size: 0.75rem;
+                background-color: var(--tblr-bg-surface);
+                border: 1px solid var(--tblr-border-color);
+                border-radius: 3px;
+                font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+            }
+        }
+    }
+
+    #docs-search {
+        padding-right: 5rem;
+    }
+}
+
+.search-results {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: var(--tblr-bg-surface);
+    border: 1px solid var(--tblr-border-color);
+    border-radius: 6px;
+    box-shadow: var(--tblr-box-shadow-lg);
+    z-index: 1050;
+
+    .search-result-empty {
+        padding: 1.5rem;
+        text-align: center;
+        color: var(--tblr-secondary);
+    }
+
+    .search-result-item {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid var(--tblr-border-color);
+        text-decoration: none;
+        color: var(--tblr-body-color);
+        transition: background-color 0.15s;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background-color: var(--tblr-bg-surface-secondary);
+        }
+
+        .search-result-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--tblr-primary);
+        }
+
+        .search-result-excerpt {
+            font-size: 0.875rem;
+            color: var(--tblr-secondary);
+            line-height: 1.4;
+        }
+    }
+}
+
+// Theme toggle button
+.btn-icon {
+    .icon-tabler-sun {
+        display: none;
+    }
+
+    .icon-tabler-moon {
+        display: block;
+    }
+}
+
+[data-bs-theme='light'] {
+    .btn-icon {
+        .icon-tabler-sun {
+            display: block;
+        }
+
+        .icon-tabler-moon {
+            display: none;
+        }
+    }
+}
+
+// Enhanced typography
+.markdown-body {
+    // Better line height for reading
+    line-height: 1.7;
+
+    // Optimal reading width
+    max-width: 100%;
+
+    p {
+        margin-bottom: 1.25em;
+        line-height: 1.7;
+    }
+
+    // Enhanced link styling
+    a:not(.btn):not(.nav-link):not(.search-result-item) {
+        color: var(--tblr-primary);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+            border-bottom-color: var(--tblr-primary);
+            text-decoration: none;
+        }
+    }
+
+    // Better spacing for headings
+    h1,
+    h2 {
+        margin-top: 2em;
+        margin-bottom: 0.75em;
+    }
+
+    h3,
+    h4 {
+        margin-top: 1.75em;
+        margin-bottom: 0.5em;
+    }
+
+    // Improved code block styling
+    pre {
+        padding: 1.25rem;
+        border: 1px solid var(--tblr-border-color);
+        box-shadow: var(--tblr-box-shadow-sm);
+    }
+
+    // Better inline code styling
+    code {
+        font-size: 87.5%;
+        padding: 0.2em 0.4em;
+        font-weight: 500;
+    }
+
+    // Improved blockquote styling
+    blockquote {
+        padding: 0.75rem 1.5rem;
+        background-color: var(--tblr-bg-surface-secondary);
+        border-left: 4px solid var(--tblr-primary);
+        border-radius: 0 4px 4px 0;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Table of Contents improvements
+.table-of-contents {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    // Smooth scrolling
+    scroll-behavior: smooth;
+
+    // Custom scrollbar styling
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--tblr-border-color);
+        border-radius: 3px;
+
+        &:hover {
+            background: var(--tblr-secondary);
+        }
+    }
+
+    li a {
+        border-left: 2px solid transparent;
+        padding-left: 0.75rem;
+        padding-right: 0.5rem;
+        transition: all 0.15s ease-in-out;
+        border-radius: 0 4px 4px 0;
+
+        &:hover {
+            border-left-color: var(--tblr-border-color);
+        }
+
+        &.active {
+            border-left-color: var(--tblr-primary);
+            background-color: var(--tblr-bg-surface-secondary);
+            color: var(--tblr-primary);
+            font-weight: 600;
+        }
+    }
+}
+
+// Sticky TOC positioning
+.page-body {
+    .position-sticky {
+        top: 1rem;
+        align-self: flex-start;
+    }
+}
+
+// Header improvements
+.page-header {
+    .d-flex.gap-2 {
+        gap: 0.75rem;
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 991.98px) {
+    .docs-search-wrapper {
+        width: 250px;
+
+        .input-icon-addon-end {
+            display: none;
+        }
+
+        #docs-search {
+            padding-right: 2.5rem;
+        }
+    }
+
+    .code-block-wrapper .btn-copy {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .docs-search-wrapper {
+        width: 100%;
+    }
+
+    .page-header .btn-list {
+        flex-direction: column;
+        width: 100%;
+
+        .btn {
+            width: 100%;
+        }
+    }
+}

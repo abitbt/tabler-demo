@@ -18,6 +18,11 @@ abstract class Controller
             ->icon('home')
             ->activeRoute('home');
 
+        // Documentation link
+        $menu->link('Documentation', url('/docs'))
+            ->icon('book')
+            ->activeRoute('docs.*');
+
         // Components dropdown
         $menu->dropdown('Components')
             ->icon('package')
