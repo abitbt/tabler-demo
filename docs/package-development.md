@@ -626,7 +626,419 @@ tabler-blade/
 ├── tests/
 │   └── ComponentTest.php
 ├── .gitignore
+├── CHANGELOG.md
 ├── composer.json
 ├── LICENSE
 └── README.md
 ```
+
+## Version Management & Releases
+
+### Semantic Versioning
+
+Follow [Semantic Versioning 2.0.0](https://semver.org/):
+
+**Given a version number MAJOR.MINOR.PATCH (e.g., 2.3.1):**
+
+- **MAJOR** (2): Breaking changes, backwards-incompatible API changes
+- **MINOR** (3): New features, backwards-compatible additions
+- **PATCH** (1): Bug fixes, backwards-compatible fixes
+
+### Version Number in Code
+
+Update version in multiple places:
+
+**1. composer.json:**
+```json
+{
+    "name": "abitbt/tablerui",
+    "version": "1.2.0",
+    "description": "Laravel Blade components for Tabler UI"
+}
+```
+
+**2. ServiceProvider (for AboutCommand):**
+```php
+AboutCommand::add('Tabler UI', fn () => [
+    'Version' => '1.2.0',
+    'Components' => '52+',
+]);
+```
+
+**3. Optional: Create a Version class:**
+```php
+// src/Version.php
+namespace Tabler;
+
+class Version
+{
+    public const VERSION = '1.2.0';
+    public const MAJOR = 1;
+    public const MINOR = 2;
+    public const PATCH = 0;
+}
+```
+
+### CHANGELOG.md
+
+Maintain a changelog following [Keep a Changelog](https://keepachangelog.com/):
+
+```markdown
+# Changelog
+
+All notable changes to `tabler-blade` will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+- Tooltip component with Bootstrap integration
+- Dark mode support for all components
+
+### Changed
+- Button component now uses `variant` prop instead of `outline` boolean
+
+### Deprecated
+- `outline` prop on button component (use `variant="outline"` instead)
+  Will be removed in v2.0.0
+
+### Fixed
+- Alert component dismissible button alignment
+- Card component padding issues with `active` state
+
+### Security
+- Updated dependencies to fix security vulnerabilities
+
+## [1.2.0] - 2025-01-15
+
+### Added
+- Card component with 50+ variations
+- Badge component with all Tabler colors
+- Tag component
+- Comprehensive test suite
+
+### Changed
+- Improved button component accessibility
+- Updated documentation with examples
+
+### Fixed
+- Button icon spacing in Safari
+- Alert dismissible button not working
+
+## [1.1.0] - 2024-12-01
+
+### Added
+- Alert component with dismissible functionality
+- Button component with icon support
+
+### Fixed
+- Initial release fixes
+
+## [1.0.0] - 2024-11-15
+
+### Added
+- Initial release
+- Basic button, alert components
+- Service provider setup
+- Package configuration
+
+[Unreleased]: https://github.com/abitbt/tabler-blade/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/abitbt/tabler-blade/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/abitbt/tabler-blade/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/abitbt/tabler-blade/releases/tag/v1.0.0
+```
+
+### Release Process
+
+#### 1. Prepare Release
+
+```bash
+# Ensure working directory is clean
+git status
+
+# Run all tests
+php artisan test
+
+# Run static analysis (if using)
+./vendor/bin/phpstan analyze
+
+# Run code formatting
+./vendor/bin/pint
+```
+
+#### 2. Update Version Numbers
+
+Update version in:
+- `composer.json`
+- `TablerServiceProvider.php` (AboutCommand)
+- `Version.php` (if using)
+
+#### 3. Update CHANGELOG.md
+
+Move items from `[Unreleased]` to new version section:
+
+```markdown
+## [1.3.0] - 2025-02-01
+
+### Added
+- New features from unreleased section
+
+## [1.2.0] - 2025-01-15
+...
+```
+
+#### 4. Commit Changes
+
+```bash
+# Commit version bump
+git add .
+git commit -m "chore: bump version to 1.3.0"
+```
+
+#### 5. Create Git Tag
+
+```bash
+# Create annotated tag
+git tag -a v1.3.0 -m "Release version 1.3.0"
+
+# Push commits and tags
+git push origin main
+git push origin v1.3.0
+```
+
+#### 6. Create GitHub Release
+
+On GitHub, create a new release:
+- Tag: `v1.3.0`
+- Title: `v1.3.0 - February 2025`
+- Description: Copy changelog section for this version
+
+#### 7. Submit to Packagist
+
+Packagist automatically detects new tags. Verify at:
+```
+https://packagist.org/packages/abitbt/tabler-blade
+```
+
+### Breaking Changes Management
+
+#### Deprecation Strategy
+
+**1. Mark as Deprecated (Minor Version):**
+
+In component:
+```blade
+@props([
+    'outline' => null,  // Deprecated: use variant="outline" instead
+    'variant' => null,
+])
+
+@if($outline !== null)
+    @env('local', 'testing')
+        @php
+            trigger_error(
+                'The "outline" prop is deprecated and will be removed in v2.0.0. ' .
+                'Use variant="outline" instead.',
+                E_USER_DEPRECATED
+            );
+        @endphp
+    @endenv
+    @php
+        $variant = 'outline';  // Map deprecated prop to new prop
+    @endphp
+@endif
+```
+
+In CHANGELOG.md:
+```markdown
+### Deprecated
+- `outline` prop on button component
+  - Use `variant="outline"` instead
+  - Will be removed in v2.0.0
+  - Migration: `<x-button outline>` → `<x-button variant="outline">`
+```
+
+**2. Keep Functionality (One Major Version):**
+- Keep deprecated features working in all minor versions
+- Remove only in next major version (e.g., v1.x.x → v2.0.0)
+
+**3. Provide Migration Guide:**
+
+Create `UPGRADE.md`:
+
+```markdown
+# Upgrade Guide
+
+## Upgrading to 2.0 from 1.x
+
+### Button Component
+
+**Removed `outline` prop:**
+
+```blade
+<!-- Before (1.x) -->
+<x-tabler::button outline color="primary">Click</x-tabler::button>
+
+<!-- After (2.0) -->
+<x-tabler::button variant="outline" color="primary">Click</x-tabler::button>
+```
+
+**Search and replace:**
+```bash
+# Find all instances
+grep -r "outline" resources/views/
+
+# Example sed command (test first!)
+find resources/views -name "*.blade.php" -exec sed -i '' 's/outline/variant="outline"/g' {} \;
+```
+```
+
+### Version Compatibility
+
+#### Laravel Version Support
+
+Support current + previous 2 major Laravel versions:
+
+```json
+{
+    "require": {
+        "php": "^8.1|^8.2|^8.3",
+        "illuminate/support": "^10.0|^11.0|^12.0"
+    }
+}
+```
+
+#### PHP Version Support
+
+Support current + previous 2 minor PHP versions:
+
+- PHP 8.3 (current) ✓
+- PHP 8.2 ✓
+- PHP 8.1 ✓
+- PHP 8.0 ❌ (EOL)
+
+Update when new PHP version releases.
+
+### Release Automation
+
+#### GitHub Actions for Releases
+
+`.github/workflows/release.yml`:
+
+```yaml
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.3
+
+      - name: Install dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      - name: Run tests
+        run: ./vendor/bin/pest
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+```
+
+### Pre-release Versions
+
+For beta/alpha releases:
+
+```bash
+# Create pre-release tag
+git tag -a v2.0.0-beta.1 -m "Beta release for v2.0.0"
+git push origin v2.0.0-beta.1
+```
+
+In `composer.json`:
+```json
+{
+    "name": "abitbt/tabler-blade",
+    "version": "2.0.0-beta.1"
+}
+```
+
+Users install with:
+```bash
+composer require abitbt/tabler-blade:^2.0@beta
+```
+
+### Version Bumping Script
+
+Create `bin/version-bump.sh`:
+
+```bash
+#!/bin/bash
+
+# Usage: ./bin/version-bump.sh 1.3.0
+
+VERSION=$1
+
+if [ -z "$VERSION" ]; then
+    echo "Usage: ./bin/version-bump.sh <version>"
+    exit 1
+fi
+
+# Update composer.json
+sed -i '' "s/\"version\": \".*\"/\"version\": \"$VERSION\"/" composer.json
+
+# Update ServiceProvider
+sed -i '' "s/'Version' => '.*'/'Version' => '$VERSION'/" src/TablerServiceProvider.php
+
+# Update Version class (if exists)
+sed -i '' "s/const VERSION = '.*'/const VERSION = '$VERSION'/" src/Version.php
+
+echo "Version bumped to $VERSION"
+echo "Don't forget to:"
+echo "1. Update CHANGELOG.md"
+echo "2. Run tests"
+echo "3. Commit changes"
+echo "4. Create git tag: git tag -a v$VERSION -m 'Release $VERSION'"
+echo "5. Push: git push origin main && git push origin v$VERSION"
+```
+
+Make executable:
+```bash
+chmod +x bin/version-bump.sh
+```
+
+Usage:
+```bash
+./bin/version-bump.sh 1.3.0
+```
+
+## Best Practices Summary
+
+1. **Follow Semantic Versioning** - MAJOR.MINOR.PATCH
+2. **Maintain CHANGELOG.md** - Document all changes
+3. **Deprecate before removing** - Give users time to migrate
+4. **Test before release** - Run full test suite
+5. **Support multiple Laravel versions** - Current + 2 previous
+6. **Create migration guides** - Help users upgrade
+7. **Use Git tags** - v1.2.3 format
+8. **Automate where possible** - GitHub Actions for CI/CD
+9. **Communicate clearly** - Release notes, upgrade guides
+10. **Version everything** - composer.json, ServiceProvider, CHANGELOG.md

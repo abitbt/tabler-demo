@@ -2,6 +2,74 @@
 
 > Quick reference for Tabler UI layouts, plugins, interface components, and extra pages
 
+### Package Stats
+
+- **Total Components**: 19
+- **Form Components**: 11 (input, select, textarea, checkbox, radio, switch, range, color-input, file-input, form-label, form-hint)
+- **UI Components**: 4 (alert, badge, button, card)
+- **Layout Components**: 2 (page-header, pagination)
+- **Helper Components**: 2 (input-group, tag)
+
+## Quick Component Finder
+
+| Component | Complexity | JS Required | Dependencies | Tabler Status |
+|-----------|------------|-------------|--------------|---------------|
+| **Interface** |  |  |  |  |
+| [Accordion](#accordion) | ⭐⭐ Medium | ✓ Bootstrap | Bootstrap JS | ✓ Available |
+| [Alerts](#alerts) | ⭐ Easy | Optional | - | ✓ Available |
+| [Avatars](#avatars) | ⭐ Easy | - | - | ✓ Available |
+| [Badges](#badges) | ⭐ Easy | - | - | ✓ Available |
+| [Breadcrumbs](#breadcrumbs) | ⭐ Easy | - | - | ✓ Available |
+| [Buttons](#buttons) | ⭐ Easy | - | - | ✓ Available |
+| [Cards](#cards) | ⭐⭐ Medium | - | - | ✓ Available |
+| [Carousel](#carousel) | ⭐⭐ Medium | ✓ Bootstrap | Bootstrap JS | ✓ Available |
+| [Chips](#chips) | ⭐ Easy | - | - | ⚠️ SCSS Only |
+| [Close Button](#close-button) | ⭐ Easy | - | - | ⚠️ SCSS Only |
+| [Divider](#divider) | ⭐ Easy | - | - | ✓ Available |
+| [Dropdowns](#dropdowns) | ⭐⭐ Medium | ✓ Bootstrap | Bootstrap JS | ✓ Available |
+| [Empty States](#empty-states) | ⭐ Easy | - | - | ✓ Available |
+| [Forms](#forms) | ⭐⭐⭐ Hard | Optional | Tom-Select, IMask, Autosize | ✓ Available |
+| [Icons](#icons) | ⭐ Easy | - | - | ✓ Available |
+| [Images](#images) | ⭐ Easy | - | - | ✓ Available |
+| [Legend](#legend) | ⭐ Easy | - | - | ⚠️ SCSS Only |
+| [Lists](#lists) | ⭐ Easy | - | - | ✓ Available |
+| [Loaders](#loaders) | ⭐ Easy | - | - | ✓ Available |
+| [Markdown](#markdown) | ⭐ Easy | - | - | ⚠️ SCSS Only |
+| [Modals](#modals) | ⭐⭐ Medium | ✓ Bootstrap | Bootstrap JS | ✓ Available |
+| [Navigation](#navigation) | ⭐⭐ Medium | - | - | ✓ Available |
+| [Offcanvas](#offcanvas) | ⭐⭐ Medium | ✓ Bootstrap | Bootstrap JS | ✓ Available |
+| [Pagination](#pagination) | ⭐ Easy | - | - | ✓ Available |
+| [Placeholder](#placeholder) | ⭐ Easy | - | - | ✓ Available |
+| [Popovers](#popovers) | ⭐⭐ Medium | ✓ Bootstrap | Bootstrap JS | ✓ Available |
+| [Progress](#progress) | ⭐ Easy | - | - | ✓ Available |
+| [Ribbons](#ribbons) | ⭐ Easy | - | - | ✓ Available |
+| [Spinners](#spinners) | ⭐ Easy | - | - | ✓ Available |
+| [Status](#status) | ⭐ Easy | - | - | ✓ Available |
+| [Steps](#steps) | ⭐⭐ Medium | - | - | ✓ Available |
+| [Tables](#tables) | ⭐⭐ Medium | Optional | Sortable.js | ✓ Available |
+| [Tabs](#tabs) | ⭐⭐ Medium | ✓ Bootstrap | Bootstrap JS | ✓ Available |
+| [Timeline](#timeline) | ⭐⭐ Medium | - | - | ✓ Available |
+| [Toasts](#toasts) | ⭐⭐ Medium | ✓ Bootstrap | Bootstrap JS | ✓ Available |
+| [Toolbar](#toolbar) | ⭐⭐ Medium | - | - | ⚠️ SCSS Only |
+| [Tooltips](#tooltips) | ⭐ Easy | ✓ Bootstrap | Bootstrap JS | ✓ Available |
+| [Tracking](#tracking) | ⭐ Easy | - | - | ✓ Available |
+
+**Legend:**
+- **Tabler Status** = Availability in Tabler UI framework (not tabler-blade package)
+- ✓ Available = Full component with preview, docs, and SCSS
+- ⚠️ SCSS Only = Only SCSS file exists, no preview or documentation
+- ⭐ Easy = Simple HTML/CSS, no JavaScript
+- ⭐⭐ Medium = Moderate complexity, may require JavaScript
+- ⭐⭐⭐ Hard = Complex with multiple variations and JavaScript
+
+**JavaScript Dependencies:**
+- **Bootstrap JS**: Required for interactive components (modals, dropdowns, tooltips, etc.)
+- **Tom-Select**: Advanced select dropdowns
+- **IMask**: Input masking
+- **Autosize**: Auto-resizing textareas
+
+---
+
 ## Layout
 
 ### Boxed
@@ -172,12 +240,19 @@
 ## Interface
 
 ### Accordion
+- **Complexity:** ⭐⭐ Medium
+- **JavaScript:** Required (Bootstrap Collapse)
+- **Dependencies:** Bootstrap JS
 - **Preview:** [tabler/preview/dist/accordion.html](../tabler/preview/dist/accordion.html)
 - **Template:** [tabler/preview/pages/accordion.html](../tabler/preview/pages/accordion.html)
+- **Documentation:** [tabler/docs/content/ui/components/accordion.md](../tabler/docs/content/ui/components/accordion.md)
 - **Includes:** [tabler/shared/includes/ui/accordion.html](../tabler/shared/includes/ui/accordion.html)
 - **SCSS:** [tabler/core/scss/ui/_accordion.scss](../tabler/core/scss/ui/_accordion.scss)
 
 ### Alerts
+- **Complexity:** ⭐ Easy
+- **JavaScript:** Optional (dismissible alerts)
+- **Dependencies:** None
 - **Preview:** [tabler/preview/dist/alerts.html](../tabler/preview/dist/alerts.html)
 - **Template:** [tabler/preview/pages/alerts.html](../tabler/preview/pages/alerts.html)
 - **Documentation:** [tabler/docs/content/ui/components/alerts.md](../tabler/docs/content/ui/components/alerts.md)
@@ -519,12 +594,83 @@
 - **Main Bundle:** [tabler/core/js/tabler.js](../tabler/core/js/tabler.js)
 - **Source Files:** [tabler/core/js/src/](../tabler/core/js/src/)
 
+**JavaScript Modules (12 files):**
+1. `tabler.js` - Main framework initialization
+2. `autosize.js` - Auto-resizing textarea plugin
+3. `bootstrap.js` - Bootstrap JavaScript enhancements
+4. `countup.js` - Number counter animation
+5. `dropdown.js` - Custom dropdown behavior
+6. `input-mask.js` - Input masking functionality
+7. `popover.js` - Popover component
+8. `sortable.js` - Table/list sorting
+9. `switch-icon.js` - Icon switcher
+10. `tab.js` - Tab navigation
+11. `toast.js` - Toast notifications
+12. `tooltip.js` - Tooltip component
+
 ### Main SCSS
 - **Main File:** [tabler/core/scss/tabler.scss](../tabler/core/scss/tabler.scss)
-- **Variables:** [tabler/core/scss/_variables.scss](../tabler/core/scss/_variables.scss)
+- **Variables:** [tabler/core/scss/_variables.scss](../tabler/core/scss/_variables.scss) (36KB design tokens)
 - **Dark Mode:** [tabler/core/scss/_variables-dark.scss](../tabler/core/scss/_variables-dark.scss)
-- **Layout:** [tabler/core/scss/layout/](../tabler/core/scss/layout/)
-- **UI Components:** [tabler/core/scss/ui/](../tabler/core/scss/ui/)
+- **Layout:** [tabler/core/scss/layout/](../tabler/core/scss/layout/) (7 files)
+- **UI Components:** [tabler/core/scss/ui/](../tabler/core/scss/ui/) (50+ component files)
+- **Utilities:** [tabler/core/scss/utils/](../tabler/core/scss/utils/)
+- **Marketing:** [tabler/core/scss/marketing/](../tabler/core/scss/marketing/)
+
+**Total SCSS Files:** 119 files
 
 ### Third-party Libraries
-- **All Libraries:** [tabler/core/dist/libs/](../tabler/core/dist/libs/)
+Location: [tabler/core/dist/libs/](../tabler/core/dist/libs/)
+
+**Charts & Visualization (2):**
+- `apexcharts/` - Advanced charting library
+- `jsvectormap/` - Vector map library
+
+**UI Components (8):**
+- `clipboard/` - Copy-to-clipboard functionality
+- `dropzone/` - File upload handling
+- `fullcalendar/` - Calendar component
+- `plyr/` - Video/audio player
+- `fslightbox/` - Image lightbox
+- `signature_pad/` - Signature capture
+- `sortablejs/` - Drag-and-drop sorting
+- `star-rating.js/` - Star rating widget
+
+**Form Controls (5):**
+- `tom-select/` - Advanced select dropdown
+- `imask/` - Input masking library
+- `autosize/` - Auto-resize textarea
+- `litepicker/` - Date picker
+- `nouislider/` - Range slider
+
+**Text & Content (2):**
+- `typed.js/` - Text typing animation
+- `hugerte/` - WYSIWYG editor (TinyMCE)
+
+**Utilities (4):**
+- `list.js/` - List filtering and sorting
+- `@hotwired/` - Turbo for progressive enhancement
+- `@melloware/` - Additional utilities
+- `countup.js/` - Number counter animation
+
+**Total Libraries:** 21 bundled libraries
+
+### Shared Templates
+- **UI Includes:** [tabler/shared/includes/ui/](../tabler/shared/includes/ui/) (75 files)
+- **Card Variations:** [tabler/shared/includes/cards/](../tabler/shared/includes/cards/) (60+ files)
+- **Layout Includes:** [tabler/shared/includes/layout/](../tabler/shared/includes/layout/)
+- **Form Includes:** [tabler/shared/includes/forms/](../tabler/shared/includes/forms/)
+- **Total Include Files:** 283 reusable templates
+
+### Documentation
+- **Location:** [tabler/docs/content/](../tabler/docs/content/)
+- **Component Docs:** [tabler/docs/content/ui/components/](../tabler/docs/content/ui/components/) (42 files)
+- **Form Docs:** [tabler/docs/content/ui/forms/](../tabler/docs/content/ui/forms/) (9 files)
+- **Layout Docs:** [tabler/docs/content/ui/layout/](../tabler/docs/content/ui/layout/) (4 files)
+- **Getting Started:** [tabler/docs/content/ui/getting-started/](../tabler/docs/content/ui/getting-started/) (10 files)
+- **Total Documentation Files:** 104 markdown files
+
+### Preview Pages
+- **Location:** [tabler/preview/pages/](../tabler/preview/pages/)
+- **Total Pages:** 116 HTML preview/example pages
+- **Built Site:** [tabler/preview/dist/](../tabler/preview/dist/)
